@@ -15,4 +15,4 @@ Here are some ideas to get you started:
 
 # My nickname is *x1hibi* 🐲
 
-## I'm a lover of chemistry 🧪 and science 🔬, and yes... also a tech geek 😎, my main area is the development of web applications 🌐 (Front-End and Back-End)
+## I'm a lover of chemistry 🧪 and science 🔬, and yes... also a tech geek 😎, my main area is the development of web applications 🌐💻 (Front-End and Back-End)
