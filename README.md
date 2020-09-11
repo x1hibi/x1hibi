@@ -1,5 +1,3 @@
-### Hi there 👋
-
 <!--
 **x1hibi/x1hibi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -14,3 +12,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+# My nickname is *x1hibi* 🐲
+
+## I'm a lover of chemical🧪 and science 🔬, and yes... also a tech geek 😎, my main area is the development of web applications (Front and back)
