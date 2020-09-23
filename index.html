@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es-en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Hello my nickname is x1hibi this is personal web site were we share things about me, as my proyects, libraries and skills, and also you can contact me and ask me what ever you want and give me feedback.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x1hibi</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js" defer></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="media/logo.png" rel="icon" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#2b2727">
+</head>
+<body>
+
+
+    <!-- html template for card component -->
+    <script type="text/x-template" id="card">
+        <article class="cardContainer" >
+            <h2 class="cardHeader">{{title}}</h2>
+            <div class="cardBody">
+                content of card
+            </div>
+        </article>
+    </script>
+
+    <!-- father container -->
+    <div id="app" class="fatherContainer">
+        <header class="bannerContainer" id="header">
+            <img src="media/logo.png" class="logoAnimation" alt="red dragon" />
+            <div class="bannerTextContainer">
+                <h1 class="headerTitle" >x1hibi</h1>
+                <!-- <h2 class="headerSubtitle" v-if="showSubtitle">{{subtitle}}<span id="caret0" class="caret">{{caret}}</span></h2> -->
+                <h2 class="headerSubtitle" id="typingEffect" v-if="showSubtitle"></h2>
+
+            </div>
+        </header>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li>About Me</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </uk>
+        </nav>
+        <section class="sectionContainer">
+            <card-component title="Titulo uno"></card-component>
+            <card-component title="Titulo dos"></card-component>
+            <card-component title="Titulo tres"></card-component>
+            <card-component title="Titulo cuatro"></card-component>
+            <card-component title="Titulo cinco"></card-component>
+        </section>
+
+            <!-- <div id="typingEffect" style="color:white"> sdasdfsdf</div> -->
+        
+    </div>
+</body>
+
+
+<script type="module" src="js/app.js" defer></script>
+</html>
