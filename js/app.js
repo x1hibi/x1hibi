@@ -11,7 +11,7 @@ new Vue({
 
     this.typeEffect()
 
-    if(window.location.pathname=="/x1hibi/index.html"){
+    if(window.location.pathname=="/x1hibi/"){
       this.typeEffectContent('home')
     }
 
