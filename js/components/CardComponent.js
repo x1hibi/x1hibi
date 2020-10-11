@@ -2,6 +2,8 @@ let cardComponent= {
     template: '#card',
     props: {
         title: String, 
+        preview:String,
+        url:String,
     },
     data: function () {
         return {

@@ -41,6 +41,8 @@ export default class TypedText{
         this.finalCaretState=options.finalCaretState || 'hidden'
         // Indicate in the last iteration if the content will be deleted ("empty") or remain
         this.finalStringState=options.finalStringState || 'empty'
+        // Id of the html element where will be the caret
+        this.idCaret=options.idCaret || 'caret'
         // Id of the html element where the text will be typed
         this.idContainer=options.idContainer || 'typingEffect'
         // Number of loops which textTyped will be showed
@@ -61,14 +63,15 @@ export default class TypedText{
         let doc = document
         //we iterate async to wait before add or remove more letters, caret loop / 2 indicate the number of blink will do the caret
         for (let i = 0; i < caretLoop; i++) {
+            console.log(caretLoop)
            await new Promise (resolve=>setTimeout(resolve,this.blinkDuration))
            //when caret is present we modify the opacity to create a appere and disappear effect
            if(caret){
-                doc.getElementById("caret").style.opacity=doc.getElementById("caret").style.opacity=="0" ? "1" : "0"
+                doc.getElementById(this.idCaret).style.opacity=doc.getElementById(this.idCaret).style.opacity=="0" ? "1" : "0"
            }
            //change the opacity of the caret in the last iteration
            if (finalIteration && i==caretLoop-1 && caret) {
-                doc.getElementById("caret").style.opacity=this.finalCaretState=='hidden' ? "0" :"1"
+                doc.getElementById(this.idCaret).style.opacity=this.finalCaretState=='hidden' ? "0" :"1"
            }
         }
     }
@@ -142,7 +145,7 @@ export default class TypedText{
             //create a span element with a caret (pipe simbol)
             let caret= document.createElement('span');
             //define atribute for the caret element
-            caret.setAttribute("id","caret")
+            caret.setAttribute("id",this.idCaret)
             caret.setAttribute("class",this.caretClassName)
             caret.textContent=this.caretSymbol
             //add the new caret into the container

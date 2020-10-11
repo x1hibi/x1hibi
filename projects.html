@@ -30,7 +30,7 @@
             <img src="media/logo.png" class="logoAnimation" alt="red dragon" />
             <div class="bannerTextContainer">
                 <h1 class="headerTitle" >x1hibi</h1>
-                <h2 class="headerSubtitle" id="typingEffect"></h2>
+                <h2 class="headerSubtitle" id="typingEffect" ></h2>
 
             </div>
         </header>
@@ -41,8 +41,8 @@
                 <li><a href="contact.html">Contact</a></li>
             </uk>
         </nav>
-        <section class="sectionContainer" >
-            <h2 class="headerSubtitle" id="typingEffectHome">&nbsp;</h2>
+        <section class="sectionContainer">
+            <card-component v-for="project in projects" :title=project.title :preview=project.previewImage :url=project.urlProject ></card-component>
         </section>
 
 

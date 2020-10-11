@@ -1,4 +1,5 @@
 html,body{
+    background-color: #050010;
     margin: 0;
     padding: 0;
 }
@@ -41,7 +42,7 @@ html,body{
 
 .headerTitle{
     align-self: flex-end;
-    animation-delay:.9s;
+    animation-delay:.35s;
     animation-duration: .75s;
     animation-fill-mode: forwards;
     animation-name: nicknameTitle;
@@ -94,7 +95,7 @@ html,body{
 .navbar{
     background: #1b1b1b;
     height: fit-content;
-    box-shadow: 0 0 10px rgb(6, 6, 63);
+    box-shadow: 0 0 12.5px rgb(6, 6, 63);
     width: 100%;
     transition-duration: .45s;
 }
@@ -110,7 +111,7 @@ ul{
 li{
     cursor: pointer;
     text-align: center;
-    color: white;
+    
     display: inline-block;
     height: fit-content;
     padding: 15px;
@@ -125,13 +126,19 @@ li:hover{
     text-shadow: 0px 0px 2px white;
 }
 
+li a {
+    text-decoration: none;
+    color: white;
+}
+
 
 .sectionContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     color: white;
-    margin: 7.5px;
+    margin: 20px 10px 10px 10px;
+    gap: 20px;
     font-family: Ubuntu,sans-serif;
 }
 
@@ -142,36 +149,44 @@ li:hover{
 /************************/
 
 .cardContainer{
-    color: white;
-    background-color: gray;
-    border-radius: 15px;
-    border: 8px ridge #ffffffba;
-    box-sizing: border-box;
     display: grid;
+    border: 3px inset #353030;
     grid-template-rows: 15% 85%;
-    grid-template-columns: 1fr;
-    height: 400px;
-    margin: 7.5px;
-    width: 250px;
-    align-items: center;
-    justify-content: center;
+    text-decoration: none;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 350px;
+    max-height: 200px;
+    transition-duration: .5s;
 }
 
-.cardHeader{
-    align-items: center;
-    border-radius: 15px 15px 0 0;
-    box-sizing: border-box;
-    display: grid;
-    background-color: blue;
+.cardContainer:hover{
+    box-shadow: 0 0 10px gray;
+}
+
+.cardTitle{
+    background:linear-gradient(to right, black, #353030);
+    color: white;
+    display: block;
+    font-size: 1.5em;
+    font-weight: 400;
     margin: 0;
     text-align: center;
-    height: 100%;
+}
+
+.previewImage{
+    border-radius: 0 0 18px 18px;
+    display: block;
     width: 100%;
 }
 
-.cardBody{
-    box-sizing: border-box;
-    background-color: rosybrown;
-    height: 100%;
-    width: 100%;
+
+.footer{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: #050010;
+    color: white;
+    height: 50px;
+    text-shadow: 0 0 2.5px white;
 }
