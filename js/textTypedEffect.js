@@ -63,7 +63,6 @@ export default class TypedText{
         let doc = document
         //we iterate async to wait before add or remove more letters, caret loop / 2 indicate the number of blink will do the caret
         for (let i = 0; i < caretLoop; i++) {
-            console.log(caretLoop)
            await new Promise (resolve=>setTimeout(resolve,this.blinkDuration))
            //when caret is present we modify the opacity to create a appere and disappear effect
            if(caret){
