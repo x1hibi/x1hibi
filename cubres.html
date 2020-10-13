@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es-en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubreShop 😷</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="cubresStyles.css">
+    <link href="https://image.flaticon.com/icons/png/512/2833/2833278.png" rel="icon" type="image/png">
+    <meta name="theme-color" content="#2b2727">
+</head>
+<body>
+
+    <!-- html template for cubre component -->
+    <script type="text/x-template" id="cubre" >
+        <div class="card" style="width: 18rem;">
+            <img :src=articulo.url class="card-img-top" style="margin:auto;padding:20px;height:230px" :alt="articulo.producto">
+            <div class="card-body" style="display:grid;background:rgba(0,0,0,.03)">
+                <h5 class="card-title">{{articulo.titulo}} </br>{{articulo.piezas}}</h5>
+                <p class="card-text" style="display:inline"><b>Precio: {{articulo.precio}} pesos</b></p>
+                <div class="centerProduct">
+                    <button type="button" class="btn btn-secondary" :disabled="articulo.inventario==0" style="display:inline" @click="quitar()">-</button>
+                    <p class="card-text" style="display:inline">Cantidad: {{cantidad}}</p>
+                    <button type="button" class="btn btn-secondary" :disabled="articulo.inventario==0" style="display:inline" @click="agregar()">+</button></br></br>
+                    <button type="button" class="btn btn-primary" :disabled="articulo.inventario==0" data-toggle="modal" data-target="#alertaModal">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- html template for cubre component -->
+
+    <!-- html template for carrito component -->
+    <script type="text/x-template" id="carrito">
+        <div style="padding:10px 0;" class="adjustFooterCarritoHeight">
+            <div class="card" style="width: 90%;margin:0 auto;background: rgb(0,0,0,0.02);">
+                <h3 class="card-title text-center" style="margin-top:10px">Confirma tu pedido</h3></br>
+                <h5 class="card-title text-center" v-for="articulo in pedido"><i>- {{articulo}}</i></br></h5>
+                <h5 class="card-title text-center" v-if="$parent.total==0"><i>No tienes artículos en tu carrito.</i></h5></br>
+                <h4 class="card-title text-center" >Total: {{$parent.total}} pesos</h4></br>
+                <div class="d-flex flex-wrap" style="justify-content: center;">
+                    <button type="button" class="btn btn-danger buttonTwo" data-toggle="modal" data-target="#alertaModal" :disabled="pedido.length==0">Vaciar carrito 🗑️</button>
+                    <button type="button" class="btn btn-primary buttonTwo" style="padding:0px;" :disabled="pedido.length==0"><a :href="pedido.length==0 ? '#' : urlWhats " :target="pedido.length==0 ? '' : '_blank' " style="color:white;padding:10px" >Enviar pedido ✔️</a></button>
+                </div></br>
+                <button type="button" class="btn btn-primary buttonTwo" @click="$parent.cambiarSeccion('Tienda',false)">Volver a la tienda 🛍️</button>
+            </div>
+        </div>
+    </script>
+    <!-- html template for carrito component -->
+
+
+
+    <!-- father container -->
+    <div id="app" class="fatherContainer ">
+        <!-- MENU INICIO -->
+          <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            
+            <button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" style="outline: none;">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="navbar-collapse collapse" id="navbarColor02">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="navbar-brand" @click="cambiarSeccion('Productos')">Conoce nuestros productos ⚕️</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" @click="cambiarSeccion('Tienda')">Tienda 🛍️</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" @click="cambiarSeccion('Carrito')">Carrito 🛒 ({{articulosEnCarrito}})</a>
+                </li>
+              </ul>
+            </div>
+            <li style="list-style: none;" @click="cambiarSeccion('Inicio', document.getElementsByClassName('show').length ? true : false )"><a class="navbar-brand" style="cursor: pointer;"><em>CubreShop</em> 😷</a></li>
+          </nav>
+        <!-- MENU FIN  -->
+
+        <!-- Pagina de inicio -->
+        <div v-if="seccion=='Inicio'" class="visibility adjustFooterHeight">
+            <div class="jumbotron" style="margin: 0 !important;background-color: transparent;">
+                <h1 class="display-4">Bienvenidos a nuestra tienda!</h1>
+                <p class="lead">En <i>cubreShop</i> nos encargamos de la venta de cubrebocas de la mas alta calidad, asi como otros artículos de protección, realizamos entregas a domicilio en la CDMX.</p>
+                <hr class="my-4">
+                <p>Pasa a nuestra tienda a ver nuestros productos!</p>
+                <button class="btn btn-primary btn-lg" role="button" @click="cambiarSeccion('Tienda',false)">Ir a la tienda 🛍️</button>
+            </div>
+        </div>
+        <!-- Pagina de inicio-->
+
+        <!-- Productos  -->
+        <div class="card visibility" v-if="seccion=='Tienda'">
+            <h5 class="card-header"><b>APROVECHA NUESTROS ULTIMOS PRODUCTOS EN EXISTENCIA!!! 😱</b></h5>
+            <div class="card-body">
+                <div class="d-flex flex-wrap" style="justify-content: center;gap: 5px;">
+                    <cubre-component v-for="articulo in db" :id=articulo.id></cubre-component>
+                </div>
+            </div>
+          </div>
+        <!-- Productos  -->
+
+        <!-- Modal alerta-->
+        <div class="modal fade" id="alertaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header"><h5 class="modal-title" id="exampleModalLabel">{{tituloAlerta}}</h5></div>
+                    <div class="modal-body">{{contenidoAlerta}}</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{botonSalirAlerta}}</button>
+                        <button type="button" :class="confirmarAlerta=='Eliminar' ? 'btn btn-danger' : 'btn btn-primary' " @click="confirmarAlerta=='Eliminar' ? vaciarCarrito() : agregarAlCarrito() " data-dismiss="modal">{{confirmarAlerta}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal alerta-->
+
+        <!-- carrito de compra -->
+        <carrito-component v-if="seccion=='Carrito'" class="visibility"></carrito-component>
+        <!-- carrito de compra -->
+
+        <!-- conoce nuestros productos -->
+        <div if="seccion=='Productos'" class="visibility"></div>
+        <!-- conoce nuestros productos -->
+
+        <footer class="myFooter">
+            Copyright@2020 X1hibi
+        </footer>
+
+    </div>
+</body>
+<script type="module" src="js/cubres.js" defer></script>
+</html>

@@ -1,0 +1,77 @@
+
+
+li a{
+    cursor: pointer;
+}
+
+button a{
+    text-decoration: none !important;
+}
+
+li a:hover{
+    text-shadow: 1px 1px 3px rgb(0,0,0,0.5);
+    text-decoration: underline !important;
+}
+
+.centerProduct{
+    margin: auto;
+    width: fit-content;
+}
+
+.buttonTwo{
+    margin:0 auto 10px auto;
+    padding:0px 12px;
+    height:40px
+}
+
+button[disabled],button[disabled] a{
+     cursor: no-drop !important;
+ }
+
+.visibility{
+    animation-name: fade;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    transition-duration: 1s;
+}
+
+@keyframes fade{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.myFooter{
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    display: grid;
+    height: 56px;
+    justify-content: center;
+}
+
+.adjustFooterHeight{
+    background-image: linear-gradient(to top, #e3e7eb, white);
+    height: calc(100vh - 112px)
+}
+
+.adjustFooterCarritoHeight{
+    background: white;
+    height: calc(100vh - 112px)
+}
+
+
+@media (max-width:767px) {
+    .adjustFooterHeight{
+        height: auto;
+    }
+
+    .adjustFooterCarritoHeight{
+        height: auto
+    }
+}
+
+@media (max-width:767px) and (orientation:portrait) {
+    .adjustFooterCarritoHeight{
+        height: calc(100vh - 112px)
+    }
+}
