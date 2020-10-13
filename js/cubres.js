@@ -10,7 +10,7 @@ new Vue({
   },
   data: {
     seccion:"Inicio",
-    dbBackup:[{id:0,producto:"Cubrebocas kn95",titulo:"Cubrebocas kn95",piezas:"(5 piezas)",inventario:11,precio:350,descuento:0,url:"/media/kn95.jpg",imagenes:[]},{id:1,producto:"Caja de kn95",titulo:"Caja de cubrebocas kn95",piezas:"(30 piezas)",inventario:1,precio:2100,descuento:0,url:"/media/kn95Caja.jpg",imagenes:[]},{id:2,producto:"Mascarila con filtro color azul marino",titulo:"Mascarilla azul marino con filtro de respiración, incluye 2 filtros PM 2.5",piezas:"(1 pieza)",inventario:1,precio:150,descuento:0,url:"/media/mascarillaAzul.jpg",imagenes:[]},{id:3,producto:"Mascarila con filtro color negro",titulo:"Mascarilla negro con filtro de respiración, incluye 2 filtros PM 2.5",piezas:"(1 pieza)",inventario:11,precio:150,descuento:0,url:"/media/mascarillaNegra.jpg",imagenes:[]},{id:4,producto:"Mascarila con filtro color rosa",titulo:"Mascarilla rosa con filtro de respiración, incluye 2 filtros PM 2.5",piezas:"(1 pieza)",inventario:4,precio:150,descuento:0,url:"/media/mascarillaRosa.jpg",imagenes:[]},{id:5,producto:"Filtro de carbon activado",titulo:"Filtro PM 2.5 de carbón activado, repuesto para mascarilla",piezas:"(2 piezas)",inventario:36,precio:20,descuento:0,url:"/media/filtros.jpg",imagenes:[]},{id:6,producto:"Cubrebocas uso civil",titulo:"Caja de cubrebocas USO CIVIL",piezas:"(50 piezas)",inventario:2,precio:600,descuento:0,url:"/media/cubreCivil.jpg",imagenes:[]},{id:7,producto:"Cubrebocas uso medico",titulo:"Caja de cubrebocas USO MEDICO",piezas:"(50 piezas)",inventario:1,precio:800,descuento:0,url:"/media/cubreMedico.jpg",imagenes:[]},{id:8,producto:"Lentes de protección",titulo:"Lentes de protección",piezas:"(1 pieza)",inventario:2,precio:60,descuento:0,url:"/media/lentes.jpg",imagenes:[]}],
+    dbBackup:[{id:0,producto:"Cubrebocas kn95",titulo:"Cubrebocas kn95",piezas:"(5 piezas)",inventario:11,precio:350,descuento:0,url:"media/kn95.jpg",imagenes:[]},{id:1,producto:"Caja de kn95",titulo:"Caja de cubrebocas kn95",piezas:"(30 piezas)",inventario:1,precio:2100,descuento:0,url:"media/kn95Caja.jpg",imagenes:[]},{id:2,producto:"Mascarila con filtro color azul marino",titulo:"Mascarilla azul marino con filtro de respiración, incluye 2 filtros PM 2.5",piezas:"(1 pieza)",inventario:1,precio:150,descuento:0,url:"media/mascarillaAzul.jpg",imagenes:[]},{id:3,producto:"Mascarila con filtro color negro",titulo:"Mascarilla negro con filtro de respiración, incluye 2 filtros PM 2.5",piezas:"(1 pieza)",inventario:11,precio:150,descuento:0,url:"media/mascarillaNegra.jpg",imagenes:[]},{id:4,producto:"Mascarila con filtro color rosa",titulo:"Mascarilla rosa con filtro de respiración, incluye 2 filtros PM 2.5",piezas:"(1 pieza)",inventario:4,precio:150,descuento:0,url:"media/mascarillaRosa.jpg",imagenes:[]},{id:5,producto:"Filtro de carbon activado",titulo:"Filtro PM 2.5 de carbón activado, repuesto para mascarilla",piezas:"(2 piezas)",inventario:36,precio:20,descuento:0,url:"media/filtros.jpg",imagenes:[]},{id:6,producto:"Cubrebocas uso civil",titulo:"Caja de cubrebocas USO CIVIL",piezas:"(50 piezas)",inventario:2,precio:600,descuento:0,url:"media/cubreCivil.jpg",imagenes:[]},{id:7,producto:"Cubrebocas uso medico",titulo:"Caja de cubrebocas USO MEDICO",piezas:"(50 piezas)",inventario:1,precio:800,descuento:0,url:"media/cubreMedico.jpg",imagenes:[]},{id:8,producto:"Lentes de protección",titulo:"Lentes de protección",piezas:"(1 pieza)",inventario:2,precio:60,descuento:0,url:"media/lentes.jpg",imagenes:[]}],
     db:[
       {
         id:0,
@@ -20,7 +20,7 @@ new Vue({
         inventario:11,
         precio:350,
         descuento:0,
-        url:"/media/kn95.jpg",
+        url:"media/kn95.jpg",
         imagenes:[]
       },
       {
@@ -31,7 +31,7 @@ new Vue({
         inventario:1,
         precio:2100,
         descuento:0,
-        url:"/media/kn95Caja.jpg",
+        url:"media/kn95Caja.jpg",
         imagenes:[]
       },
       {
@@ -42,7 +42,7 @@ new Vue({
         inventario:1,
         precio:150,
         descuento:0,
-        url:"/media/mascarillaAzul.jpg",
+        url:"media/mascarillaAzul.jpg",
         imagenes:[]
       },
       {
@@ -53,7 +53,7 @@ new Vue({
         inventario:11,
         precio:150,
         descuento:0,
-        url:"/media/mascarillaNegra.jpg",
+        url:"media/mascarillaNegra.jpg",
         imagenes:[]
       },
       {
@@ -64,7 +64,7 @@ new Vue({
         inventario:4,
         precio:150,
         descuento:0,
-        url:"/media/mascarillaRosa.jpg",
+        url:"media/mascarillaRosa.jpg",
         imagenes:[]
       },
       {
@@ -75,7 +75,7 @@ new Vue({
         inventario:36,
         precio:20,
         descuento:0,
-        url:"/media/filtros.jpg",
+        url:"media/filtros.jpg",
         imagenes:[]
       },
       {
@@ -86,7 +86,7 @@ new Vue({
         inventario:2,
         precio:600,
         descuento:0,
-        url:"/media/cubreCivil.jpg",
+        url:"media/cubreCivil.jpg",
         imagenes:[]
       },
       {
@@ -97,7 +97,7 @@ new Vue({
         inventario:1,
         precio:800,
         descuento:0,
-        url:"/media/cubreMedico.jpg",
+        url:"media/cubreMedico.jpg",
         imagenes:[]
       },
       {
@@ -108,7 +108,7 @@ new Vue({
         inventario:2,
         precio:60,
         descuento:0,
-        url:"/media/lentes.jpg",
+        url:"media/lentes.jpg",
         imagenes:[]
       }
     ],
