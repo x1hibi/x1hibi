@@ -8,10 +8,12 @@ let cardComponent= {
             cantidad:0,
             articulo:this.$parent.db[this.id],
             cantidad:0,
-            articulosEnCarrito:this.$parent.carrito[this.id].cantidad
+            articulosEnCarrito:this.$parent.carrito[this.id].cantidad,
+            url:''
         }
     },
     mounted(){
+        this.url=`media/cubreShop/${this.articulo.imagenes[0]}`
     },
     methods:{
         /**

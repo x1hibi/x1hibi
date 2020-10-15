@@ -59,16 +59,107 @@ button[disabled],button[disabled] a{
     height: calc(100vh - 112px)
 }
 
+.cardResponsive{
+    width:48%;
+}
+.slider{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+.arrowContaier{
+    align-items: center;
+    cursor: pointer;
+    display: grid;
+    height: auto;
+    justify-content: center;
+    opacity: 0;
+    transition-duration: .7s;
+    width: 100%;
+    z-index: 2;
+}
+
+.onlyArrow:nth-child(1):hover + .arrowContaier{
+    opacity: 1;
+    background-image: linear-gradient(to right,rgba(0,123,255,0.25),transparent);
+}
+
+.onlyArrow:nth-child(4):hover + .arrowContaier{
+    opacity: 1;
+    background-image: linear-gradient(to left,rgba(0,123,255,0.25),transparent);
+}
+
+.onlyArrow{
+    background: transparent;
+    border:0 !important;
+    outline: none !important;
+    align-items: center;
+    cursor: pointer;
+    display: grid;
+    height: auto;
+    justify-content: center;
+    width: 100%;
+    z-index: 3;
+}
+
+.onlyArrow:active,.onlyArrow:hover{
+    border:0 !important;
+    outline: none !important;
+}
+
+.arrow{
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5em;
+    font-style: oblique;
+    font-weight: 500;
+    height: 40px;
+    text-align: center;
+    text-shadow: 0 0 3px black;
+    width: 40px;
+    z-index: 3;
+}
+
+.slideImage{
+    border-radius: 15px;
+    height:400px;
+    grid-area: 1/1/2/4;
+    margin:auto;
+    padding:5px;
+    transition-duration: .35s;
+    max-width:100%;
+}
+
+@media (max-width:1025px) {
+    .slideImage{
+        height:300px;
+    }
+}
 
 @media (max-width:767px) {
     .adjustFooterHeight{
         height: auto;
     }
-
+    
     .adjustFooterCarritoHeight{
         height: auto
     }
+    
+    .cardResponsive{
+        width:100%;
+    }
+    
+    .slideImage{
+        height:250px;
+    }
 }
+
+@media (max-height:740px) and (orientation:landscape) {
+    .slideImage{
+        height:350px;
+    }
+}
+
 
 @media (max-width:767px) and (orientation:portrait) {
     .adjustFooterCarritoHeight{

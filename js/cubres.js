@@ -1,6 +1,7 @@
 //import components
 import cubreComponent from './components/CubreComponent.js';
 import carritoComponent from './components/CarritoComponent.js';
+import descriptionComponent from './components/DescriptionComponent.js';
 
 
 new Vue({
@@ -10,111 +11,122 @@ new Vue({
   },
   data: {
     seccion:"Inicio",
-    dbBackup:[{id:0,producto:"Cubrebocas kn95",titulo:"Cubrebocas kn95",piezas:"(5 piezas)",inventario:11,precio:350,descuento:0,url:"media/kn95.jpg",imagenes:[]},{id:1,producto:"Caja de kn95",titulo:"Caja de cubrebocas kn95",piezas:"(30 piezas)",inventario:1,precio:2100,descuento:0,url:"media/kn95Caja.jpg",imagenes:[]},{id:2,producto:"Mascarila con filtro color azul marino",titulo:"Mascarilla azul marino con filtro de respiración, incluye 2 filtros PM 2.5",piezas:"(1 pieza)",inventario:1,precio:150,descuento:0,url:"media/mascarillaAzul.jpg",imagenes:[]},{id:3,producto:"Mascarila con filtro color negro",titulo:"Mascarilla negro con filtro de respiración, incluye 2 filtros PM 2.5",piezas:"(1 pieza)",inventario:11,precio:150,descuento:0,url:"media/mascarillaNegra.jpg",imagenes:[]},{id:4,producto:"Mascarila con filtro color rosa",titulo:"Mascarilla rosa con filtro de respiración, incluye 2 filtros PM 2.5",piezas:"(1 pieza)",inventario:4,precio:150,descuento:0,url:"media/mascarillaRosa.jpg",imagenes:[]},{id:5,producto:"Filtro de carbon activado",titulo:"Filtro PM 2.5 de carbón activado, repuesto para mascarilla",piezas:"(2 piezas)",inventario:36,precio:20,descuento:0,url:"media/filtros.jpg",imagenes:[]},{id:6,producto:"Cubrebocas uso civil",titulo:"Caja de cubrebocas USO CIVIL",piezas:"(50 piezas)",inventario:2,precio:600,descuento:0,url:"media/cubreCivil.jpg",imagenes:[]},{id:7,producto:"Cubrebocas uso medico",titulo:"Caja de cubrebocas USO MEDICO",piezas:"(50 piezas)",inventario:1,precio:800,descuento:0,url:"media/cubreMedico.jpg",imagenes:[]},{id:8,producto:"Lentes de protección",titulo:"Lentes de protección",piezas:"(1 pieza)",inventario:2,precio:60,descuento:0,url:"media/lentes.jpg",imagenes:[]}],
+    dbBackup:[{id:0,producto:"Cubrebocas kn95",descripcion:"Cubrebocas kn95 standard Gb2626-2006, tiene ajustador nasal, elástico grueso, puede ser esterilizado para ser reusado, vienen en bolsas con 5 piezas.",titulo:"Cubrebocas kn95",piezas:"(5 piezas)",inventario:11,precio:350,descuento:0,imagenes:['kn95_0.jpg','kn95_1.jpg','kn95_2.jpg']},{id:1,producto:"Caja de kn95",descripcion:"Caja de cubrebocas kn95, la caja incluye 6 bolsas con 5 piezas.",titulo:"Caja de cubrebocas kn95",piezas:"(30 piezas)",inventario:1,precio:2100,descuento:0,imagenes:['kn95Caja_0.jpg','kn95Caja_1.jpg']},{id:2,producto:"Mascarilla anti-contaminación azul marino",descripcion:"Mascarilla anti contaminación color azul marino con elastico ajustable y ajustador nasal, incluye dos filtros PM 2.5 de carbón activado para evitar el paso de partículas contaminantes.",titulo:"Mascarilla anti-contaminación azul marino, incluye 2 filtros PM 2.5",piezas:"(1 pieza)",inventario:1,precio:150,descuento:0,imagenes:['mascarillaAzul_0.jpg','mascarillaAzul_1.jpg','mascarillaAzul_2.jpg','mascarillaAzul_3.jpg','mascarillaAzul_4.jpg','mascarillaAzul_5.jpg']},{id:3,producto:"Mascarilla anti-contaminación negro",descripcion:"Mascarilla anti contaminación color negro con elastico ajustable y ajustador nasal, incluye dos filtros PM 2.5 de carbón activado para evitar el paso de partículas contaminantes.",titulo:"Mascarilla anti-contaminación negro, incluye 2 filtros PM 2.5",piezas:"(1 pieza)",inventario:11,precio:150,descuento:0,imagenes:['mascarillaNegra_0.jpg','mascarillaNegra_1.jpg','mascarillaNegra_2.jpg','mascarillaNegra_3.jpg','mascarillaNegra_4.jpg']},{id:4,producto:"Mascarilla anti-contaminación rosa",descripcion:"Mascarilla anti contaminación color rosa con elastico ajustable y ajustador nasal, incluye dos filtros PM 2.5 de carbón activado para evitar el paso de partículas contaminantes.",titulo:"Mascarilla anti-contaminación rosa, incluye 2 filtros PM 2.5",piezas:"(1 pieza)",inventario:4,precio:150,descuento:0,imagenes:['mascarillaRosa_0.jpg','mascarillaRosa_1.jpg','mascarillaRosa_2.jpg','mascarillaRosa_3.jpg','mascarillaRosa_4.jpg','mascarillaRosa_5.jpg']},{id:5,producto:"Filtro de carbon activado PM 2.5",descripcion:"Filtro de carbón activado 5 con poro de 2.5 micrómetros de 5 capas, impide la filtración de partículas contaminantes.",titulo:"Filtro PM 2.5 de carbón activado, repuestos para mascarillas",piezas:"(2 piezas)",inventario:36,precio:20,descuento:0,imagenes:['filtros_0.jpg','filtros_1.jpg']},{id:6,producto:"Cubrebocas uso civil",descripcion:"Caja de cubrebocas de grado civil, bolsa con 50 cubrebocas de triple capa plizado con elastico grueso y ajustador nasal.",titulo:"Caja de cubrebocas USO CIVIL",piezas:"(50 piezas)",inventario:2,precio:600,descuento:0,imagenes:['cubreCivil_0.jpg','cubreCivil_1.jpg']},{id:7,producto:"Cubrebocas uso medico",descripcion:"Caja de cubrebocas de grado médico, bolsa con 50 cubrebocas de triple capa plizado y termosellado con elastico grueso y ajustador nasal.",titulo:"Caja de cubrebocas USO MEDICO",piezas:"(50 piezas)",inventario:1,precio:800,descuento:0,imagenes:['cubreMedico_0.jpg','cubreMedico_1.jpg']},{id:8,producto:"Lentes de protección",descripcion:"Lentes de protección con cubiertas portectoras laterales son antirayones y antireflejantes.",titulo:"Lentes de protección",piezas:"(1 pieza)",inventario:2,precio:60,descuento:0,imagenes:['lentes_0.jpg','lentes_1.jpg','lentes_2.jpg','lentes_3.jpg',]},{id:9,producto:"Cubrebocas de doble capa con elastico sencillo",descripcion:"Cubrebocas de doble capa de material quirurjico con elastico delgado.",titulo:"Cubrebocas de doble capa con elastico sencillo",piezas:"(50 pieza)",inventario:10,precio:100,descuento:0,imagenes:['cubrePellon_0.jpg','cubrePellon_1.jpg','cubrePellon_2.jpg','cubrePellon_3.jpg']}],
     db:[
       {
         id:0,
         producto:"Cubrebocas kn95",
+        descripcion:"Cubrebocas kn95 standard Gb2626-2006, tiene ajustador nasal, elástico grueso, puede ser esterilizado para ser reusado, vienen en bolsas con 5 piezas.",
         titulo:"Cubrebocas kn95",
         piezas:"(5 piezas)",
         inventario:11,
         precio:350,
         descuento:0,
-        url:"media/kn95.jpg",
-        imagenes:[]
+        imagenes:['kn95_0.jpg','kn95_1.jpg','kn95_2.jpg']
       },
       {
         id:1,
         producto:"Caja de kn95",
+        descripcion:"Caja de cubrebocas kn95, la caja incluye 6 bolsas con 5 piezas.",
         titulo:"Caja de cubrebocas kn95",
         piezas:"(30 piezas)",
         inventario:1,
         precio:2100,
         descuento:0,
-        url:"media/kn95Caja.jpg",
-        imagenes:[]
+        imagenes:['kn95Caja_0.jpg','kn95Caja_1.jpg']
       },
       {
         id:2,
-        producto:"Mascarila con filtro color azul marino",
-        titulo:"Mascarilla azul marino con filtro de respiración, incluye 2 filtros PM 2.5",
+        producto:"Mascarilla anti-contaminación azul marino",
+        descripcion:"Mascarilla anti contaminación color azul marino con elastico ajustable y ajustador nasal, incluye dos filtros PM 2.5 de carbón activado para evitar el paso de partículas contaminantes.",
+        titulo:"Mascarilla anti-contaminación azul marino, incluye 2 filtros PM 2.5",
         piezas:"(1 pieza)",
         inventario:1,
         precio:150,
         descuento:0,
-        url:"media/mascarillaAzul.jpg",
-        imagenes:[]
+        imagenes:['mascarillaAzul_0.jpg','mascarillaAzul_1.jpg','mascarillaAzul_2.jpg','mascarillaAzul_3.jpg','mascarillaAzul_4.jpg','mascarillaAzul_5.jpg']
       },
       {
         id:3,
-        producto:"Mascarila con filtro color negro",
-        titulo:"Mascarilla negro con filtro de respiración, incluye 2 filtros PM 2.5",
+        producto:"Mascarilla anti-contaminación negro",
+        descripcion:"Mascarilla anti contaminación color negro con elastico ajustable y ajustador nasal, incluye dos filtros PM 2.5 de carbón activado para evitar el paso de partículas contaminantes.",
+        titulo:"Mascarilla anti-contaminación negro, incluye 2 filtros PM 2.5",
         piezas:"(1 pieza)",
         inventario:11,
         precio:150,
         descuento:0,
-        url:"media/mascarillaNegra.jpg",
-        imagenes:[]
+        imagenes:['mascarillaNegra_0.jpg','mascarillaNegra_1.jpg','mascarillaNegra_2.jpg','mascarillaNegra_3.jpg','mascarillaNegra_4.jpg']
       },
       {
         id:4,
-        producto:"Mascarila con filtro color rosa",
-        titulo:"Mascarilla rosa con filtro de respiración, incluye 2 filtros PM 2.5",
+        producto:"Mascarilla anti-contaminación rosa",
+        descripcion:"Mascarilla anti contaminación color rosa con elastico ajustable y ajustador nasal, incluye dos filtros PM 2.5 de carbón activado para evitar el paso de partículas contaminantes.",
+        titulo:"Mascarilla anti-contaminación rosa, incluye 2 filtros PM 2.5",
         piezas:"(1 pieza)",
         inventario:4,
         precio:150,
         descuento:0,
-        url:"media/mascarillaRosa.jpg",
-        imagenes:[]
+        imagenes:['mascarillaRosa_0.jpg','mascarillaRosa_1.jpg','mascarillaRosa_2.jpg','mascarillaRosa_3.jpg','mascarillaRosa_4.jpg','mascarillaRosa_5.jpg']
       },
       {
         id:5,
-        producto:"Filtro de carbon activado",
-        titulo:"Filtro PM 2.5 de carbón activado, repuesto para mascarilla",
+        producto:"Filtro de carbon activado PM 2.5",
+        descripcion:"Filtro de carbón activado 5 con poro de 2.5 micrómetros de 5 capas, impide la filtración de partículas contaminantes.",
+        titulo:"Filtro PM 2.5 de carbón activado, repuestos para mascarillas",
         piezas:"(2 piezas)",
         inventario:36,
         precio:20,
         descuento:0,
-        url:"media/filtros.jpg",
-        imagenes:[]
+        imagenes:['filtros_0.jpg','filtros_1.jpg']
       },
       {
         id:6,
         producto:"Cubrebocas uso civil",
+        descripcion:"Caja de cubrebocas de grado civil, bolsa con 50 cubrebocas de triple capa plizado con elastico grueso y ajustador nasal.",
         titulo:"Caja de cubrebocas USO CIVIL",
         piezas:"(50 piezas)",
         inventario:2,
         precio:600,
         descuento:0,
-        url:"media/cubreCivil.jpg",
-        imagenes:[]
+        imagenes:['cubreCivil_0.jpg','cubreCivil_1.jpg']
       },
       {
         id:7,
         producto:"Cubrebocas uso medico",
+        descripcion:"Caja de cubrebocas de grado médico, bolsa con 50 cubrebocas de triple capa plizado y termosellado con elastico grueso y ajustador nasal.",
         titulo:"Caja de cubrebocas USO MEDICO",
         piezas:"(50 piezas)",
         inventario:1,
         precio:800,
         descuento:0,
-        url:"media/cubreMedico.jpg",
-        imagenes:[]
+        imagenes:['cubreMedico_0.jpg','cubreMedico_1.jpg']
       },
       {
         id:8,
         producto:"Lentes de protección",
+        descripcion:"Lentes de protección con cubiertas portectoras laterales son antirayones y antireflejantes.",
         titulo:"Lentes de protección",
         piezas:"(1 pieza)",
         inventario:2,
         precio:60,
         descuento:0,
-        url:"media/lentes.jpg",
-        imagenes:[]
+        imagenes:['lentes_0.jpg','lentes_1.jpg','lentes_2.jpg','lentes_3.jpg',]
+      },
+      {
+        id:9,
+        producto:"Cubrebocas de doble capa con elastico sencillo",
+        descripcion:"Cubrebocas de doble capa de material quirurjico con elastico delgado.",
+        titulo:"Cubrebocas de doble capa con elastico sencillo",
+        piezas:"(50 pieza)",
+        inventario:10,
+        precio:100,
+        descuento:0,
+        imagenes:['cubrePellon_0.jpg','cubrePellon_1.jpg','cubrePellon_2.jpg','cubrePellon_3.jpg'] 
       }
     ],
-    preCarrito:[{id:0,cantidad:0},{id:1,cantidad:0},{id:2,cantidad:0},{id:3,cantidad:0},{id:4,cantidad:0},{id:5,cantidad:0},{id:6,cantidad:0},{id:7,cantidad:0},{id:8,cantidad:0}],
-    carritoBackup:[{id:0,cantidad:0},{id:1,cantidad:0},{id:2,cantidad:0},{id:3,cantidad:0},{id:4,cantidad:0},{id:5,cantidad:0},{id:6,cantidad:0},{id:7,cantidad:0},{id:8,cantidad:0}],
-    carrito:[{id:0,cantidad:0},{id:1,cantidad:0},{id:2,cantidad:0},{id:3,cantidad:0},{id:4,cantidad:0},{id:5,cantidad:0},{id:6,cantidad:0},{id:7,cantidad:0},{id:8,cantidad:0}],
+    preCarrito:[{id:0,cantidad:0},{id:1,cantidad:0},{id:2,cantidad:0},{id:3,cantidad:0},{id:4,cantidad:0},{id:5,cantidad:0},{id:6,cantidad:0},{id:7,cantidad:0},{id:8,cantidad:0},{id:9,cantidad:0}],
+    carritoBackup:[{id:0,cantidad:0},{id:1,cantidad:0},{id:2,cantidad:0},{id:3,cantidad:0},{id:4,cantidad:0},{id:5,cantidad:0},{id:6,cantidad:0},{id:7,cantidad:0},{id:8,cantidad:0},{id:9,cantidad:0}],
+    carrito:[{id:0,cantidad:0},{id:1,cantidad:0},{id:2,cantidad:0},{id:3,cantidad:0},{id:4,cantidad:0},{id:5,cantidad:0},{id:6,cantidad:0},{id:7,cantidad:0},{id:8,cantidad:0},{id:9,cantidad:0}],
     pedido:[],
     articulosEnCarrito:0,
     total:0,
@@ -236,6 +248,7 @@ new Vue({
   components: {
     'cubre-component': cubreComponent,
     'carrito-component':carritoComponent,
+    'description-component':descriptionComponent,
   }
 
 });
