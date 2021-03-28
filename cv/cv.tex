@@ -1,0 +1,331 @@
+%%%%% START PREAMBLE HEADER %%%%%
+
+%%% START REQUIRED PACKAGES %%%
+
+\documentclass{article}
+\usepackage[a4paper, total={7.75in, 10.25in}]{geometry} 
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{graphicx}
+\RequirePackage{fontspec}
+\usepackage{fontawesome5}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[export]{adjustbox}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,linkcolor=blue,filecolor=magenta,urlcolor=cyan,citecolor=blue}
+
+%%% END REQUIRED PACKAGES %%%                
+
+
+%%% START NEW COMMANDS new (shortcut) %%%
+
+% This is a paragraph with normal font
+\newcommand{\np}[1]{\paragraph*{\normalfont{#1}}}
+% This is a text with a color
+\newcommand{\ct}[2]{\textcolor{#1}{#2}}
+% This is a bold text 
+\newcommand{\bt}[1]{\textbf{#1}}
+% This is an italic text 
+\newcommand{\et}[1]{\emph{#1}}
+% This is an underline text 
+\newcommand{\ut}[1]{\underline{#1}}
+% This is a newline shortcut
+\newcommand{\n}{\\}
+% This is a numbered equation with break line shortcut
+\newcommand{\necbreak}[1]{\begin{equation}\begin{aligned}#1\end{aligned}\end{equation}}
+% This is a numbered equation with break line shortcut
+\newcommand{\nec}[1]{\begin{equation}#1\end{equation}}
+% This is an equation shortcut
+\newcommand{\ec}[1]{\begin{center} $#1$ \end{center}}
+% Table title with bold text and correct space%
+\newcommand{\titleTable}[2]{\np{\bt{Table #1} #2}}% Graph title with bold text and correct space%
+\newcommand{\titleGraph}[2]{\np{\bt{Graph #1} #2}}
+% Table body with border %
+\newcommand{\bodyTable}[2]{\begin{center} \begin{tabular}{|#1|} \hline #2 \hline \end{tabular} \end{center} }
+
+% image shortcut
+\newcommand{\img}[2]{\includegraphics[scale=#2]{#1}}
+
+\newcommand{\cvSection}[6]{
+% SECTION CONTAINER
+\begin{tabular}{@{} p{0.53in} p{4.3in}}
+
+    \centering
+    #1
+
+    &
+
+    \large{\bt{#3}} \\
+    \vspace{-0.25in}
+    \centering
+    #2
+
+    &
+    \vspace{-0.25in}
+    \large{\et{#4}} \\
+
+    ~ &
+    \vspace{-0.5in}
+    \begin{tabular}{@{}  p{4.1in}}
+        \begin{itemize}
+            #5
+        \end{itemize}
+    \vspace{-0.1in}
+    \bt{\et{#6}}
+    \end{tabular}
+
+\end{tabular}
+
+}
+
+
+\newcommand{\cvCoursesSection}[2]{
+% SECTION CONTAINER
+\begin{tabular}{@{} p{0.61in} p{4.3in}}
+
+    ~
+    &
+    \large{\bt{\et{#1}}} \\
+
+    #2
+
+\end{tabular}
+
+}
+%%% END NEW COMMANDS (shortcuts) %%%
+
+%%%%% END PREAMBLE HEADER %%%%%
+
+
+
+%%%%%%%%%%%%%%%% START DOCUMENT %%%%%%%%%%%%%%%%
+\begin{document}
+
+
+% Tabla 1 (start) %
+
+    \begin{tabular}{p{1.95in} p{5.05in}}
+
+        \centering
+        \hspace{-0.3in} \img{cvPhoto}{0.315} &
+        \hspace{-0.3in} 
+        \begin{tabular}{p{5.05in}}
+            % NAME
+            \vspace{-1.25in}
+            \huge{Pérez Alvardo Luis Raymundo \ct{red}{\faDragon}} \\
+            % JOB
+            \vspace{-1.1in}
+            \Large{\et{\bt{Web Developer \faCode}}}
+             \\
+            % RESUMEN
+            \vspace{-0.9in}
+            Soy un amante de la química y la ciencia ... y si soy geek de la tecnología, mi área principal es la web, disfruto tanto el desarrollo Front-End como Back-End de aplicaciones, me gusta aprender mucho y deseo convertirme en un Full Stack developer y crear muchas aplicaciones geniales con un gran diseño.\\
+        \end{tabular}
+        \\
+
+    \end{tabular}
+
+% Tabla 1 (start) %
+
+    \begin{tabular}{@{} p{1.95in}|p{5.05in}}
+        % LATERAL LATERAL
+
+        \begin{tabular}{@{} p{1.95in}}
+            \large{\faUser ~ \bt{Personal info}} \\
+            \large{\em{Sección interactiva} ~ \faMousePointer }\\
+            \vspace{0.02in}
+            \bt{Edad} \\ 24 años \\
+            \vspace{0.025in}
+            \faWhatsapp ~ \bt{Télfono} \\ \href{https://api.whatsapp.com/send/?phone=%2B5215532116641&text=Hola%20este%20es%20un%20mensaje%20directo%20de%20tu%20cv%20con%20la%20API%20de%20whatsapp%20...}{5532116641} \\ 
+            \vspace{0.025in}
+            \faEnvelope ~ \bt{Correo} \\  \href{mailto:kamisama@comunidad.unam.mx?subject=Mensaje%20de%20tu%20cv%20con%20la%20API%20de%20mailto%20...}{kamisama@comunidad.unam.mx}  \\ 
+            \vspace{0.025in}
+            \faGlobe ~ \bt{Web} \\ \href{https://x1hibi.github.io/x1hibi/}{https://x1hibi.github.io/x1hibi/}  \\
+            \vspace{0.015in}
+            \faBriefcase ~ \bt{Redes}\\
+            \vspace{-0.025in}
+            \hspace*{0.15in}
+            \begin{tabular}{@{} c c}
+                \Huge{\faLinkedin} & \Huge{\faGithub} \\ 
+                \href{https://www.linkedin.com/in/luis-raymundo-p%C3%A9rez-alvarado-0970a0166/}{Luis Raymundo}   & \href{https://github.com/x1hibi}{x1hibi}  
+            \end{tabular}  \\
+
+            \vspace{0.1in}
+            \bt{Lenguajes de programación} \\
+            \def\arraystretch{3.5}
+            \hspace*{0.35in}
+            \begin{tabular}{ c c } 
+                 \Huge{\faJs} & \Huge{~ \faPhp} \\ 
+                 \Huge{\faPython} & \Huge{~ \faTerminal}
+            \end{tabular}
+
+            \vspace{0.1in}
+            \bt{Otros lenguajes} \\
+            \def\arraystretch{3.5}
+            \hspace*{0.2in}
+            \begin{tabular}{ c c c} 
+                 \Huge{\faHtml5} & \Huge{\faCss3*} & \LARGE{\LaTeX}
+            \end{tabular}
+
+            \vspace{0.1in}
+            \bt{Frameworks} \\
+            \def\arraystretch{3.5}
+            \hspace*{0.35in}
+            \begin{tabular}{ c c} 
+                 \Huge{\faVuejs} & ~~~~~\Huge{\faLaravel} 
+            \end{tabular}
+
+            \vspace{0.1in}
+            \bt{Librerias} \\
+            \def\arraystretch{3.5}
+            \hspace*{0.35in}
+            \begin{tabular}{ c c} 
+                 \Huge{\faReact} & ~~~~~\Huge{\faBootstrap} 
+            \end{tabular} \\
+            ~ \\ ~
+
+        \end{tabular}
+
+        &
+
+        \begin{tabular}{@{} p{3in}}
+
+            \huge{\faUserMd ~Experiencia} \\
+            \vspace{0.1in}
+            \cvSection{2019-20}{6 meses}{Desarrollador Web Jr}{REVIMEX, Rehabilitadora de Propiedades
+            Mexicanas}{\item Desarrollo de aplicaciones web SPA, maquetación, diseño responsivo, validaciones de formularios, conexión con el backend y soporte a diferentes navegadores y dispositivos. \item Desarrollo, consumo y conexión de API's, servicios y  bases de datos (mongo) (\faAws~\faCcStripe~\faDatabase~
+            \faFacebookF~\faTwitter~\faWhatsapp~\faLinkedinIn~\faEnvelope). \item Testing, actualización y optimización de código para reducción de tiempos de carga, creación de componentes reutilizables y documentación de código.}{VueJS Laravel Python PHP JS HTML5 CSS3}
+            \\
+
+            \cvSection{2019}{6 meses}{Becario}{PROTECO, Programa de Tecnología en Computo, UNAM}{\item Desarrollo de proyectos, programas, aplicaciones web y moviles. \item Imparticion de cursos de lenguajes de programación y tecnologias de la computación.}{Bash C C++ Java Python JS Android Bases de datos} 
+            \\
+
+            \cvSection{2017-19}{20 meses}{Becario}{SICA, Sala de Informática y Computo para Alumnos, UNAM}{\item Asesoria a alumnos en el manejo e instalación de software y uso del equipo de computo. \item Actualización y mantenimiento del software y hardware los equipos de computo.}{Paquetería de office} 
+            \\
+            \cvSection{2017}{6 meses}{Monitorista}{Intelite KHD SA de CV}{\item Monitoreo de medios electrónicos, desarrollo de síntesis de información y captura de datos.}
+
+            \\
+
+
+        \end{tabular}
+
+        
+
+    \end{tabular}
+
+
+    % Tabla 2 (start) %
+
+    \begin{tabular}{p{1.95in}|p{5.05in}}
+
+        % LATERAL LATERAL
+        \begin{tabular}{@{} p{1.5in}}
+            
+            \bt{Bases de datos} \\
+            \begin{tabular}{c c} 
+                \img{mongo}{0.15} & \img{mysql}{0.125}
+            \end{tabular} \\
+            
+            \vspace{0.05in}
+            \bt{Sistemas opertivos} \\
+            \def\arraystretch{4.5}
+            \hspace*{0.25in}
+            \begin{tabular}{c c c} 
+                \Huge{\faWindows} & \Huge{\faLinux} & \Huge{\faApple}
+            \end{tabular} 
+            \\
+
+            \bt{Idiomas} \\
+            \vspace{0.1in}
+            \begin{tabular}{c c} 
+                \Huge{\faFlagUsa} & \Huge{\faLanguage} \\
+                Inglés & Japones \\
+                (Intermedio) & (Básico)
+            \end{tabular} \\
+            \vspace{0.1in}
+
+            \bt{Metodologias águiles} \\
+            \vspace{0.05in}
+            \img{scrumKanban}{0.125}
+
+            \vspace{0.1in}
+            \bt{Hobies} \\
+            \hspace*{0.1in}
+            \begin{tabular}{c c} 
+                \img{play}{0.6} & \img{piano}{0.6}\\
+                \img{micro}{0.6} & \img{chemistry}{0.6}\\
+                \img{coding}{0.6} & \img{chemistry2}{0.6}\\
+            \end{tabular} \\
+
+            \\~\\~\\~\\~\\~\\~\\~\\~\\~\\~\\~\\~\\~\\~\\~\\~\\~\\~\\~\\~\\~\\~\\~
+            
+            
+
+        \end{tabular}
+
+        &
+
+        \begin{tabular}{@{} p{3.7in}}
+
+            \huge{\faGlasses ~ Experiencia en investigación}
+            \\
+            \vspace{0.1in}
+            \cvSection{2019}{6 meses}{Servicio social}{IIM, Instituto de Investigaciones en Materiales, UNAM}{\item Dinamica molecular de proteínas en problemas de inflamación y cancer. \item Desarrollo de scripts para desarrollo de calculos, graficas, manejo de archivos y trabajo vía remota por línea de comando.}{GROMACS Python Bash SSH GNU/Linux} 
+            \\
+
+            \huge{\faBusinessTime ~ Experiencia en voluntariado}
+            \\
+            \vspace{0.1in}
+            \cvSection{2018}{6 meses}{Director de Tecnología CNU}{Centro de Negocios
+            Universitario, UNAM}{\item Maquetado, desarrollo y actualización de la pagina web del CNU. \item Organización y planeación de proyectos.}{HTML CSS UX UI Kanban Scrum} 
+            \\
+            \cvSection{2018}{6 meses}{Asesor del Área de Marketing CNU}{Centro de Negocios
+            Universitario, UNAM}{\item Creación de contenido infografias, carteles y memes. \item Difusión de contenido por pagina web y redes sociales.}{Photoshop Illustrator Canvas} 
+            \\
+
+            \huge{\faChalkboardTeacher ~ Experiencia en cursos}\\~
+            \\
+            \cvCoursesSection{\faLaptop~Cursos PROTECO}{
+                \centering 2019 60h & \textbullet \em{Instructor Auxiliar Curso \bt{Desarollador Full Stack} (stack MERN).} \\
+                \centering 2019 20h & \textbullet \em{Instructor Auxiliar Curso \bt{\LaTeX}.} \\
+                \centering 2019 20h & \textbullet \em{Instructor Auxiliar Curso \bt{Photoshop}.} \\
+            }
+            \\
+
+
+
+            \huge{\faAward ~Certificaciones y cursos}\\~
+            \\
+            \cvCoursesSection{\faFreeCodeCamp~freecodecamp.org}{
+                \centering 2020 300h & \textbullet \href{https://www.freecodecamp.org/certification/x1hibi/front-end-libraries}{Developer Certification Front End Libraries} \\
+                \centering 2020 300h & \textbullet \href{https://www.freecodecamp.org/certification/x1hibi/javascript-algorithms-and-data-structures}{Developer Certification JavaScript Algorithms and Data
+                Structures} \\
+                \centering 2019 300h & \textbullet \href{https://www.freecodecamp.org/certification/x1hibi/responsive-web-design}{Developer Certification Responsive Web Design}
+            }
+            \\
+            \vspace{-0.75cm}
+            \cvCoursesSection{\faSun~sololearn.com}{
+                \centering 2018-19 & \textbullet \href{https://www.sololearn.com/Certificate/1024-8428663/pdf/}{JavaScript course}  \textbullet \href{https://www.sololearn.com/Certificate/1059-8428663/pdf/}{PHP course} \textbullet \href{https://www.sololearn.com/Certificate/1073-8428663/pdf/}{Python Core course} \textbullet \href{https://www.sololearn.com/Certificate/1082-8428663/pdf/}{jQuery course} \textbullet \href{https://www.sololearn.com/Certificate/1060-8428663/pdf/}{SQL course} \textbullet \href{https://www.sololearn.com/Certificate/1068-8428663/pdf/}{Java course} \textbullet \href{https://www.sololearn.com/Certificate/1051-8428663/pdf/}{C++ course} \textbullet \href{https://www.sololearn.com/Certificate/1089-8428663/pdf/}{C course} \textbullet \href{https://www.sololearn.com/Certificate/1014-8428663/pdf/}{HTML course} \textbullet \href{https://www.sololearn.com/Certificate/1023-8428663/pdf/}{CSS course}
+            }
+
+            \\
+
+            
+            
+
+            \huge{\faGraduationCap ~Education} \\
+            \\
+            \cvSection{2015}{(actual)}{Estudiante de la Licenciatura en Química,}{Facultad de Química, UNAM.}{~}{~}
+            \\
+
+        \end{tabular}
+
+    \end{tabular}
+
+
+
+
+
+\end{document}

@@ -1,0 +1,139 @@
+/* Root variables*/
+:root{
+
+    
+    /* Color Armonic (analogous)*/
+    /* https://www.sessions.edu/color-calculator/ */
+    --mainColor:#387aff;
+    --mainAnalogousOne:#c5b6ff;
+    --mainAnalogousTwo:#b6ffd3;
+
+    /* Family fonts for headers and text */
+
+    --fontHeader: 'open-sans';
+    --fontText: 'open-sans';
+    --genericFont: Sans-serif;
+
+    /* High Contrast Text upper to 4.5 (for normal text) with 12 is good for all sizes*/
+    /* https://coolors.co/contrast-checker/f1bebe-090313 */
+
+    --headerTextColor:black;
+    --contentTextColor:black;
+
+}
+
+/* General styles */
+body{
+    background: red   ;
+    margin: 0;
+    padding: 0;
+    font-family: var(--familyFont), var(--genericFont);
+    font-weight: lighter;
+}
+
+footer {
+    background: black;
+    font-size: small;
+    padding: 10px;
+}
+
+.footer-content {
+    color:white;
+    margin: auto;
+    width: fit-content;
+}
+
+
+
+
+/* Responsive text */
+/* We use fluid typography Made By Mike*/
+/* https://www.madebymike.com.au/writing/fluid-type-calc-examples/ */
+
+
+/* Scren with a width equal or less than 320px  */
+.header-fluid-type {
+    font-size: 11px;
+}
+
+.footer-fluid-type {
+    font-size: 11px;
+}
+
+
+
+/* Scren with a width equal or bigger than 320px  */
+@media screen and (min-width: 320px) {
+    .footer-fluid-type {
+        /* sintax  linear responsive text [min font size + (max font size - min font size) * ((viewport width - min viewport width) / (max viewport width - min viewport width))] */
+        font-size: calc(11px + 5 * ((100vw - 320px) / 1600));
+    }
+}
+  
+/* Scren with a width equal or bigger than 1920px  */
+@media screen and (min-width: 1920px) {
+    .footer-fluid-type {
+      font-size: 16px;
+    }
+}
+
+footer a{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+footer a:hover{
+    text-shadow: 0 0 5px white;
+}
+
+.footer-bar{
+    animation: footerBar;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    border-width: 0.5px;
+    margin: 10px auto;
+    width: 10%;
+}
+
+@keyframes footerBar{
+    0%{width: 10%;}
+    40%{width: 10%;}
+    50%{width: 75%;}
+    60%{width: 10%;}
+    100%{width: 10%;}
+}
+
+
+
+/* General classes styles */
+
+.responsiveImg{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Page classes styles */
+
+
+
+/* Responsive Web Design media queries*/
+
+/* Smartphones (portrait and landcape)*/
+
+@media (max-width:767px) {
+    body{
+        background: blue;
+    }
+}
+
+
+/* Tablets (portrait) */
+
+@media (min-width:768px) and (max-width:1023px){
+    body{
+        background: yellow;
+    }
+}
