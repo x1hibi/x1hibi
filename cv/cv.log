@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.3.29)  29 MAR 2021 22:39
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.3.29)  30 MAR 2021 00:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -346,28 +346,8 @@ File: mongo.png Graphic file (type bmp)
 <mongo.png>
 File: mysql.jpg Graphic file (type bmp)
 <mysql.jpg>
-
-Overfull \hbox (29.44128pt too wide) in paragraph at lines 219--223
-[]||  []| 
- []
-
-
-Overfull \hbox (10.08255pt too wide) in paragraph at lines 227--232
-[]||  []| 
- []
-
-
-Overfull \hbox (16.09247pt too wide) in paragraph at lines 235--241
-[]||  []| 
- []
-
 File: scrumKanban.png Graphic file (type bmp)
 <scrumKanban.png>
-
-Overfull \hbox (11.4305pt too wide) in paragraph at lines 245--247
-[]||  [] 
- []
-
 File: play.jpg Graphic file (type bmp)
 <play.jpg>
 File: piano.jpg Graphic file (type bmp)
@@ -381,69 +361,69 @@ File: coding.jpg Graphic file (type bmp)
 File: chemistry2.jpg Graphic file (type bmp)
 <chemistry2.jpg>
 
-Overfull \hbox (15.9829pt too wide) in paragraph at lines 250--256
-[]||  []| 
- []
-
-
-Overfull \hbox (99.66545pt too wide) in paragraph at lines 272--272
+Overfull \hbox (6.0pt too wide) in paragraph at lines 217--261
 []|[] 
  []
 
 
-Overfull \hbox (99.66545pt too wide) in paragraph at lines 278--278
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 270--270
 []|[] 
  []
 
 
-Overfull \hbox (99.66545pt too wide) in paragraph at lines 281--281
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 276--276
 []|[] 
  []
 
 
-Overfull \hbox (105.44717pt too wide) in paragraph at lines 289--289
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 279--279
 []|[] 
  []
 
 
-Overfull \hbox (105.44717pt too wide) in paragraph at lines 297--297
+Overfull \hbox (105.44717pt too wide) in paragraph at lines 287--287
 []|[] 
  []
 
 
-Overfull \hbox (105.44717pt too wide) in paragraph at lines 301--301
+Overfull \hbox (105.44717pt too wide) in paragraph at lines 295--295
 []|[] 
  []
 
 
-Overfull \hbox (99.66545pt too wide) in paragraph at lines 305--305
+Overfull \hbox (105.44717pt too wide) in paragraph at lines 299--299
 []|[] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 313.
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 303--303
+[]|[] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 309.
 (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 ) [1
 
 ]
-Overfull \vbox (53.80975pt too high) has occurred while \output is active []
+Overfull \vbox (40.80975pt too high) has occurred while \output is active []
 
  [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 313.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 309.
  (./cv.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 313.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 313.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 309.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 309.
 Package rerunfilecheck Info: File `cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 313.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 309.
  ) 
 Here is how much of TeX's memory you used:
  11355 strings out of 479819
  165809 string characters out of 5895846
- 457356 words of memory out of 5000000
+ 454356 words of memory out of 5000000
  28297 multiletter control sequences out of 15000+600000
  534709 words of font info for 54 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  39i,33n,49p,980b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on cv.xdv (2 pages, 46860 bytes).
+Output written on cv.xdv (2 pages, 46820 bytes).
