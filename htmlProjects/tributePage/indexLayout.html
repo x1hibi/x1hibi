@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <!-- Meta information (stat) -->
     <!-- <title>Kouji Wada 🎵- The best digital singer • Digimon Discography 🎶 </title> -->
@@ -11,6 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./media/digivice.png">
     <!-- Meta information (end) -->
+
+    <!-- Preload images (start) -->
+    <link rel="preload" as="image" href="./media/code1.png" >
+    <link rel="preload" as="image" href="./media/code2.png" >
+    <link rel="preload" as="image" href="./media/wireframeView1.png" >
+    <link rel="preload" as="image" href="./media/wireframeView2.png" >
+    <link rel="preload" as="image" href="./media/spinnerLoader.gif" >
+    <!-- Preload images (end) -->
 
 </head>
 
@@ -81,12 +89,10 @@
     <!-- Principal content (end) -->
 
     <!-- Button Menu (start) -->
-    <button class="buttonMenu" onclick="buttonMenu('one')"><i class="fas fa-dragon"></i></button>
 
     <button class="fixed-button-menu" onclick="buttonMenu('wireframe')" id="wireframe" title="Wireframes"><i class="fas fa-columns"></i></button>
 
     <button class="fixed-button-menu" onclick="buttonMenu('diagram')" id="diagram" title="Flow diagram"><i class="fas fa-project-diagram"></i></button>
-    
     
     <button class="fixed-button-menu" onclick="buttonMenu('code')" id="code" title="Code"><i class="fas fa-code"></i></button>
     
@@ -100,10 +106,9 @@
 
         <!-- Wireframes and code -->
         <figure class="modal">
-            <div class="responsive-slider">
-                <!-- <div style="background-color: red;height: 1024px;">as</div> -->
+            <div class="responsive-slider responsive-slider-background">
                 <button class="slider-arrow" onclick="modalSlider('previus')"><i class="fas fa-arrow-left"></i></button>
-                <img class="slider-image" src="./media/wireframeView1.png" id="sliderImage">
+                <img class="slider-image" src="#" id="sliderImage">
                 <button class="slider-arrow" onclick="modalSlider('next')"><i class="fas fa-arrow-right"></i></button>
                 </div>
             <figcaption class="slider-caption" id="sliderCaption">text</figcaption>
@@ -126,12 +131,10 @@
 <!-- Js and css files (start) -->
 <link type="text/css" rel="stylesheet" href="./myStylesLayout.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link
-    href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600;1,700&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
-    <script src="buttonMenu.js" type="text/javascript" defer></script>
-    <!-- Personal asome kit code -->
-    <script src="https://kit.fontawesome.com/51080353b4.js" crossorigin="anonymous"></script>
-<!-- Js and css files (start) -->
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600;1,700&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<!-- Personal asome kit code -->
+<script src="https://kit.fontawesome.com/51080353b4.js" crossorigin="anonymous"></script>
+<script src="buttonMenu.js" type="text/javascript" defer></script>
+<!-- Js and css files (end) -->
 
 </html>

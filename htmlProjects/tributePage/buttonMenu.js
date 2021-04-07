@@ -1,53 +1,50 @@
-
 //// Global variables 
 
 // modal container element
 const modalContainer=document.getElementById("modalContainer")
-// modal content element
+// image of modal slider 
 const sliderImage=document.getElementById("sliderImage")
-// modal image caption
+// caption of modal slider 
 const sliderCaption=document.getElementById("sliderCaption")
 // Array of modal images 
-const modalImages=[
+const modalSliderImages=[
     [{
-        "image":"./media/wireframeView1.png",
+        "imagePath":"./media/wireframeView1.png",
         "captionText":"Wireframe Home (1/2)",
         "altText":"this is the alternative text"
     },
     {
-        "image":"./media/wireframeView2.png",
+        "imagePath":"./media/wireframeView2.png",
         "captionText":"Wireframe Home (2/2)",
         "altText":"this is the alternative text"
     }],
     [{
-        "image":"./media/wireframeView2.png",
-        "captionText":"this is a static caption",
+        "imagePath":"./media/code1.png",
+        "captionText":"index.html",
         "altText":"this is the alternative text"
     },
     {
-        "image":"./media/digivice.png",
+        "imagePath":"./media/code2.png",
         "captionText":"this is a static caption",
         "altText":"this is the alternative text"
     }],
     [{
-        "image":"./media/digivice.png",
+        "imagePath":"./media/digivice.png",
         "captionText":"this is a static caption",
         "altText":"this is the alternative text"
     },
     {
-        "image":"./media/digivice.png",
+        "imagePath":"./media/digivice.png",
         "captionText":"this is a static caption",
         "altText":"this is the alternative text"
     }]
 ]
-// array of object selected
+// varibles of slider 
 var currentOption = 0;
 var currentIndex = 0;
 var currentSize = 0;
 
 
-
-// current list 
 
 //// Global functions
 
@@ -70,19 +67,22 @@ function buttonMenu(type){
     })
 }
 
+/**
+ * Disable all buttons in DOM 
+ * @param {Boolean} disable - Condition to disable/ enable all buttons
+ */
 
-function disableButtons(disable){
+function disableButtons(disabled){
 
     // make an array of all buttons
     let buttonList=[...document.getElementsByTagName("button")]
 
-    let status = disable ? true : false 
+    let status = disabled ? true : false 
 
     // disable or enable all buttons 
     buttonList.forEach(button => {
         button.disabled=status
     });
-
     
 }
 
@@ -109,6 +109,7 @@ function buttonHandler(type) {
         disableButtons(true)
         // when type is closeModal
         displayModal(false)
+        sliderImage.src="#"
     }else{
         // click inside modal
         return false
@@ -128,9 +129,9 @@ function displayFixedMenu() {
     // hide and show menu
     document.getElementById("fixedMenu").classList.toggle("hide-element")
     // toogle classes for each button to move it 
-    document.getElementById("wireframe").classList.toggle("wireframe-button-position");
-    document.getElementById("code").classList.toggle("code-button-position");
-    document.getElementById("diagram").classList.toggle("diagram-button-position");
+    document.getElementById("code").classList.toggle("first-button-position");
+    document.getElementById("diagram").classList.toggle("second-button-position");
+    document.getElementById("wireframe").classList.toggle("third-button-position");
 }
 
 
@@ -157,9 +158,10 @@ function selectOption(type){
     // select fixed menu seccion
     currentOption= type=="wireframe" ? 0 : type=="diagram" ? 1 : 2
     // set first image of array
-    sliderImage.src=modalImages[currentOption][0].image
-    sliderCaption.textContent=modalImages[currentOption][0].captionText
-    currentSize=modalImages[currentOption].length
+    sliderImage.src=modalSliderImages[currentOption][0].imagePath
+    sliderImage.alt=modalSliderImages[currentOption][0].altText
+    sliderCaption.textContent=modalSliderImages[currentOption][0].captionText
+    currentSize=modalSliderImages[currentOption].length
 }
 
 
@@ -185,8 +187,9 @@ function modalSlider(action) {
 
     setTimeout(() => {
         // set selected image 
-        sliderImage.src=modalImages[currentOption][currentIndex].image
-        sliderCaption.textContent=modalImages[currentOption][currentIndex].captionText
+        sliderImage.src=modalSliderImages[currentOption][currentIndex].imagePath
+        sliderImage.alt=modalSliderImages[currentOption][currentIndex].altText
+        sliderCaption.textContent=modalSliderImages[currentOption][currentIndex].captionText
         sliderImage.classList.toggle("transition-effect")
         sliderCaption.classList.toggle("transition-effect")
         setTimeout(() => {
