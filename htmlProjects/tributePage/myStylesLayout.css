@@ -49,9 +49,18 @@ body{
     width: 5px;
 }
 
+/* single button styling */
+::-webkit-scrollbar-button:single-button {
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
 /* Track */
 ::-webkit-scrollbar-track {
-    background: transparent; 
+    background: gray; 
 }
 
 /* Handle */
@@ -63,7 +72,7 @@ body{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background:rgba(0, 0, 139, 0.75)
-}
+} 
 
 
 
@@ -174,25 +183,34 @@ body{
 }
 
 .modal{
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 0 5px white;
+    background: transparent;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     margin: 0;
+    max-height: 95%;
+    position: relative;
+    width: 100%;
+    padding-bottom: 25px;
+}
+
+.slider-container{
+    box-shadow: 0 0 5px 0.5px white;
+    border-radius: 5px;
+    background: white;
+    display: flex;
     max-height: 90%;
     overflow:hidden ;
-    position: relative;
-    width: 95%;
+    margin: 0;
+    width: 100%;
 }
 
 .responsive-slider{
+    border-radius: 5px;
     box-sizing: border-box;
     display: flex;
     margin: 0;
     overflow-y: auto;
-    padding:2.5px;
     width: 100%;
 }
 
@@ -240,7 +258,7 @@ body{
 }
 
 .slider-image{
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
     height: max-content;
     opacity: 1;
     transition-duration: 0.3s;
@@ -251,7 +269,7 @@ body{
     opacity: 0;
 }
 
-.slider-caption{
+/* .slider-caption{
     background: linear-gradient(to top, rgba(0,0,0,0.15), transparent);
     height: fit-content;
     padding: 2.5px;
@@ -259,6 +277,19 @@ body{
     transition-duration: 0.3s;
     width: 100%;
     z-index: 3;
+} */
+
+.slider-caption{
+    display: block;
+    text-shadow: 0 0 5px white;
+    color: white;
+    bottom: 0px;
+    position: absolute;
+    height: fit-content;
+    text-align: center;
+    transition-duration: 0.3s;
+    width: 100%;
+    z-index: 30;
 }
 
 
