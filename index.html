@@ -1,54 +1,132 @@
 <!DOCTYPE html>
-<html lang="es-en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Hello my nickname is x1hibi this is personal web site were we share things about me, as my proyects, libraries and skills, and also you can contact me and ask me what ever you want and give me feedback.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta information (start) -->
     <title>x1hibi</title>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js" defer></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
-    <script src="https://unpkg.com/scrollreveal" defer></script>
-    <link rel="stylesheet" href="myStyles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link href="media/logo.png" rel="icon" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript, React, VueJs, PHP, Laravel, Bootstrap, D3.js, mySQL, mongo ">
+    <meta name="author" content="x1hibi">
+    <meta name="description" content="Personal web page where I show my profile and web projects.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./media/icon.png">
     <meta name="theme-color" content="#2b2727">
+    <!-- Meta information (end) -->
+
+    <!-- Personal asome kit code -->
+    <script src="./js/fontAsome.js" crossorigin="anonymous" type="text/javascript"></script>
+
 </head>
-<body>
 
-    <!-- html template for card component -->
-    <script type="text/x-template" id="card">
-        <a :href=url target="_blank" class="cardContainer">
-            <h2 class="cardTitle">{{title}}</h2>
-            <img :src=preview class="previewImage">
-        </a>
-    </script>
+<body id="app" class="fatherContainer">
 
-    <!-- father container -->
-    <div id="app" class="fatherContainer">
-        <header class="bannerContainer" id="header">
-            <img src="media/logo.png" class="logoAnimation" alt="red dragon" />
-            <div class="bannerTextContainer">
-                <h1 class="headerTitle" >x1hibi</h1>
-                <h2 class="headerSubtitle" id="typingEffect"></h2>
+    <!-- Principal header (start)  -->
+    <header class="banner-container">
+        <img src="media/icon.png" class="logo" alt="red dragon" />
+        <div class="headers-container">
+            <h1 class="headerTitle" >x1hibi</h1>
+            <h2 class="headerSubtitle" id="typingEffect">sub tuads adoa sda asdpasjd aspd a a dapod  asd asdopj </h2>
+        </div>
+    </header>
+    <!-- Menu bar (start)  -->
+    <nav>
+        <ul>
+            <li>link1</li>
+            <li>link1</li>
+            <li>link1</li>
+        </ul>
+    </nav>
+    <!-- Menu bar (end)  -->
+    <!-- Principal header (end)  -->
 
-            </div>
-        </header>
-        <nav class="navbar" id="navbar">
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </uk>
-        </nav>
-        <section class="sectionContainer" >
-            <h2 class="headerSubtitle" id="typingEffectHome">&nbsp;</h2>
+    <!-- Principal content (start) -->
+    <main>
+
+        <!-- Title H1 for seo ( start option 2) -->
+        <h1>Title for SEO</h1>
+        <!-- Title H1 for seo ( end option 2) -->
+
+        <!-- section define a section of a document, "A section is a thematic grouping of content, typically with a heading."     -->
+        <section>
+            <h2>Section title </h2>
+            <article>
+                <h3>SubSection title </h3>
+            </article>
         </section>
 
+        <!-- article element specifies independent, self-contained content -->
+        <article>
+            <h2>Article title</h2>
+            <section>
+                <h3>section of aticle title</h3>
+            </section>
+        </article>
 
-        <footer class="footer">Copyright@2020 x1hibi</footer>
+        <!-- Aside if exist a laretal bar with content or list of content -->
+        <aside>
+            <nav>
+                <ol>
+                    <li>1 topic </li>
+                    <li>2 topic </li>
+                    <li>3 topic </li>
+                </ol>
+            </nav>
+            <section>
+                <h2>Title of seccion </h2>
+            </section>
+        </aside>
 
-    </div>
+    </main>
+    <!-- Principal content (end) -->
+
+    <!-- Button Menu (start) -->
+
+    <button class="fixed-button-menu" onclick="buttonMenu('wireframe')" id="wireframe" title="Wireframes"><i class="fas fa-columns"></i></button>
+
+    <button class="fixed-button-menu" onclick="buttonMenu('diagram')" id="diagram" title="Flow diagram"><i class="fas fa-project-diagram"></i></button>
+    
+    <button class="fixed-button-menu" onclick="buttonMenu('code')" id="code" title="Code"><i class="fas fa-code"></i></button>
+    
+    <button class="fixed-button-menu button-shadow" onclick="buttonMenu('closeMenu')"><i class="fas fa-times" title="Close menu"></i></button>
+    
+    <button class="fixed-button-menu" onclick="buttonMenu('openMenu')" id="fixedMenu"><i class="fas fa-list" title="Menu"></i></button>
+    <!-- Button Menu (end) -->
+
+    <!-- Modal of fixed button (start) -->
+    <section class="modal-container" id="modalContainer" onclick="buttonMenu(event)">
+
+        <!-- Wireframes and code -->
+        <figure class="modal">
+            <div class="slider-container">
+                <div class="responsive-slider responsive-slider-background">
+                    <button class="slider-arrow" onclick="modalSlider('previus')"><i class="fas fa-arrow-left"></i></button>
+                    <img class="slider-image" src="#" id="sliderImage">
+                    <button class="slider-arrow" onclick="modalSlider('next')"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <figcaption class="slider-caption" id="sliderCaption">text</figcaption>
+        </figure>
+
+    </section>
+    <!-- Modal of fixed button (end) -->
+
+
+    <!-- Footer (start)  -->
+    <footer class="footer-container">
+        <p class="footer-content footer-fluid-text"><a href="#" target="_blank" class="footer-link">Contact US &nbsp;<i class="fas fa-envelope"></i></a> | <a href="#" target="_blank" class="footer-link"> x1hibi Web &nbsp;<i class="fas fa-dragon din" ></i></a></p>
+        <hr class="footer-bar">
+        <p class="footer-content">Copyright © 2021 x1hibi All rights reserved.</p>
+    </footer>
+    <!-- Footer (end)  -->
+
 </body>
-<script type="module" src="js/app.js" defer></script>
+
+<!-- Js and css files (start) -->
+<link type="text/css" rel="stylesheet" href="./css/myStylesLayout.css">
+<!-- <link type="text/css" rel="stylesheet" href="./css/myStyles.css">  -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600;1,700&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
+<script src="./js/app.js" type="module" defer></script>
+<!-- Js and css files (end) -->
+
 </html>

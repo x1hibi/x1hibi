@@ -1,6 +1,0 @@
-bugs
-libray at the end option left the last text or empy with caret
-navbar style
-project card component4
-
-fix bug in data base 
