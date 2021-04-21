@@ -19,19 +19,6 @@
 
 <body class="fatherContainer">
 
-    <!-- html template for card component (start) -->
-    <script type="text/x-template" id="card">
-        <figure class="card-container">
-            <img :src=preview width="100%">
-            <figcaption class="card-info">
-                <h3 class="card-title">{{title}} <a :href=url target="_blank" ><i class="fas fa-globe-americas page-link"></i></a></h3>
-                <h4 class="card-description">{{description}}</h4>
-                <p class="card-tags">{{"Tags: "   + tags.join(", ")}}</p>
-            </figcaption>
-        </figure>
-    </script>
-    <!-- html template for card component (end) -->
-
     <main id="app">
         <!-- Principal header (start)  -->
         <header class="banner-container">
@@ -45,19 +32,21 @@
         <nav class="navbar-menu">
             <ul class="menu-options-container">
                 <li class="menu-option"><a href="./index.html" class="menu-link">HOME</a></li>
-                <li class="menu-option currect-section"><a href="./projects.html" class="menu-link">PROJECTS</a></li>
-                <li class="menu-option"><a href="./contact.html" class="menu-link">CONTACT</a></li>
+                <li class="menu-option"><a href="./projects.html" class="menu-link">PROJECTS</a></li>
+                <li class="menu-option currect-section"><a href="./contact.html" class="menu-link">CONTACT</a></li>
             </ul>
-            <div class="search-option" ><input type="text" class="search-input" id="searchInput" v-model="searchValue" placeholder="Search by tags" v-on:keyup.enter="sortByTags()" @input="resetSort()"><i class="fas fa-search search-icon" @click="sortByTags()"></i></div>
         </nav>
         <!-- Menu bar (end)  -->
         <!-- Principal header (end)  -->
 
         <!-- Principal content (start) -->
-        <main class="main-container">
-            <section class="cards-container cards-container-open-animation">
-                <card-component v-for="project in projects" :preview=project.previewImage :url=project.urlProject :description=project.description :tags=project.tags :title=project.title></card-component>
-            </section>
+        <main class="main-container direction-container">
+            <h2 class="contact-title">Do you want to contact me ? <br/> Send me a email and I will contact you 😉</h2>
+            <form class="email-container" v-on:submit.prevent="sendEmail()">
+                <section class="subject-container"><label class="email-label">Subject</label><input type="text" class="email-subject" v-model="emailSubject" placeholder="Eg. Web Work ..." required></section>
+                <textarea class="email-content" v-model="emailContent" placeholder="Eg. Hello x1hibi I want to speak with you ..." required></textarea>
+                <button type="submit" class="email-button" >Send mail</button>
+            </form>
         </main>
         <!-- Principal content (end) -->
 

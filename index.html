@@ -9,7 +9,7 @@
     <meta name="description" content="Personal web page where I show my profile and web projects.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./media/icon.png">
-    <meta name="theme-color" content="#2b2727">
+    <meta name="theme-color" content="black">
     <!-- Meta information (end) -->
 
     <!-- Personal asome kit code -->
@@ -17,114 +17,48 @@
 
 </head>
 
-<body id="app" class="fatherContainer">
+<body class="fatherContainer">
 
-    <!-- Principal header (start)  -->
-    <header class="banner-container">
-        <img src="media/icon.png" class="logo" alt="red dragon" />
-        <div class="headers-container">
-            <h1 class="headerTitle" >x1hibi</h1>
-            <h2 class="headerSubtitle" id="typingEffect">sub tuads adoa sda asdpasjd aspd a a dapod  asd asdopj </h2>
-        </div>
-    </header>
-    <!-- Menu bar (start)  -->
-    <nav>
-        <ul>
-            <li>link1</li>
-            <li>link1</li>
-            <li>link1</li>
-        </ul>
-    </nav>
-    <!-- Menu bar (end)  -->
-    <!-- Principal header (end)  -->
-
-    <!-- Principal content (start) -->
-    <main>
-
-        <!-- Title H1 for seo ( start option 2) -->
-        <h1>Title for SEO</h1>
-        <!-- Title H1 for seo ( end option 2) -->
-
-        <!-- section define a section of a document, "A section is a thematic grouping of content, typically with a heading."     -->
-        <section>
-            <h2>Section title </h2>
-            <article>
-                <h3>SubSection title </h3>
-            </article>
-        </section>
-
-        <!-- article element specifies independent, self-contained content -->
-        <article>
-            <h2>Article title</h2>
-            <section>
-                <h3>section of aticle title</h3>
-            </section>
-        </article>
-
-        <!-- Aside if exist a laretal bar with content or list of content -->
-        <aside>
-            <nav>
-                <ol>
-                    <li>1 topic </li>
-                    <li>2 topic </li>
-                    <li>3 topic </li>
-                </ol>
-            </nav>
-            <section>
-                <h2>Title of seccion </h2>
-            </section>
-        </aside>
-
-    </main>
-    <!-- Principal content (end) -->
-
-    <!-- Button Menu (start) -->
-
-    <button class="fixed-button-menu" onclick="buttonMenu('wireframe')" id="wireframe" title="Wireframes"><i class="fas fa-columns"></i></button>
-
-    <button class="fixed-button-menu" onclick="buttonMenu('diagram')" id="diagram" title="Flow diagram"><i class="fas fa-project-diagram"></i></button>
-    
-    <button class="fixed-button-menu" onclick="buttonMenu('code')" id="code" title="Code"><i class="fas fa-code"></i></button>
-    
-    <button class="fixed-button-menu button-shadow" onclick="buttonMenu('closeMenu')"><i class="fas fa-times" title="Close menu"></i></button>
-    
-    <button class="fixed-button-menu" onclick="buttonMenu('openMenu')" id="fixedMenu"><i class="fas fa-list" title="Menu"></i></button>
-    <!-- Button Menu (end) -->
-
-    <!-- Modal of fixed button (start) -->
-    <section class="modal-container" id="modalContainer" onclick="buttonMenu(event)">
-
-        <!-- Wireframes and code -->
-        <figure class="modal">
-            <div class="slider-container">
-                <div class="responsive-slider responsive-slider-background">
-                    <button class="slider-arrow" onclick="modalSlider('previus')"><i class="fas fa-arrow-left"></i></button>
-                    <img class="slider-image" src="#" id="sliderImage">
-                    <button class="slider-arrow" onclick="modalSlider('next')"><i class="fas fa-arrow-right"></i></button>
-                </div>
+    <main id="app">
+        <!-- Principal header (start)  -->
+        <header class="banner-container">
+            <img src="media/icon2.png" class="logo" alt="red dragon" />
+            <div class="headers-container">
+                <h1 class="header-title header-title-fluid-text" >x1hibi</h1>
+                <h2 class="header-subtitle header-subtitle-fluid-text" id="typingEffect"></h2> 
             </div>
-            <figcaption class="slider-caption" id="sliderCaption">text</figcaption>
-        </figure>
+        </header>
+        <!-- Menu bar (start)  -->
+        <nav class="navbar-menu">
+            <ul class="menu-options-container">
+                <li class="menu-option currect-section"><a href="./index.html" class="menu-link">HOME</a></li>
+                <li class="menu-option"><a href="./projects.html" class="menu-link">PROJECTS</a></li>
+                <li class="menu-option"><a href="./contact.html" class="menu-link">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- Menu bar (end)  -->
+        <!-- Principal header (end)  -->
 
-    </section>
-    <!-- Modal of fixed button (end) -->
+        <!-- Principal content (start) -->
+        <main class="main-container">
+            <h2 class="section-content section-content-fluid-text" id="typingEffectHome">&nbsp;</h2>
+        </main>
+        <!-- Principal content (end) -->
 
-
-    <!-- Footer (start)  -->
-    <footer class="footer-container">
-        <p class="footer-content footer-fluid-text"><a href="#" target="_blank" class="footer-link">Contact US &nbsp;<i class="fas fa-envelope"></i></a> | <a href="#" target="_blank" class="footer-link"> x1hibi Web &nbsp;<i class="fas fa-dragon din" ></i></a></p>
-        <hr class="footer-bar">
-        <p class="footer-content">Copyright © 2021 x1hibi All rights reserved.</p>
-    </footer>
-    <!-- Footer (end)  -->
-
+        <!-- Footer (start)  -->
+        <footer class="footer-container">
+            <p class="footer-content footer-fluid-text"> <a class="footer-link"> x1hibi Web &nbsp;<i class="fas fa-dragon din" ></i></a></p>
+            <hr class="footer-bar">
+            <p class="footer-content footer-fluid-text">Copyright © 2021 x1hibi All rights reserved.</p>
+        </footer>
+        <!-- Footer (end)  -->
+    </main>
 </body>
 
 <!-- Js and css files (start) -->
 <link type="text/css" rel="stylesheet" href="./css/myStylesLayout.css">
-<!-- <link type="text/css" rel="stylesheet" href="./css/myStyles.css">  -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600;1,700&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600;1,700&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Share+Tech&family=Share+Tech+Mono&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
 <script src="./js/app.js" type="module" defer></script>
 <!-- Js and css files (end) -->

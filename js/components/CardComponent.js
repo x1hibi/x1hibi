@@ -4,6 +4,8 @@ let cardComponent= {
         title: String, 
         preview:String,
         url:String,
+        tags:Array,
+        description:String,
     },
     data: function () {
         return {
@@ -11,7 +13,6 @@ let cardComponent= {
         }
     },
     mounted(){
-        console.log("nueva tes")
     }
 };
 

@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.3.29)  30 MAR 2021 00:57
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.3.29)  12 APR 2021 03:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/x1hibi/x1hibi/gitRepositories/x1hibi/cv/cv.tex
-(/home/x1hibi/x1hibi/gitRepositories/x1hibi/cv/cv.tex
+**"/home/x1hibi/x1hibi/gitRepositories/x1hibi/cv/fullCV (copy)/cv.tex"
+(/home/x1hibi/x1hibi/gitRepositories/x1hibi/cv/fullCV (copy)/cv.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -220,30 +220,30 @@ Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 ) (./cv.aux)
 \openout1 = `cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 97.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 97.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 147.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -254,14 +254,14 @@ LaTeX Font Info:    ... okay on input line 97.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(18.70769pt, 560.0925pt, 18.70769pt)
-* v-part:(T,H,B)=(41.71173pt, 740.76749pt, 62.56763pt)
+* v-part:(T,H,B)=(48.93872pt, 722.7pt, 73.40813pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=560.0925pt
-* \textheight=740.76749pt
+* \textheight=722.7pt
 * \oddsidemargin=-53.5623pt
 * \evensidemargin=-53.5623pt
-* \topmargin=-67.55826pt
+* \topmargin=-60.33127pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -280,7 +280,7 @@ LaTeX Font Info:    ... okay on input line 97.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring ON on input line 97.
+Package hyperref Info: Link coloring ON on input line 147.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -290,55 +290,50 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count194
 )
-LaTeX Info: Redefining \ref on input line 97.
-LaTeX Info: Redefining \pageref on input line 97.
-LaTeX Info: Redefining \nameref on input line 97.
+LaTeX Info: Redefining \ref on input line 147.
+LaTeX Info: Redefining \pageref on input line 147.
+LaTeX Info: Redefining \nameref on input line 147.
  (./cv.out) (./cv.out)
 \@outlinefile=\write3
 \openout3 = `cv.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 101.
+(Font)              <7> on input line 150.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 101.
+(Font)              <5> on input line 150.
 File: cvPhoto.jpg Graphic file (type bmp)
 <cvPhoto.jpg>
 
-Overfull \hbox (1.64374pt too wide) in paragraph at lines 138--140
+Overfull \hbox (1.64374pt too wide) in paragraph at lines 188--193
 []|[][]\TU/lmr/m/n/10 kamisama@comunidad.unam.mx[][]| 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 166.
+(Font)              <17.28> on input line 216.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 166.
+(Font)              <12> on input line 216.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 128--188
+Overfull \hbox (6.0pt too wide) in paragraph at lines 175--229
+[]|[]| 
+ []
+
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 238--238
 []|[] 
  []
 
 
-Overfull \hbox (150.25423pt too wide) in paragraph at lines 199--199
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 243--243
 []|[] 
  []
 
 
-Underfull \hbox (badness 2302) in paragraph at lines 201--201
-[]\TU/lmr/m/n/10 Desarrollo de proyectos, programas, aplicaciones web y
- []
-
-
-Overfull \hbox (150.25423pt too wide) in paragraph at lines 201--201
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 248--248
 []|[] 
  []
 
 
-Overfull \hbox (150.25423pt too wide) in paragraph at lines 203--203
-[]|[] 
- []
-
-
-Overfull \hbox (150.25423pt too wide) in paragraph at lines 205--205
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 253--253
 []|[] 
  []
 
@@ -361,69 +356,154 @@ File: coding.jpg Graphic file (type bmp)
 File: chemistry2.jpg Graphic file (type bmp)
 <chemistry2.jpg>
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 217--261
+Overfull \hbox (6.0pt too wide) in paragraph at lines 271--329
 []|[] 
  []
 
 
-Overfull \hbox (99.66545pt too wide) in paragraph at lines 270--270
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 335--335
 []|[] 
  []
 
 
-Overfull \hbox (99.66545pt too wide) in paragraph at lines 276--276
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 339--339
 []|[] 
  []
 
 
-Overfull \hbox (99.66545pt too wide) in paragraph at lines 279--279
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 345--345
 []|[] 
  []
 
 
-Overfull \hbox (105.44717pt too wide) in paragraph at lines 287--287
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 348--348
 []|[] 
  []
 
 
-Overfull \hbox (105.44717pt too wide) in paragraph at lines 295--295
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 351--351
 []|[] 
  []
 
 
-Overfull \hbox (105.44717pt too wide) in paragraph at lines 299--299
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 358--358
 []|[] 
  []
 
-
-Overfull \hbox (99.66545pt too wide) in paragraph at lines 303--303
-[]|[] 
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 309.
 (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 ) [1
 
 ]
-Overfull \vbox (40.80975pt too high) has occurred while \output is active []
+Underfull \hbox (badness 2302) in paragraph at lines 403--403
+[]\TU/lmr/m/n/10 Desarrollo de proyectos, programas, aplicaciones web y
+ []
 
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 309.
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 403--403
+[]|[] 
+ []
+
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 406--406
+[]|[] 
+ []
+
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 407--407
+[]|[] 
+ []
+
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 415--415
+[]|[] 
+ []
+
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 419--419
+[]|[] 
+ []
+
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 422--422
+[]|[] 
+ []
+
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 425--425
+[]|[] 
+ []
+
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 428--428
+[]|[] 
+ []
+
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 432--432
+[]|[] 
+ []
+
+[2]
+Overfull \vbox (21.32811pt too high) has occurred while \output is active []
+
+ [3]
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 492--492
+[]|[] 
+ []
+
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 496--496
+[]|[] 
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 501--501
+[]\TU/lmr/m/n/10 Impartición de asesorias de nivel primaria, secundaria y
+ []
+
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 501--501
+[]|[] 
+ []
+
+
+Overfull \hbox (99.66545pt too wide) in paragraph at lines 504--504
+[]|[] 
+ []
+
+
+Overfull \hbox (105.44717pt too wide) in paragraph at lines 511--511
+[]|[] 
+ []
+
+
+Overfull \hbox (105.44717pt too wide) in paragraph at lines 519--519
+[]|[] 
+ []
+
+
+Overfull \hbox (105.44717pt too wide) in paragraph at lines 523--523
+[]|[] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 536.
+[4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 536.
  (./cv.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 309.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 309.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 536.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 536.
 Package rerunfilecheck Info: File `cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 309.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 536.
  ) 
 Here is how much of TeX's memory you used:
  11355 strings out of 479819
- 165809 string characters out of 5895846
- 454356 words of memory out of 5000000
- 28297 multiletter control sequences out of 15000+600000
- 534709 words of font info for 54 fonts, out of 8000000 for 9000
+ 165788 string characters out of 5895846
+ 456534 words of memory out of 5000000
+ 28296 multiletter control sequences out of 15000+600000
+ 534693 words of font info for 52 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 39i,33n,49p,980b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,33n,49p,996b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on cv.xdv (2 pages, 46820 bytes).
+Output written on cv.xdv (4 pages, 79832 bytes).

@@ -5,7 +5,7 @@
 % Doc type
 \documentclass{article}
 % Doc dimensions 
-\usepackage[a4paper, total={7.75in, 10.25in}]{geometry} 
+\usepackage[a4paper, total={7.75in, 10.in}]{geometry} 
 % Insert images
 \usepackage{graphicx}
 % Color of text 
@@ -44,6 +44,7 @@
 % CV commands
 \newcommand{\cvSection}[6]{
 % SECTION CONTAINER DONT REMOVE SPACES!!!!
+
 \begin{tabular}{@{} p{0.53in} p{4.3in}}
 
     \centering
@@ -57,6 +58,7 @@
     #2
 
     &
+    % default size -0.25in
     \vspace{-0.25in}
     \large{\et{#4}} \\
 
@@ -73,6 +75,54 @@
 \end{tabular}
 
 }
+
+
+
+\newcommand{\cvSectionNew}[8]{
+% SECTION CONTAINER DONT REMOVE SPACES!!!!
+\begin{tabular}{@{} p{0.53in} p{4.3in}}
+
+    \centering
+    #1
+
+    &
+
+    \large{\bt{#3}} \\
+    \vspace{-0.25in}
+    \centering
+    #2
+
+    &
+    \vspace{#8}
+    \large{\et{#4}} \\
+
+    ~ &
+    % default size -0.5in
+    \vspace{#7}
+    \begin{tabular}{@{}  p{4.1in}}
+        \begin{itemize}
+            #5
+        \end{itemize}
+    \vspace{-0.1in}
+    \bt{\et{#6}}
+    \end{tabular}
+
+\end{tabular}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \newcommand{\cvCoursesSection}[2]{
 % SECTION CONTAINER
@@ -96,33 +146,30 @@
 %%%%%%%%%%%%%%%% START DOCUMENT %%%%%%%%%%%%%%%%
 \begin{document}
 
-
-    % TABLE 1 START %
+% TABLE 1 START %
     \begin{tabular}{p{1.95in} p{5.05in}}
-
         \centering
-        \hspace{-0.3in} \img{cvPhoto}{0.315} &
+        \hspace{-0.3in} \img{cvPhoto}{0.3} &
         \hspace{-0.3in} 
+        \vspace{-0.25in}
         \begin{tabular}{p{5.05in}}
             % NAME
             \vspace{-1.25in}
-            \huge{Pérez Alvardo Luis  \ct{red}{\faDragon}} \\
+            \huge{Pérez Alvardo Luis Raymundo \ct{red}{\faDragon}} \\
             % JOB
             \vspace{-1.1in}
-            \Large{\et{\bt{Web Developer \faCode}}}
+            \Large{Químico \faAtom}
              \\
             % PERSONAL ABSTRACT
             \vspace{-0.9in}
-            Soy un amante de la química y la ciencia ... y si soy geek de la tecnología, mi área principal es la web, disfruto tanto el desarrollo Front-End como Back-End de aplicaciones, me gusta aprender mucho y deseo convertirme en un Full Stack developer y crear muchas aplicaciones geniales con un gran diseño.\\
+            Soy un amante de la química y la ciencia, con especial interés en la investigación de temas de fisicoquímica, simulación molecular, química computacional, biológicos y de la salud… también soy geek de la tecnología, mi área principal es la programación de aplicaciones web y scripts.
         \end{tabular}
-        \\
-
     \end{tabular}
     % TABLE 1 END %
 
-
+    \vspace{0.25in}
     % TABLE 2 PAGE 1 START %
-    \begin{tabular}{@{} p{1.95in}|p{5.05in}}
+    \begin{tabular}{@{} p{1.95in} | p{5.05in}}
 
         % TABLE 2.1 LATERAL BAR START %
         \begin{tabular}{@{} p{1.95in}}
@@ -131,15 +178,18 @@
             \vspace{0.02in}
             \bt{Edad} \\ 24 años 
             \\
+            \vspace{0.02in}
+            \bt{Promedio} \\ SIAE 7.88 Calculado* 7.93 \\ \em{*Se consideran las optativas obligatorias}
+            \\
             \vspace{0.025in}
             \faWhatsapp ~ \bt{Télfono} \\ \href{https://api.whatsapp.com/send/?phone=%2B5215532116641&text=Hola%20este%20es%20un%20mensaje%20directo%20de%20tu%20cv%20con%20la%20API%20de%20whatsapp%20...}{5532116641} 
             \\ 
             \vspace{0.025in}
             \faEnvelope ~ \bt{Correo} \\  \href{mailto:kamisama@comunidad.unam.mx?subject=Mensaje%20de%20tu%20cv%20con%20la%20API%20de%20mailto%20...}{kamisama@comunidad.unam.mx}  
             \\ 
-            \vspace{0.025in}
-            \faGlobe ~ \bt{Web} \\ \href{https://x1hibi.github.io/x1hibi/}{https://x1hibi.github.io/x1hibi/}  
-            \\
+            % \vspace{0.025in}
+            % \faGlobe ~ \bt{Web} \\ \href{https://x1hibi.github.io/x1hibi/}{https://x1hibi.github.io/x1hibi/}  
+            % \\
             \vspace{0.015in}
             \faBriefcase ~ \bt{Redes}\\
             \vspace{-0.025in}
@@ -173,7 +223,53 @@
             \begin{tabular}{ c c} 
                  \Huge{\faVuejs} & ~~~~~\Huge{\faLaravel} 
             \end{tabular}
+            \\~\\~\\~\\~\\~\\~
+        \end{tabular}
+        % TABLE 2.1 LATERAL BAR END %
+        &
+        % TABLE 2.1 SECTION CONTENT START %
+        \begin{tabular}{@{} p{3.7in}}
 
+            \huge{\faFlask ~ Experiencia en investigación}
+            \\ \\
+            \Large{Estancias en laboratorios}
+            \\
+            \vspace{0.05in}
+            \cvSection{2019}{6 meses}{Servicio social y estancia corta}{IIM, Instituto de Investigaciones en Materiales, UNAM}{\item Dinamica molecular de proteínas en problemas de inflamación y cancer. \item Desarrollo de scripts para desarrollo de calculos, graficas, manejo de archivos y trabajo vía remota por línea de comando.}{GROMACS Python Bash SSH GNU/Linux} 
+            \\
+            \vspace{-0.25in}
+            \cvSectionNew{2017-19}{3 años}{Voluntariado y trabajo de investigación I y II}{Laboratorio de Filogenia del Sistema Inmune y Mucosas, departamento de biologı́a belular y tisular, Facultad de Medicina, UNAM.}{\item 
+            Colaboración en trabajos de investigación \item Realización de técnicas histologicas.
+            }{Uso de balanza analítica, potenciometro microspios óptico, estereoscopíco y digital.}{-0.2in}{-0.25in}
+            \\
+            \vspace{-0.25in}
+            \cvSectionNew{2015-17}{2 años}{Voluntariado y servicio social de opcion técnica}{Laboratorio de Impregnaciones Metálicas, departamento de biologı́a belular y tisular, Facultad de Medicina, UNAM,}{\item 
+            Colaboración en trabajos de investigación y docencia.
+            \item Realización de técnicas de impregnación metálicas.}{Uso de balanza analítica y material de laboratorio}{-0.2in}{-0.25in}
+            
+            \Large{Congresos}
+            \\
+            \vspace{0.05in}
+            \cvSectionNew{2019}{~}{Cartel "Una segunda mirada a las células de Langerhans del pez gato (Siluriformes)"}{XXIV Simposio del departamento de ciencias de la salud, UAM Iztacala}{\item[]}{~}{-0.2in}{0in}
+        \end{tabular}
+    \end{tabular}
+    % TABLE 2 PAGE 1 END %
+
+
+
+
+
+
+
+
+
+    % TABLE 3 PAGE 3 START %
+    \begin{tabular}{@{} p{1.95in}|p{5.05in}}
+
+        % TABLE 3.1 LATERAL LATERAL PAGE 2 START
+        \vspace*{-5in}
+        \begin{tabular}{@{} p{1.95in}}
+            
             \vspace{0.1in}
             \bt{Librerias} \\
             \def\arraystretch{3.5}
@@ -181,41 +277,7 @@
             \begin{tabular}{ c c} 
                  \Huge{\faReact} & ~~~~~\Huge{\faBootstrap} 
             \end{tabular} \\
-            ~ \\ ~
 
-        \end{tabular}
-        % TABLE 2.1 LATERAL BAR END %
-
-        &
-
-        % TABLE 2.1 SECTION CONTENT START %
-        \begin{tabular}{@{} p{3in}}
-
-            \huge{\faUserMd ~Experiencia} 
-            \\
-            \vspace{0.1in}
-            \cvSection{2019-20}{6 meses}{Desarrollador Web Jr}{REVIMEX, Rehabilitadora de Propiedades
-            Mexicanas}{\item Desarrollo de aplicaciones web SPA, maquetación, diseño responsivo, validaciones de formularios, conexión con el backend y soporte a diferentes navegadores y dispositivos. \item Desarrollo, consumo y conexión de API's, servicios y  bases de datos (mongo) (\faAws~\faCcStripe~\faDatabase~
-            \faFacebookF~\faTwitter~\faWhatsapp~\faLinkedinIn~\faEnvelope). \item Testing, actualización y optimización de código para reducción de tiempos de carga, creación de componentes reutilizables y documentación de código.}{VueJS Laravel Python PHP JS HTML5 CSS3}
-            \\
-            \cvSection{2019}{6 meses}{Becario}{PROTECO, Programa de Tecnología en Computo, UNAM}{\item Desarrollo de proyectos, programas, aplicaciones web y moviles. \item Imparticion de cursos de lenguajes de programación y tecnologias de la computación.}{Bash C C++ Java Python JS Android Bases de datos} 
-            \\
-            \cvSection{2017-19}{20 meses}{Becario}{SICA, Sala de Informática y Computo para Alumnos, UNAM}{\item Asesoria a alumnos en el manejo e instalación de software y uso del equipo de computo. \item Actualización y mantenimiento del software y hardware los equipos de computo.}{Paquetería de office} 
-            \\
-            \cvSection{2017}{6 meses}{Monitorista}{Intelite KHD SA de CV}{\item Monitoreo de medios electrónicos, desarrollo de síntesis de información y captura de datos.}{~}\\
-
-        \end{tabular}
-
-    \end{tabular}
-    % TABLE 2 PAGE 1 END %
-
-    % TABLE 3 PAGE 3 START %
-    \begin{tabular}{@{} p{1.95in}|p{5.05in}}
-
-        % TABLE 3.1 LATERAL LATERAL PAGE 2 START
-        \vspace*{-5.5in}
-        \begin{tabular}{@{} p{1.95in}}
-            
             \bt{Bases de datos} \\
             \hspace*{-0.1in}
             \begin{tabular}{c c} 
@@ -228,6 +290,14 @@
             \hspace*{0.25in}
             \begin{tabular}{c c c} 
                 \Huge{\faWindows} & \Huge{\faLinux} & \Huge{\faApple}
+            \end{tabular} 
+            \\
+            \vspace{0.05in}
+            \bt{Paqueteria office} \\
+            \def\arraystretch{4.5}
+            \hspace*{0.25in}
+            \begin{tabular}{c c c} 
+                \Huge{\faFileWord} & \Huge{\faFilePowerpoint} & \Huge{\faFileExcel}
             \end{tabular} 
             \\
 
@@ -253,9 +323,7 @@
                 \img{play}{0.6} & \img{piano}{0.6}\\
                 \img{micro}{0.6} & \img{chemistry}{0.6}\\
                 \img{coding}{0.6} & \img{chemistry2}{0.6}\\
-            \end{tabular} \\
-
-
+            \end{tabular} 
         \end{tabular}
         % TABLE 3.1 LATERAL LATERAL PAGE 2 END
 
@@ -264,22 +332,178 @@
         % TABLE 3.2 SECTION CONTENT PAGE 2 START
         \begin{tabular}{@{}  p{3.7in}}
 
-            \huge{\faGlasses ~ Experiencia en investigación}
+            \cvSectionNew{2018}{~}{Cartel ”Dimorfismo sexual en el desarrollo posteclosión de las células de Langerhans epiteliales del pollo doméstico Gallus gallus”}{7° Congreso PECEM, Facultad de Medicina, UNAM}{\item[]}{~}{-0.2in}{0in}
             \\
-            \vspace{0.1in}
-            \cvSection{2019}{6 meses}{Servicio social}{IIM, Instituto de Investigaciones en Materiales, UNAM}{\item Dinamica molecular de proteínas en problemas de inflamación y cancer. \item Desarrollo de scripts para desarrollo de calculos, graficas, manejo de archivos y trabajo vía remota por línea de comando.}{GROMACS Python Bash SSH GNU/Linux} 
+            \vspace{-0.7in}
+            \cvSectionNew{2016}{~}{Cartel ”Análisis Histológico de la Microglı́a hipocampal de Ratas Tratadas Prenatalmente
+            con Corticosterona”}{Congreso XIV panamericano de neurologı́a}{\item[]}{~}{-0.2in}{0in}
             \\
+            \vspace{-0.7in}
+            \Large{Publicaciones y constancias}
+            \\
+            \vspace{-0.5in}
+            \cvSectionNew{2019}{~}{Constancia de apoyo  en el proyecto "Estudio de la actividad antiinflamatoria de alfa-pineno y alfa-felandreno en modelo murino"}{M. en C. Judith Salas Oropeza, FES Iztacala}{\item El apoyo consistío en entrenamiento de estudiantes en la técnica histoquímica enzimatica para ATPasa}{~}{-0.25in}{0in}
+            \\
+            \vspace{-0.5in}
+            \cvSectionNew{2016}{~}{Publicación de resumen ”Análisis Histológico de la Microglı́a hipocampal de Ratas Tratadas Prenatalmente con Corticosterona”,}{Rev Mex Neuroci. 2016; 17 (suplmento): S1-S346}{\item[]}{~}{-0.2in}{0in}
+            \\
+            \vspace{-0.7in}
+            \cvSectionNew{2015}{~}{Constancia de participación en muestra experimental de fisica Albert Einstein "Determinación de la velocidad de la limadura de hierro en líquidos de diferentes densidades"}{Facultad de Química, departamento de física y química teórica, UNAM}{\item[]}{~}{-0.25in}{0in}
+            \\
+            \vspace*{-0.5in}
+            \huge{\faUserMd ~Experiencia} 
+            \\
+            \cvSection{2019-20}{6 meses}{Desarrollador Web Jr}{REVIMEX, Rehabilitadora de Propiedades
+            Mexicanas}{\item Desarrollo de aplicaciones web SPA, maquetación, diseño responsivo, validaciones de formularios, conexión con el backend y soporte a diferentes navegadores y dispositivos. \item Desarrollo, consumo y conexión de API's, servicios y  bases de datos (mongo) (\faAws~\faCcStripe~\faDatabase~
+            \faFacebookF~\faTwitter~\faWhatsapp~\faLinkedinIn~\faEnvelope). \item Testing, actualización y optimización de código para reducción de tiempos de carga, creación de componentes reutilizables y documentación de código.}{VueJS Laravel Python PHP JS HTML5 CSS3}
+        \end{tabular}
+        % TABLE 3.2 SECTION CONTENT PAGE 2 END
+    \end{tabular}
+    % TABLE 3 PAGE 2 END %
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    % MAKe corrections
+
+
+    % TABLE 4 PAGE 4 START %
+    \begin{tabular}{@{} p{1.95in}|p{5.05in}}
+
+        % TABLE 4.1 LATERAL LATERAL PAGE 2 START
+        \vspace*{-5.5in}
+        \begin{tabular}{@{} p{1.95in}}
+            
+            
+        \end{tabular}
+        % TABLE 3.1 LATERAL LATERAL PAGE 2 END
+
+        &
+
+        % TABLE 3.2 SECTION CONTENT PAGE 2 START
+        \begin{tabular}{@{}  p{3.7in}}
+            \cvSection{2019}{6 meses}{Becario}{PROTECO, Programa de Tecnología en Computo, UNAM}{\item Desarrollo de proyectos, programas, aplicaciones web y moviles. \item Imparticion de cursos de lenguajes de programación y tecnologias de la computación.}{Bash C C++ Java Python Android Ardruino HTML CSS JS Bases de datos Redes de datos} 
+
+            \\
+            \cvSection{2017-19}{20 meses}{Becario}{SICA, Sala de Informática y Computo para Alumnos, UNAM}{\item Asesoria a alumnos en el manejo e instalación de software y uso del equipo de computo. \item Actualización y mantenimiento del software y hardware los equipos de computo.}{Paquetería de office} 
+            \cvSection{2017}{6 meses}{Monitorista}{Intelite KHD SA de CV}{\item Monitoreo de medios electrónicos, desarrollo de síntesis de información y captura de datos.}{~}\\
+
+            
+            \vspace{-0.5in}
+            \huge{\faGlasses ~ Formación complementaria}
+            \\
+            \vspace{0in}
+            \cvSectionNew{2020}{8 h}{Certificate  "Webinar  Innate immunity and SARS-CoV-2"
+            }{The autonomous university of Aguascalientes and the Pasteur Institute}{\item[]}{~}{-0.25in}{0in}
+            \\
+            \vspace{-0.7in}
+            \cvSection{2020}{20 h}{Constancia "Curso modular de microscopia en línea"}{Facultad de Medicina, UNAM
+            }{\item[]}{~} 
+            \\
+            \vspace{-0.6in}
+            \cvSection{2014-15}{1 año}{Diploma ”Tecnico en Histopatologı́a”}{Opción Técnica cursada en ENP 9 Pedro de Alba, UNAM}{\item[]}{~} 
+            \\
+            \vspace{-0.6in}
+            \cvSection{2013-14}{1 año}{Diploma ”Tecnico Auxiliar Laboratorista Quı́mico”}{Opción Técnica cursada en ENP 3 Justo sierra, UNAM}{\item[]}{~} 
+            \\
+            \vspace{-0.6in}
+            \cvSectionNew{2013}{40 h}{Constancia ”Curso-taller de Microscopı́a Óptica y Microfotografı́a”}{Curso realizado en ENP 3 Justo sierra, UNAM}{\item[]}{~}{-0.25in}{0in}
+            \\
+            \vspace{-0.5in}
+            \huge{\faGraduationCap ~Education} \\
+            \cvSection{2015}{(actual)}{Estudiante de la Licenciatura en Química,}{Facultad de Química, UNAM.}{\item[]}{~}
+
+        \end{tabular}
+        % TABLE 3.2 SECTION CONTENT PAGE 2 END
+    
+    \end{tabular}
+    % TABLE 3 PAGE 2 END %
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    % TABLE 5 PAGE 4 START %
+    \begin{tabular}{@{} p{1.95in}|p{5.05in}}
+
+        % TABLE 4.1 LATERAL LATERAL PAGE 2 START
+        \vspace*{-5.5in}
+        \begin{tabular}{@{} p{1.95in}}
+            
+            
+        \end{tabular}
+        % TABLE 3.1 LATERAL LATERAL PAGE 2 END
+
+        &
+
+        % TABLE 3.2 SECTION CONTENT PAGE 2 START
+        \begin{tabular}{@{}  p{3.7in}}
             \huge{\faBusinessTime ~ Experiencia en voluntariado}
             \\
             \vspace{0.1in}
             \cvSection{2018}{6 meses}{Director de Tecnología CNU}{Centro de Negocios
             Universitario, UNAM}{\item Maquetado, desarrollo y actualización de la pagina web del CNU. \item Organización y planeación de proyectos.}{HTML CSS UX UI Kanban Scrum} 
             \\
+            \vspace{-0.25in}
             \cvSection{2018}{6 meses}{Asesor del Área de Marketing CNU}{Centro de Negocios
             Universitario, UNAM}{\item Creación de contenido infografias, carteles y memes. \item Difusión de contenido por pagina web y redes sociales.}{Photoshop Illustrator Canvas} 
             \\
-            \huge{\faChalkboardTeacher ~ Experiencia en cursos}\\~
+            \vspace{-0.2in}
+            \huge{\faChalkboardTeacher ~ Experiencia docente}\\~
             \\
+            \cvSection{2018-19}{6 meses}{Asesor Injuve}{Injuve, Instituto de la Juventud}{\item Impartición de asesorias de nivel primaria, secundaria y bachillerato en matemáticas, biológicas, quı́micas e inglés}{~}
+            \\
+            \vspace{-0.5in}
+            \cvSection{2018}{6 meses}{Asesorias a domicilio}{Independiente}{\item Impartición de asesorias a nivel bachillerato en las asignaturas de matemáticas, biologı́a y quı́mica.}{~} 
+            \\
+            \vspace{-0.5in}
             \cvCoursesSection{\faLaptop~Cursos PROTECO}{
                 \centering 2019 60h & \textbullet \em{Instructor Auxiliar Curso \bt{Desarollador Full Stack} (stack MERN).} \\
                 \centering 2019 20h & \textbullet \em{Instructor Auxiliar Curso \bt{\LaTeX}.} \\
@@ -298,13 +522,16 @@
                 \centering 2018-19 & \textbullet \href{https://www.sololearn.com/Certificate/1024-8428663/pdf/}{JavaScript course}  \textbullet \href{https://www.sololearn.com/Certificate/1059-8428663/pdf/}{PHP course} \textbullet \href{https://www.sololearn.com/Certificate/1073-8428663/pdf/}{Python Core course} \textbullet \href{https://www.sololearn.com/Certificate/1082-8428663/pdf/}{jQuery course} \textbullet \href{https://www.sololearn.com/Certificate/1060-8428663/pdf/}{SQL course} \textbullet \href{https://www.sololearn.com/Certificate/1068-8428663/pdf/}{Java course} \textbullet \href{https://www.sololearn.com/Certificate/1051-8428663/pdf/}{C++ course} \textbullet \href{https://www.sololearn.com/Certificate/1089-8428663/pdf/}{C course} \textbullet \href{https://www.sololearn.com/Certificate/1014-8428663/pdf/}{HTML course} \textbullet \href{https://www.sololearn.com/Certificate/1023-8428663/pdf/}{CSS course}
             }
             \\
-            \huge{\faGraduationCap ~Education} \\
-            \\
-            \cvSection{2015}{(actual)}{Estudiante de la Licenciatura en Química,}{Facultad de Química, UNAM.}{\item[]}{~}
+            
         \end{tabular}
         % TABLE 3.2 SECTION CONTENT PAGE 2 END
     \end{tabular}
     % TABLE 3 PAGE 2 END %
+
+
+
+
+
 
 \end{document}
 %%%%%%%%%%%%%%%% END DOCUMENT %%%%%%%%%%%%%%%%
