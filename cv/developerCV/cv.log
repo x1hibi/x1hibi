@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.3.29)  30 MAR 2021 00:57
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.3.29)  21 APR 2021 15:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/x1hibi/x1hibi/gitRepositories/x1hibi/cv/cv.tex
-(/home/x1hibi/x1hibi/gitRepositories/x1hibi/cv/cv.tex
+**/home/x1hibi/x1hibi/gitRepositories/x1hibi/cv/developerCV/cv.tex
+(/home/x1hibi/x1hibi/gitRepositories/x1hibi/cv/developerCV/cv.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -419,11 +419,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 309.
  ) 
 Here is how much of TeX's memory you used:
  11355 strings out of 479819
- 165809 string characters out of 5895846
+ 165845 string characters out of 5895846
  454356 words of memory out of 5000000
  28297 multiletter control sequences out of 15000+600000
  534709 words of font info for 54 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 39i,33n,49p,980b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,33n,49p,992b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on cv.xdv (2 pages, 46820 bytes).

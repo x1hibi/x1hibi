@@ -1,9 +1,9 @@
-PWD /home/x1hibi/x1hibi/gitRepositories/x1hibi/cv
+PWD /home/x1hibi/x1hibi/gitRepositories/x1hibi/cv/developerCV
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/xetex/xelatex.fmt
-INPUT /home/x1hibi/x1hibi/gitRepositories/x1hibi/cv/cv.tex
+INPUT /home/x1hibi/x1hibi/gitRepositories/x1hibi/cv/developerCV/cv.tex
 OUTPUT cv.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls

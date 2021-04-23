@@ -1,13 +1,12 @@
 
 //import components
 import cardComponent from './components/CardComponent.js';
-// Import the library
+// Import the module textTypedEffect
 import TypedText from './textTypedEffect.js'
 
 new Vue({
   el: "#app",
   mounted() {
-
     
     //make a copy non mutable of array projects
     this.projects=[...this.projectsBackup]
@@ -25,17 +24,14 @@ new Vue({
       let searchInput=document.getElementById("searchInput")
       if(searchInput){
         if(searchInput==document.activeElement){
-          searchInput.parentElement.style.width="87%"
+          searchInput.parentElement.style.width="1024px"
           searchInput.placeholder="HTML CSS JS REACT VUE PHP PYTHON LARAVEL BOOTSTRAP D3"
         }else{
-          searchInput.parentElement.style.width="125px"
+          searchInput.parentElement.style.width="200px"
           searchInput.placeholder="Search by tags"
         }
       }
     })
-
-    // ScrollReveal().reveal('.cardContainer',{delay:500,duration:1250, origin:"bottom", distance:"250%",reset:true, useDelay:"once"});
-
   },
   data: {
     subtitle: " ",
@@ -126,20 +122,19 @@ new Vue({
         tags:['HTML','CSS'],
       },
       {
-        title:"Survey Form",
+        title:"Quick blindness survey",
         previewImage:"media/preview_2.jpg",
         urlProject:"https://codepen.io/x1hibi/full/eqNPWr",
-        description:'this is a description',
+        description:'In this survey you will be able to know the most general aspects of color blindness, you will be able to know if you are color blind very quickly.',
         tags:['HTML','CSS'],
       },
       {
         title:"Tribute Page",
         previewImage:"media/preview_1.jpg",
         urlProject:"https://codepen.io/x1hibi/full/rXVroO",
-        description:'this is a description',
+        description:'This is a tribute to japanese singer Kouji Wada knowed specially to be the interpreter of Digimon openings, you can find a brief biography about his life and carrer and a little about his discograpfy.',
         tags:['HTML','CSS'],
       },
-      
     ],
     projects:'',
     searchValue:"",
@@ -149,7 +144,6 @@ new Vue({
     emailContent:"",
   },
   methods: {
-
     /**
      * Auto type my areas in the banner 
      */
@@ -174,7 +168,7 @@ new Vue({
      * Type my personal info into main element in home section 
      */
     typeEffectContent(){
-      let myAbstract=["Hello my nickname is x1hibi 🐉, I'm a lover of chemistry 🧪, science 🔬 and anime 🇯🇵 and videogames 🎮 , and yes... also a tech geek 😎, my main area is the development of web applications 🌐💻 (Front-End and Back-End)"]
+      let myAbstract=["   Hello my nickname is x1hibi 🐉, I'm a lover of chemistry 🧪, science 🔬 and anime 🇯🇵 and videogames 🎮 , and yes... also a tech geek 😎, my main area is the development of web applications 🌐💻 (Front-End and Back-End)"]
       let options = {
         delayTimeBeforeTyping:500,
         blinkCaretRepetitionsAtStart:2,
@@ -241,7 +235,6 @@ new Vue({
             document.getElementsByClassName("cards-container")[0].className="cards-container cards-container-open-animation"
           }, 300);
         }else {
-          this.projects=this.projectsBackup
           // TO MAKE BETTER !
           // input effect 
           searchInput.style.opacity="0"
@@ -274,7 +267,6 @@ new Vue({
           hiddenInput.disabled="true"
         }, 10);
       }
-
     },
     /**
      * Load all projects when search input are empty
@@ -305,6 +297,4 @@ new Vue({
   components: {
     'card-component': cardComponent,
   }
-
 });
-
