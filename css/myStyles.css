@@ -898,3 +898,13 @@ body{
     }   
 
 }
+
+/* Smartphones (portrait)*/
+@media (max-height:200px) {
+
+    .fixed-button-menu{
+        display: none;
+    }
+
+}
+

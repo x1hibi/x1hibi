@@ -115,17 +115,17 @@ new Vue({
         tags:['HTML','CSS'],
       },
       {
-        title:"Landing Page",
+        title:"Product Landing Page",
         previewImage:"media/preview_3.jpg",
         urlProject:"https://codepen.io/x1hibi/full/pMJMKb",
         description:'this is a description',
         tags:['HTML','CSS'],
       },
       {
-        title:"Quick blindness survey",
+        title:"Survey Form",
         previewImage:"media/preview_2.jpg",
         urlProject:"https://codepen.io/x1hibi/full/eqNPWr",
-        description:'In this survey you will be able to know the most general aspects of color blindness, you will be able to know if you are color blind very quickly.',
+        description:'In this survey form you will be able to know the most general aspects of color blindness and you will be able to know if you are color blind quickly.',
         tags:['HTML','CSS'],
       },
       {

@@ -24,19 +24,9 @@ const modalSliderImages=[
         "altText":"Wireframe of contact section"
     }],
     [{
-        "imagePath":"./media/code2.png",
-        "captionText":"Search tag diagram (1/3)",
-        "altText":"Search tag diagram (1/3)"
-    },
-    {
-        "imagePath":"./media/code2.png",
-        "captionText":"Fixed button (2/3)",
-        "altText":"Fixed button (2/3)"
-    },
-    {
-        "imagePath":"./media/code2.png",
-        "captionText":"Modal Slider (3/3)",
-        "altText":"Modal Slider (3/3)"
+        "imagePath":"./media/searchBar.png",
+        "captionText":"Search by tag diagram (1/3)",
+        "altText":"Search by tag diagram  (1/3)"
     }],
     [{
         "imagePath":"./media/html.png",
@@ -166,6 +156,11 @@ function displayModal(showModal) {
  * @param {String} type - Option selected 
  */
 function selectOption(type){
+
+    // reset default values 
+    this.currentOption=0;
+    this.currentIndex = 0;
+    this.currentSize = 0;
     
     // select fixed menu seccion
     currentOption= type=="wireframe" ? 0 : type=="diagram" ? 1 : 2
@@ -182,6 +177,8 @@ function selectOption(type){
  */
 function modalSlider(action) {
 
+    console.log("start",this.currentIndex,this.currentOption,this.currentSize)
+
     disableButtons(true)
 
     //check index and handle cases -1 and index bigger than length array 
@@ -191,6 +188,9 @@ function modalSlider(action) {
     }else if(currentIndex >= currentSize){
         currentIndex=0
     }
+
+    console.log("end",this.currentIndex,this.currentOption,this.currentSize)
+
 
     sliderImage.classList.toggle("transition-effect")
     sliderCaption.classList.toggle("transition-effect")
@@ -202,6 +202,7 @@ function modalSlider(action) {
         sliderCaption.textContent=modalSliderImages[currentOption][currentIndex].captionText
         sliderImage.classList.toggle("transition-effect")
         sliderCaption.classList.toggle("transition-effect")
+        document.getElementById("sliderContainer").scrollTo(0,0)
         setTimeout(() => {
             disableButtons(false)
         }, 300);
