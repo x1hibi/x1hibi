@@ -1,4 +1,3 @@
-
 //import components
 import cardComponent from './components/CardComponent.js';
 // Import the module textTypedEffect
@@ -7,6 +6,7 @@ import TypedText from './textTypedEffect.js'
 new Vue({
   el: "#app",
   mounted() {
+    console.log("mounted")
     
     //make a copy non mutable of array projects
     this.projects=[...this.projectsBackup]
@@ -108,7 +108,14 @@ new Vue({
         tags:['HTML','CSS','JS','REACT'],
       },
       {
-        title:"Documentation Page",
+        title:"Personal Portfolio Webpage",
+        previewImage:"media/preview_5.png",
+        urlProject:"https://x1hibi.github.io/x1hibi/",
+        description:'This is my ersonal web page where I show my profile and web projects.',
+        tags:['HTML','CSS','JS','VUE'],
+      },
+      {
+        title:"Tecnical Documentation Page",
         previewImage:"media/preview_4.jpg",
         urlProject:"https://codepen.io/x1hibi/full/YmyNaZ",
         description:'this is a description',
@@ -168,7 +175,7 @@ new Vue({
      * Type my personal info into main element in home section 
      */
     typeEffectContent(){
-      let myAbstract=["   Hello my nickname is x1hibi 🐉, I'm a lover of chemistry 🧪, science 🔬 and anime 🇯🇵 and videogames 🎮 , and yes... also a tech geek 😎, my main area is the development of web applications 🌐💻 (Front-End and Back-End)"]
+      let myAbstract=["     My nickname is x1hibi 🐉, I'm a lover of chemistry ⚗️, science 🔬, anime 🇯🇵 and videogames 🎮 , and yes... also a tech geek 😎, my main area is the development of web applications 🌐💻 (Front-End and Back-End)"]
       let options = {
         delayTimeBeforeTyping:500,
         blinkCaretRepetitionsAtStart:2,
@@ -233,6 +240,7 @@ new Vue({
           setTimeout(() => {
             this.projects=sortProjects
             document.getElementsByClassName("cards-container")[0].className="cards-container cards-container-open-animation"
+            window.scrollTo(0, document.getElementById("banner").offsetHeight)
           }, 300);
         }else {
           // TO MAKE BETTER !

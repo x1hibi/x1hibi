@@ -74,6 +74,17 @@ function buttonMenu(type){
     })
 }
 
+
+function loader() {
+    document.getElementById("app").style.display="block"
+    document.getElementById("app").style.transitionDuration="0.5s"
+    setTimeout(() => {
+        document.getElementById("app").style.opacity="1"
+        document.getElementById("loader").style.display="none"
+    }, 10);
+}  
+
+
 /**
  * Disable all buttons in DOM 
  * @param {Boolean} disable - Condition to disable/ enable all buttons
@@ -145,9 +156,10 @@ function displayFixedMenu() {
  */
 function displayModal(showModal) {
 
-    // check if modal is display or hide and change class name
-    modalContainer.className= showModal ? "modal-container modal-open-animation" :
-    "modal-container modal-close-animation" ;
+    // check if modal is display or hide and change class name, and disable/enable body scroll
+    modalContainer.className= showModal ? 
+    (document.body.style.overflow="hidden","modal-container modal-open-animation") :
+    (document.body.style.overflow="auto","modal-container modal-close-animation") ;
 
 }
 
