@@ -102,12 +102,11 @@ body{
 } 
 
 .din{
-    animation-duration: 6s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-name: din;
     animation-timing-function: ease-in-out;
     color:red;
-
 }
 
 @keyframes din {
@@ -236,7 +235,7 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0;
-    max-height: 95%;
+    max-height: 90%;
     padding-bottom: 30px;
     position: relative;
     width: 100%;
@@ -264,10 +263,10 @@ body{
 
 .responsive-slider-background{
     background: url('../media/spinnerLoader.gif  ');
-    min-height: 140px;
-    background-size: contain;
-    background-repeat: no-repeat;
     background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 140px;
 }
 
 .slider-arrow{

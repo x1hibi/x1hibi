@@ -6,7 +6,6 @@ import TypedText from './textTypedEffect.js'
 new Vue({
   el: "#app",
   mounted() {
-    console.log("mounted")
     
     //make a copy non mutable of array projects
     this.projects=[...this.projectsBackup]
@@ -216,10 +215,11 @@ new Vue({
         if(validTags.length >0 ){
           // array with sort projects
           let sortProjects=[]
+
           // check each tag
+          let projectsToCheck=[...this.projectsBackup]
           for (let i = 0; i < validTags.length; i++) {
-            //create a copy os projects 
-            let projectsToCheck=[...this.projectsBackup]
+            //create a copy all projects 
             for (let j = 0; j < projectsToCheck.length; j++) {
               //check if tag is typed are in the current proyect 
               if(projectsToCheck[j].tags.includes(validTags[i])){

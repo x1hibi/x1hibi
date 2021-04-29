@@ -203,9 +203,9 @@
 }
 
 .project-container{
-    margin: 5% 0;
     display: flex;
     justify-content: center;
+    margin: 5% 0;
     width: 100%;
 }
 
@@ -221,16 +221,16 @@
 }
 
 .project-tile:hover,.project-tile:active,.project-label:hover,.project-label,.project-label:active{
-    transform: scale(1.2);
     text-shadow: 0 0 5px white;
+    transform: scale(1.2);
 } 
 
 .project-label{
     display: block;
-    font-size: 25px;
-    margin-top: 15px;
     font-family: 'Roboto';
+    font-size: 25px;
     font-weight: 100;
+    margin-top: 15px;
     text-shadow: 0 0 5px black;
 }
 
@@ -238,10 +238,10 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    opacity: 0;
-    margin-top: 5px;
     height: fit-content;
+    justify-content: center;
+    margin-top: 5px;
+    opacity: 0;
     width: 100%;
 }
 
@@ -314,8 +314,8 @@
 .card-description{
     font-family: Roboto, sans-serif;
     font-weight: 400;
-    max-height: 40px;
     margin: 8px 0;
+    max-height: 40px;
     overflow:hidden;
     text-align: justify;
     transition-duration: 0.15s;
@@ -422,7 +422,7 @@
     font-family: Roboto, sans-serif;
     font-size: medium;
     font-weight: 400;
-    margin: 0 auto;
+    margin: 0 auto 25px auto;
     outline: none;
     padding: 10px;
     transition-duration: 0.25s;
@@ -438,10 +438,10 @@
 
 .hiddenInput{
     border: 0;
-    width: 0;
     height: 0;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    width: 0;
 }
 
 /********************/
@@ -469,12 +469,12 @@
 }
 
 .section-content-fluid-text{
-    font-weight: 300;
-    text-align: justify;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
+    font-weight: 300;
     height: 300px;
+    text-align: justify;
     text-shadow: 0 0 20px black;
 }
 
@@ -540,8 +540,8 @@
 @media (max-width:767px){
 
     .section-container{
-        margin: 5% auto;
         height: fit-content;
+        margin: 5% auto;
     }
 
     .menu-options-container{
@@ -575,6 +575,10 @@
     .slider-caption{
         bottom: 10px;
         font-size: small;
+    }
+
+    .project-label{
+        margin: 15px 0 115px 0;
     }
 
 }

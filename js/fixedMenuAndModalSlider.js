@@ -25,27 +25,32 @@ const modalSliderImages=[
     }],
     [{
         "imagePath":"./media/searchBar.png",
-        "captionText":"Search by tag diagram (1/3)",
-        "altText":"Search by tag diagram  (1/3)"
+        "captionText":"Search by tag diagram (1/1)",
+        "altText":"Search by tag diagram  (1/1)"
     }],
     [{
         "imagePath":"./media/html.png",
-        "captionText":"index.html (1/4)",
+        "captionText":"index.html (1/5)",
         "altText":"image of html index file"
     },
     {
-        "imagePath":"./media/css.png",
-        "captionText":"myStyles.css (2/4)",
+        "imagePath":"./media/css1.png",
+        "captionText":"myStyles.css (2/5)",
+        "altText":"image of css style file"
+    },
+    {
+        "imagePath":"./media/css2.png",
+        "captionText":"generalStyles.css (3/5)",
         "altText":"image of css style file"
     },
     {
         "imagePath":"./media/js1.png",
-        "captionText":"app.js (3/4)",
+        "captionText":"app.js (4/5)",
         "altText":"image of js file"
     },
     {
         "imagePath":"./media/js2.png",
-        "captionText":"fixedMenuAndModalSlider.js (4/4)",
+        "captionText":"fixedMenuAndModalSlider.js (5/5)",
         "altText":"image of js file"
     }]
 ]
@@ -189,8 +194,6 @@ function selectOption(type){
  */
 function modalSlider(action) {
 
-    console.log("start",this.currentIndex,this.currentOption,this.currentSize)
-
     disableButtons(true)
 
     //check index and handle cases -1 and index bigger than length array 
@@ -200,8 +203,6 @@ function modalSlider(action) {
     }else if(currentIndex >= currentSize){
         currentIndex=0
     }
-
-    console.log("end",this.currentIndex,this.currentOption,this.currentSize)
 
 
     sliderImage.classList.toggle("transition-effect")
