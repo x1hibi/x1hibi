@@ -9,34 +9,39 @@ const sliderCaption=document.getElementById("sliderCaption")
 // Array of modal images 
 const modalSliderImages=[
     [{
-        "imagePath":"./media/wireframeView1.png",
-        "captionText":"Wireframe Home (1/2)",
-        "altText":"this is the alternative text"
+        "imagePath":"./media/wireframe_home.png",
+        "captionText":"Wireframe home section (1/2)",
+        "altText":"Wireframe of home section"
     },
     {
-        "imagePath":"./media/wireframeView2.png",
-        "captionText":"Wireframe Home (2/2)",
-        "altText":"this is the alternative text"
+        "imagePath":"./media/wireframe_discography.png",
+        "captionText":"Wireframe discography section (2/2)",
+        "altText":"Wireframe of discography section"
     }],
     [{
-        "imagePath":"./media/code2.png",
-        "captionText":"index.html (1/2)",
-        "altText":"this is the alternative text"
+        "imagePath":"./media/html.png",
+        "captionText":"index.html (1/5)",
+        "altText":"image of html index file"
     },
     {
-        "imagePath":"./media/code2.png",
-        "captionText":"style.css (2/2)",
-        "altText":"this is the alternative text"
-    }],
-    [{
-        "imagePath":"./media/digivice.png",
-        "captionText":"this is a static caption",
-        "altText":"this is the alternative text"
+        "imagePath":"./media/css1.png",
+        "captionText":"myStyles.css (2/5)",
+        "altText":"image of css style file"
     },
     {
-        "imagePath":"./media/digivice.png",
-        "captionText":"this is a static caption",
-        "altText":"this is the alternative text"
+        "imagePath":"./media/css2.png",
+        "captionText":"generalStyles.css (3/5)",
+        "altText":"image of css style file"
+    },
+    {
+        "imagePath":"./media/js1.png",
+        "captionText":"app.js (4/5)",
+        "altText":"image of js file"
+    },
+    {
+        "imagePath":"./media/js2.png",
+        "captionText":"fixedMenuAndModalSlider.js (5/5)",
+        "altText":"image of js file"
     }]
 ]
 // varibles of slider 
@@ -44,15 +49,12 @@ var currentOption = 0;
 var currentIndex = 0;
 var currentSize = 0;
 
-
-
 //// Global functions
 
 /**
  * This function handle multiple clicks of button elements displayed in the current DOM
  * @param {String} type - Type of button 
  */
-
 function buttonMenu(type){
 
     // make synchronous code with a promise
@@ -67,11 +69,28 @@ function buttonMenu(type){
     })
 }
 
+
+function loader(loadPage) {
+
+    if(loadPage){
+        document.getElementsByClassName('loader')[0].style.opacity="0"
+        setTimeout(() => {
+            document.getElementById("loader").style.display="none"
+            document.getElementById("main").style.display="block"
+            document.getElementById("fixedMenu").style.display="block"
+            document.body.style.animation="gradient 2s ease-in-out 1.5s infinite alternate"
+            stickyMenu=false
+        }, 1510);
+    }else{
+        document.getElementById('startButton').style.display="block"
+    }
+}  
+
+
 /**
  * Disable all buttons in DOM 
  * @param {Boolean} disable - Condition to disable/ enable all buttons
  */
-
 function disableButtons(disabled){
 
     // make an array of all buttons
@@ -86,13 +105,11 @@ function disableButtons(disabled){
     
 }
 
-
 /**
  * Execute the correspond action for each  button in base of type param 
  * @param {String} type -Define the function of the button 
  * @returns Always return true to resolve the promise 
  */
-
 function buttonHandler(type) {
     
     // check each type and execute code
@@ -109,6 +126,9 @@ function buttonHandler(type) {
         disableButtons(true)
         // when type is closeModal
         displayModal(false)
+        if(document.getElementById("fixedMenu").className=="fixed-button-menu hidden-element"){
+            displayFixedMenu()
+        }
         sliderImage.src="#"
     }else{
         // click inside modal
@@ -118,33 +138,29 @@ function buttonHandler(type) {
     return true 
 }
 
-
 /**
  * Toogle classes of fixed menu to show and hide the options
  * @param {Boolean} showMenu - Condition to display/hide menu
  */
-
 function displayFixedMenu() {
 
     // hide and show menu
-    document.getElementById("fixedMenu").classList.toggle("hide-element")
+    document.getElementById("fixedMenu").classList.toggle("hidden-element")
     // toogle classes for each button to move it 
-    document.getElementById("code").classList.toggle("first-button-position");
-    document.getElementById("diagram").classList.toggle("second-button-position");
+    document.getElementById("code").classList.toggle("second-button-position");
     document.getElementById("wireframe").classList.toggle("third-button-position");
 }
-
 
 /**
  * This funcition switch the class name of modal container to display the modal and his animation
  * @param {Boolean} showModal - Define if modal is displayed 
  */
-
 function displayModal(showModal) {
 
-    // check if modal is display or hide and change class name
-    modalContainer.className= showModal ? "modal-container modal-open-animation" :
-    "modal-container modal-close-animation" ;
+    // check if modal is display or hide and change class name, and disable/enable body scroll
+    modalContainer.className= showModal ? 
+    (document.body.style.overflow="hidden","modal-container modal-open-animation") :
+    (document.body.style.overflow="auto","modal-container modal-close-animation") ;
 
 }
 
@@ -152,11 +168,15 @@ function displayModal(showModal) {
  * Selected option of fixed menu and set first image of array 
  * @param {String} type - Option selected 
  */
-
 function selectOption(type){
+
+    // reset default values 
+    this.currentOption=0;
+    this.currentIndex = 0;
+    this.currentSize = 0;
     
     // select fixed menu seccion
-    currentOption= type=="wireframe" ? 0 : type=="diagram" ? 1 : 2
+    currentOption= type=="wireframe" ? 0 : 1;   
     // set first image of array
     sliderImage.src=modalSliderImages[currentOption][0].imagePath
     sliderImage.alt=modalSliderImages[currentOption][0].altText
@@ -164,12 +184,10 @@ function selectOption(type){
     currentSize=modalSliderImages[currentOption].length
 }
 
-
 /**
  * Display the images of the selected section and controled with the modal arrows
  * @param {String} type - Option selected 
  */
-
 function modalSlider(action) {
 
     disableButtons(true)
@@ -182,6 +200,7 @@ function modalSlider(action) {
         currentIndex=0
     }
 
+
     sliderImage.classList.toggle("transition-effect")
     sliderCaption.classList.toggle("transition-effect")
 
@@ -192,10 +211,9 @@ function modalSlider(action) {
         sliderCaption.textContent=modalSliderImages[currentOption][currentIndex].captionText
         sliderImage.classList.toggle("transition-effect")
         sliderCaption.classList.toggle("transition-effect")
+        document.getElementById("sliderContainer").scrollTo(0,0)
         setTimeout(() => {
             disableButtons(false)
         }, 300);
     }, 300);
-
 }
-

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta information (start) -->
+        <title>Kōji Wada</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="x1hibi">
+        <meta name="description" content="This is a tribute in honor to the singer Kōji Wada, who interpret a lot of anime songs, but especially remembered by his Digimon songs">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./media/digiviceIcon.png">
+        <meta name="theme-color" content="#7a84ff">
+        <!-- Meta information (end) -->
+
+        <!-- Preload inmediate images -->
+        <link rel="preload" as="image" href="./media/kouji.jpg" >
+        <link rel="preload" as="image" href="./media/digimon1.png" >
+        <link rel="preload" as="image" href="./media/digimon2.jpg" >
+        <link rel="preload" as="image" href="./media/digimon3.jpg" >
+
+        <!-- Prefetch images needed  -->
+        <link rel="prefetch" href="./media/wireframe_home.png" >
+        <link rel="prefetch" href="./media/wireframe_discography.png" >
+        <!-- load styles and inmediate resources -->
+        <script src="./js/fontAsome.js" crossorigin="anonymous" type="text/javascript"></script>
+        <link type="text/css" rel="stylesheet" href="./css/generalStyles.css">   
+        <link type="text/css" rel="stylesheet" href="./css/myStyles.css">  
+        <!-- Preload images (end) -->
+    </head>
+
+    <body onload="loader(false)">
+        <!-- Main body (start)-->
+        <main id="main" class="main-container">
+
+            <!-- Principal header (start)  -->
+            <header class="banner-container">
+
+                <figure class="figure-banner" id="img-div">
+                    <div class="image-gradient">
+                        <img src="./media/kouji.jpg" class="img-banner" alt="Kōji Wada photo" id="image">
+                    </div>
+                    <figcaption class="img-caption" id="img-caption">Kōji Wada 're-fly'</figcaption>
+                </figure>
+
+                <!-- Title H1 for seo ( start option 1) -->
+                <h1 class="title-banner" id="title">Kōji Wada</h1>
+                <!-- Title H1 for seo ( end option 1) -->
+
+            </header>
+            <!-- Principal header (end)  -->
+
+            <!-- Menu bar (start)  -->
+            <nav class="menu-container" title="console.log('tets')" id="menu">
+                <ul class="menu-list">
+                    <li class="menu-option"><a href="#tribute-info" class="menu-link">Home</a></li>
+                    <li class="menu-option"><a href="#discography-info" class="menu-link">Discography</a></li>
+                    <li class="menu-option"><a class="menu-link" href="http://wadakoji.blog87.fc2.com" target="_blank" id="tribute-link">Blog Kōji Wada</a></li>
+                </ul>
+            </nav>
+            <!-- Menu bar (end)  -->
+
+            <!-- Principal content (start) -->
+            <main id="test">
+                <!-- section define a section of a document, "A section is a thematic grouping of content, typically with a heading."     -->
+                <section id="tribute-info" class="section-content">
+                    <h2 class="section-title">Who is Kōji Wada?</h2>
+                    <article class="article-container">
+                        <p class="article-text">Kōji Wada (和田 光司, Wada Kōji, January 29, 1974 – April 3, 2016) was a Japanese pop singer. He was best known for performing theme songs for several installments of the Digimon anime television series, including his recording debut in 1999 with his first and most famous single, <em>"Butter-Fly"</em>, the theme song of the anime Digimon Adventure. He was signed with the Lantis recording label. His nickname is <b>"Immortal Butterfly Anisong Singer"</b></p>
+                        <img class="img-resposive img-effect-right" src="./media/digimon1.png" alt="Butter-Fly album" title="Butter-Fly album">
+                    </article>
+                    <article class="article-container">
+                        <img class="img-resposive img-effect-left" src="./media/digimon2.jpg" alt="Butter-Fly Tri album" title="Butter-Fly Tri album" width="">
+                        <p class="article-text"><b>Wada had contributed songs to six of the seven Digimon anime series</b> (with one of his songs reused for the seventh, to which he contributed no new songs), <em>including opening themes for the first five of them</em>. He also performed two songs used as ending themes for Digimon Frontier, "Innocent: Mujaki na Mama de" (イノセント～無邪気なままで～) and "an Endless Tale" (with AiM). He starred in various other songs for the series, such as "Bokura no Digital World" (the "memorial" theme for the Adventure series), "Yūki o Uketsugu Kodomo-tachi e" and also several Christmas songs. He also performed the theme song for Transformers: Robots in Disguise in Japan.</p>
+                    </article><article class="article-container">
+                        <p class="article-text">On October 4, 2011, Wada announced via his blog that he was putting his career on hold in order to deal with a sudden metastasized cancer which had previously seen treatment in 2003. <br/> <br/> On April 3, 2016, Wada died suddenly from complications related to nasopharynx cancer. <b>His last single, "Seven〜tri. Version〜", was released only five days prior to his death.</b> <br/><br/>A CD tribute for Kōji Wada was released in Japan on July 31, 2016 under the name of <em>"Digimon Song Best of Koji Wada."</em> The CD includes a total of eleven tracks by the late singer. Additionally, the cover features Angemon, Wada's favourite character from the "Digimon" franchise. Another compilation, <em>"Koji Wada Digimon Memorial Best"</em>, was released on January 25, 2017.</p>
+                        <img class="img-resposive img-effect-right" src="./media/digimon3.jpg" alt="rest in peace Kōji Wada" title="rest in peace Kōji Wada">
+                    </article>
+
+                </section>
+
+                <section id="discography-info" class="section-content">
+                    <h2 class="section-title">Koji Wada Digimon Memorial Best </h2>
+                    <div class="flex-wrap-container">
+                        <section class="player-container">
+                            <button class="button-player" onclick="playerOption('back')"><i class="fas fa-backward"></i></button>
+                            <button class="button-player hidden-element" onclick="playerOption('play')" id="playButton"><i class="fas fa-play"></i></button>
+                            <button class="button-player" onclick="playerOption('pause')" id="pauseButton"><i class="fas fa-pause"></i></button>
+                            <button class="button-player" onclick="playerOption('next')"><i class="fas fa-forward"></i></button>
+                            <div class="volume-container">
+                                <input oninput="selectTime()" id="progressBar" type="range" min="0" max="100" value="0" class="volume-player">
+                            </div>
+                            <audio id="player" data-track="17" >
+                                <source src='https://x1hibi.s3-us-west-1.amazonaws.com/media/htmlProjects/tributePage/18-SeventriVersion.mp3' type="audio/mpeg" >
+                              Your browser does not support the audio element.
+                            </audio>
+                        </section>
+                        <nav class="list-music-container">
+                            <ol class="list-music">
+                                <a class="track" onclick="playTrack(0)">01-Butter-Fly</a>
+                                <a class="track" onclick="playTrack(1)">02-FIRE</a>
+                                <a class="track" onclick="playTrack(2)">03-Boku-wa-Boku-datte</a>
+                                <a class="track" onclick="playTrack(3)">04-Butter-fly-Piano-version</a>
+                                <a class="track" onclick="playTrack(4)">05-Haruka-na-Okurimono</a>
+                                <a class="track" onclick="playTrack(5)">06-Seven</a>
+                                <a class="track" onclick="playTrack(6)">07-Butter-fly-Movie-Size-1</a>
+                                <a class="track" onclick="playTrack(7)">08-The-Biggest-Dreamer</a>
+                                <a class="track" onclick="playTrack(8)">09-Hirari</a>
+                                <a class="track" onclick="playTrack(9)">10-With-The-Will</a>
+                                <a class="track" onclick="playTrack(10)">11-Butter-FlyStrong-Version</a>
+                                <a class="track" onclick="playTrack(11)">12-Seven10th-Memorial-Version</a>
+                                <a class="track" onclick="playTrack(12)">13-Innocent-Mujyaki-na-mamade</a>
+                                <a class="track" onclick="playTrack(13)">14-an-Endless-tale</a>
+                                <a class="track" onclick="playTrack(14)">15-Kaze</a>
+                                <a class="track" onclick="playTrack(15)">16-Target-Akai-Shogeki</a>
+                                <a class="track" onclick="playTrack(16)">17-Mirai-e-no-Tobira-Ano-natsu-n</a>
+                                <a class="track current-track" onclick="playTrack(17)">18-SeventriVersion</a>
+                                <a class="track" onclick="playTrack(18)">19-Butter-FlytriVersion</a>
+                            </ol>
+                        </nav>
+                    </div>
+
+                </section>
+
+            </main>
+            <!-- Principal content (end) -->
+
+            <!-- Footer (start)  -->
+            <footer class="footer-container">
+                <p class="footer-content footer-fluid-text"> <a href="https://x1hibi.github.io/x1hibi/" target="_blank" class="footer-link"> x1hibi Web &nbsp;<i class="fas fa-dragon din" ></i></a></p>
+                <hr class="footer-bar">
+                <p class="footer-content footer-fluid-text">Copyright © 2021 x1hibi All rights reserved.</p>
+            </footer>
+            <!-- Footer (end)  -->
+            
+        </main>
+
+
+        <!-- Modal of fixed button (start) -->
+        <section class="modal-container" id="modalContainer" onclick="buttonMenu(event)">
+            <!-- Wireframes and code -->
+            <figure class="modal">
+                <div class="slider-container">
+                    <div class="responsive-slider responsive-slider-background" id="sliderContainer">
+                        <button class="slider-arrow" onclick="modalSlider('previus')"><i class="fas fa-arrow-left"></i></button>
+                        <img class="slider-image" src="#" id="sliderImage">
+                        <button class="slider-arrow" onclick="modalSlider('next')"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <figcaption class="slider-caption" id="sliderCaption">text</figcaption>
+            </figure>
+        </section>
+        <!-- Modal of fixed button (end) -->
+
+        <!-- Button Menu (start) -->
+        <nav class="fixed-menu-container" id="fixedMenu">
+            <button class="fixed-button-menu music-controls" onclick="playPause(event)" title="pause" id="menuPlayer"><i class="fas fa-pause"></i></button>
+            <button class="fixed-button-menu" onclick="buttonMenu('wireframe')" id="wireframe" title="Wireframes"><i class="fas fa-columns"></i></button>
+            <button class="fixed-button-menu" onclick="buttonMenu('code')" id="code" title="Code"><i class="fas fa-code"></i></button>
+            <button class="fixed-button-menu button-shadow" onclick="buttonMenu('closeMenu')"><i class="fas fa-times" title="Close menu"></i></button>
+            <button class="fixed-button-menu" onclick="buttonMenu('openMenu')" id="fixedMenu"><i class="fas fa-list" title="Menu"></i></button>
+        </nav>
+        <!-- Button Menu (end) -->
+        <!-- Main body (end)-->
+
+        <!-- Loader page -->
+        <div id="loader" class="loader-container"><div class="loader"><button class="start-button" onclick="playPause(event)" title='Start' id="startButton">START</button></div></div>
+    </body>
+
+    <!-- Js and css files (start) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600;1,700&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Share+Tech&family=Share+Tech+Mono&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
+    <script src="./js/app.js" defer></script>
+    <script src="./js/fixedMenuAndModalSlider.js" type="text/javascript" defer></script>
+    <script src="./js/fontAsome.js" crossorigin="anonymous" type="text/javascript"></script>
+    <!-- Js and css files (end) -->
+</html>
