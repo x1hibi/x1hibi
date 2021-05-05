@@ -1,34 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <!-- Meta information (start) -->
         <title>Kōji Wada</title>
         <meta charset="UTF-8">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="x1hibi">
-        <meta name="description" content="This is a tribute in honor to the singer Kōji Wada, who interpret a lot of anime songs, but especially remembered by his Digimon songs">
+        <meta name="description" content="This is a tribute in honor to the singer Kōji Wada, who interpret a lot of anime songs, but especially remembered by his Digimon songs, you can listen to his album Koji Wada Digimon Memorial Best on our page.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="./media/digiviceIcon.png">
-        <meta name="theme-color" content="#7a84ff">
+        <meta name="theme-color" content="#7a84ff"/>
         <!-- Meta information (end) -->
-
         <!-- Preload inmediate images -->
         <link rel="preload" as="image" href="./media/kouji.jpg" >
         <link rel="preload" as="image" href="./media/digimon1.png" >
         <link rel="preload" as="image" href="./media/digimon2.jpg" >
         <link rel="preload" as="image" href="./media/digimon3.jpg" >
-
         <!-- Prefetch images needed  -->
         <link rel="prefetch" href="./media/wireframe_home.png" >
         <link rel="prefetch" href="./media/wireframe_discography.png" >
+        <link rel="prefetch" href="./media/html.png" >
+        <link rel="prefetch" href="./media/css1.png" >
+        <link rel="prefetch" href="./media/css2.png" >
+        <link rel="prefetch" href="./media/js1.png" >
+        <link rel="prefetch" href="./media/js2.png" >
         <!-- load styles and inmediate resources -->
-        <script src="./js/fontAsome.js" crossorigin="anonymous" type="text/javascript"></script>
         <link type="text/css" rel="stylesheet" href="./css/generalStyles.css">   
         <link type="text/css" rel="stylesheet" href="./css/myStyles.css">  
-        <!-- Preload images (end) -->
+        <!-- Preconnet files -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
     </head>
 
     <body onload="loader(false)">
+
         <!-- Main body (start)-->
         <main id="main" class="main-container">
 
@@ -50,11 +54,11 @@
             <!-- Principal header (end)  -->
 
             <!-- Menu bar (start)  -->
-            <nav class="menu-container" title="console.log('tets')" id="menu">
+            <nav class="menu-container" id="menu">
                 <ul class="menu-list">
-                    <li class="menu-option"><a href="#tribute-info" class="menu-link">Home</a></li>
-                    <li class="menu-option"><a href="#discography-info" class="menu-link">Discography</a></li>
-                    <li class="menu-option"><a class="menu-link" href="http://wadakoji.blog87.fc2.com" target="_blank" id="tribute-link">Blog Kōji Wada</a></li>
+                    <li class="menu-option"><a href="#tribute-info" class="menu-link" title="home">Home</a></li>
+                    <li class="menu-option"><a href="#discography-info" class="menu-link" title="discography">Discography</a></li>
+                    <li class="menu-option"><a class="menu-link" href="http://wadakoji.blog87.fc2.com" target="_blank" rel="noopener" id="tribute-link" title="blog">Blog Kōji Wada</a></li>
                 </ul>
             </nav>
             <!-- Menu bar (end)  -->
@@ -63,7 +67,7 @@
             <main id="test">
                 <!-- section define a section of a document, "A section is a thematic grouping of content, typically with a heading."     -->
                 <section id="tribute-info" class="section-content">
-                    <h2 class="section-title">Who is Kōji Wada?</h2>
+                    <h2 class="section-title">Who was Kōji Wada?</h2>
                     <article class="article-container">
                         <p class="article-text">Kōji Wada (和田 光司, Wada Kōji, January 29, 1974 – April 3, 2016) was a Japanese pop singer. He was best known for performing theme songs for several installments of the Digimon anime television series, including his recording debut in 1999 with his first and most famous single, <em>"Butter-Fly"</em>, the theme song of the anime Digimon Adventure. He was signed with the Lantis recording label. His nickname is <b>"Immortal Butterfly Anisong Singer"</b></p>
                         <img class="img-resposive img-effect-right" src="./media/digimon1.png" alt="Butter-Fly album" title="Butter-Fly album">
@@ -82,16 +86,15 @@
                     <h2 class="section-title">Koji Wada Digimon Memorial Best </h2>
                     <div class="flex-wrap-container">
                         <section class="player-container">
-                            <button class="button-player" onclick="playerOption('back')"><i class="fas fa-backward"></i></button>
-                            <button class="button-player hidden-element" onclick="playerOption('play')" id="playButton"><i class="fas fa-play"></i></button>
-                            <button class="button-player" onclick="playerOption('pause')" id="pauseButton"><i class="fas fa-pause"></i></button>
-                            <button class="button-player" onclick="playerOption('next')"><i class="fas fa-forward"></i></button>
+                            <button name="button-back" class="button-player" onclick="playerOption('back')" id="backButton"><i class="fas fa-backward"></i></button>
+                            <button name="button-play" class="button-player hidden-element" onclick="playerOption('play')" id="playButton"><i class="fas fa-play"></i></button>
+                            <button name="button-pause" class="button-player" onclick="playerOption('pause')" id="pauseButton"><i class="fas fa-pause"></i></button>
+                            <button name="button-next" class="button-player" onclick="playerOption('next')" id="nextButton"><i class="fas fa-forward"></i></button>
                             <div class="volume-container">
                                 <input oninput="selectTime()" id="progressBar" type="range" min="0" max="100" value="0" class="volume-player">
                             </div>
-                            <audio id="player" data-track="17" >
+                            <audio id="player" data-track="17">
                                 <source src='https://x1hibi.s3-us-west-1.amazonaws.com/media/htmlProjects/tributePage/18-SeventriVersion.mp3' type="audio/mpeg" >
-                              Your browser does not support the audio element.
                             </audio>
                         </section>
                         <nav class="list-music-container">
@@ -118,22 +121,19 @@
                             </ol>
                         </nav>
                     </div>
-
                 </section>
-
             </main>
             <!-- Principal content (end) -->
 
             <!-- Footer (start)  -->
             <footer class="footer-container">
-                <p class="footer-content footer-fluid-text"> <a href="https://x1hibi.github.io/x1hibi/" target="_blank" class="footer-link"> x1hibi Web &nbsp;<i class="fas fa-dragon din" ></i></a></p>
+                <p class="footer-content footer-fluid-text"> <a href="https://x1hibi.github.io/x1hibi/" target="_blank" rel="noopener" class="footer-link"> x1hibi Web &nbsp;<i class="fas fa-dragon din" ></i></a></p>
                 <hr class="footer-bar">
                 <p class="footer-content footer-fluid-text">Copyright © 2021 x1hibi All rights reserved.</p>
             </footer>
             <!-- Footer (end)  -->
-            
         </main>
-
+        <!-- Main body (start)-->
 
         <!-- Modal of fixed button (start) -->
         <section class="modal-container" id="modalContainer" onclick="buttonMenu(event)">
@@ -141,9 +141,9 @@
             <figure class="modal">
                 <div class="slider-container">
                     <div class="responsive-slider responsive-slider-background" id="sliderContainer">
-                        <button class="slider-arrow" onclick="modalSlider('previus')"><i class="fas fa-arrow-left"></i></button>
-                        <img class="slider-image" src="#" id="sliderImage">
-                        <button class="slider-arrow" onclick="modalSlider('next')"><i class="fas fa-arrow-right"></i></button>
+                        <button name="button-slider-left" aria-label="button-slider-left" class="slider-arrow" onclick="modalSlider('previus')"><i class="fas fa-arrow-left"></i></button>
+                        <img class="slider-image" src="#" id="sliderImage" alt="modal-image">
+                        <button name="button-slider-right" aria-label="button-slider-rifgt"class="slider-arrow" onclick="modalSlider('next')"><i class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
                 <figcaption class="slider-caption" id="sliderCaption">text</figcaption>
@@ -153,25 +153,22 @@
 
         <!-- Button Menu (start) -->
         <nav class="fixed-menu-container" id="fixedMenu">
-            <button class="fixed-button-menu music-controls" onclick="playPause(event)" title="pause" id="menuPlayer"><i class="fas fa-pause"></i></button>
-            <button class="fixed-button-menu" onclick="buttonMenu('wireframe')" id="wireframe" title="Wireframes"><i class="fas fa-columns"></i></button>
-            <button class="fixed-button-menu" onclick="buttonMenu('code')" id="code" title="Code"><i class="fas fa-code"></i></button>
-            <button class="fixed-button-menu button-shadow" onclick="buttonMenu('closeMenu')"><i class="fas fa-times" title="Close menu"></i></button>
-            <button class="fixed-button-menu" onclick="buttonMenu('openMenu')" id="fixedMenu"><i class="fas fa-list" title="Menu"></i></button>
+            <button name="button-play/pause" class="fixed-button-menu music-controls" onclick="playPause(event)" title="pause" id="menuPlayer"><i class="fas fa-pause"></i></button>
+            <button name="button-wireframe" class="fixed-button-menu" onclick="buttonMenu('wireframe')" id="wireframe" title="Wireframes"><i class="fas fa-columns"></i></button>
+            <button name="button-code" class="fixed-button-menu" onclick="buttonMenu('code')" id="code" title="Code"><i class="fas fa-code"></i></button>
+            <button name="button-close" class="fixed-button-menu button-shadow" onclick="buttonMenu('closeMenu')"><i class="fas fa-times" title="Close menu"></i></button>
+            <button name="button-menu" class="fixed-button-menu" onclick="buttonMenu('openMenu')" id="fixedMenu"><i class="fas fa-list" title="Menu"></i></button>
         </nav>
         <!-- Button Menu (end) -->
-        <!-- Main body (end)-->
 
         <!-- Loader page -->
-        <div id="loader" class="loader-container"><div class="loader"><button class="start-button" onclick="playPause(event)" title='Start' id="startButton">START</button></div></div>
+        <div id="loader" class="loader-container"><div class="loader"><button name="button-back" class="start-button" onclick="playPause(event)" title='Start' id="startButton">START</button></div></div>
     </body>
 
     <!-- Js and css files (start) -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600;1,700&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Share+Tech&family=Share+Tech+Mono&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
     <script src="./js/app.js" defer></script>
     <script src="./js/fixedMenuAndModalSlider.js" type="text/javascript" defer></script>
-    <script src="./js/fontAsome.js" crossorigin="anonymous" type="text/javascript"></script>
+    <script src="./js/fontAsome.js" type="text/javascript" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600;1,700&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Share+Tech&family=Share+Tech+Mono&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <!-- Js and css files (end) -->
 </html>

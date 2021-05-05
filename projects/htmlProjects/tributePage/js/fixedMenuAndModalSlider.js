@@ -56,7 +56,6 @@ var currentSize = 0;
  * @param {String} type - Type of button 
  */
 function buttonMenu(type){
-
     // make synchronous code with a promise
     new Promise(resolve=>{
         // send a function resolve if response is true
@@ -69,28 +68,11 @@ function buttonMenu(type){
     })
 }
 
-
-function loader(loadPage) {
-
-    if(loadPage){
-        document.getElementsByClassName('loader')[0].style.opacity="0"
-        setTimeout(() => {
-            document.getElementById("loader").style.display="none"
-            document.getElementById("main").style.display="block"
-            document.getElementById("fixedMenu").style.display="block"
-            document.body.style.animation="gradient 2s ease-in-out 1.5s infinite alternate"
-            stickyMenu=false
-        }, 1510);
-    }else{
-        document.getElementById('startButton').style.display="block"
-    }
-}  
-
-
 /**
  * Disable all buttons in DOM 
  * @param {Boolean} disable - Condition to disable/ enable all buttons
  */
+
 function disableButtons(disabled){
 
     // make an array of all buttons
@@ -110,6 +92,7 @@ function disableButtons(disabled){
  * @param {String} type -Define the function of the button 
  * @returns Always return true to resolve the promise 
  */
+
 function buttonHandler(type) {
     
     // check each type and execute code
@@ -142,6 +125,7 @@ function buttonHandler(type) {
  * Toogle classes of fixed menu to show and hide the options
  * @param {Boolean} showMenu - Condition to display/hide menu
  */
+
 function displayFixedMenu() {
 
     // hide and show menu
@@ -155,26 +139,24 @@ function displayFixedMenu() {
  * This funcition switch the class name of modal container to display the modal and his animation
  * @param {Boolean} showModal - Define if modal is displayed 
  */
-function displayModal(showModal) {
 
+function displayModal(showModal) {
     // check if modal is display or hide and change class name, and disable/enable body scroll
     modalContainer.className= showModal ? 
     (document.body.style.overflow="hidden","modal-container modal-open-animation") :
     (document.body.style.overflow="auto","modal-container modal-close-animation") ;
-
 }
 
 /**
  * Selected option of fixed menu and set first image of array 
  * @param {String} type - Option selected 
  */
-function selectOption(type){
 
+function selectOption(type){
     // reset default values 
     this.currentOption=0;
     this.currentIndex = 0;
     this.currentSize = 0;
-    
     // select fixed menu seccion
     currentOption= type=="wireframe" ? 0 : 1;   
     // set first image of array
@@ -188,10 +170,9 @@ function selectOption(type){
  * Display the images of the selected section and controled with the modal arrows
  * @param {String} type - Option selected 
  */
+
 function modalSlider(action) {
-
     disableButtons(true)
-
     //check index and handle cases -1 and index bigger than length array 
     currentIndex+= action=="next" ? 1 : -1
     if(currentIndex <= -1 ){
@@ -199,11 +180,10 @@ function modalSlider(action) {
     }else if(currentIndex >= currentSize){
         currentIndex=0
     }
-
-
+    // togle class for modal image 
     sliderImage.classList.toggle("transition-effect")
     sliderCaption.classList.toggle("transition-effect")
-
+    // wait to finish aniamtion 
     setTimeout(() => {
         // set selected image 
         sliderImage.src=modalSliderImages[currentOption][currentIndex].imagePath

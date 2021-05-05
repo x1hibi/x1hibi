@@ -62,6 +62,19 @@ var currentSize = 0;
 //// Global functions
 
 /**
+ * Display web page after this load all media and show handle animations and styles
+ */
+
+function loader() {
+    document.getElementById("app").style.display="block"
+    document.getElementById("app").style.transitionDuration="0.5s"
+    setTimeout(() => {
+        document.getElementById("app").style.opacity="1"
+        document.getElementById("loader").style.display="none"
+    }, 10);
+}  
+
+/**
  * This function handle multiple clicks of button elements displayed in the current DOM
  * @param {String} type - Type of button 
  */
@@ -78,17 +91,6 @@ function buttonMenu(type){
         disableButtons(false)
     })
 }
-
-
-function loader() {
-    document.getElementById("app").style.display="block"
-    document.getElementById("app").style.transitionDuration="0.5s"
-    setTimeout(() => {
-        document.getElementById("app").style.opacity="1"
-        document.getElementById("loader").style.display="none"
-    }, 10);
-}  
-
 
 /**
  * Disable all buttons in DOM 

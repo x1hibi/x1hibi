@@ -1,27 +1,3 @@
-/******************/
-/* Root variables*/
-/****************/
-:root{
-
-    /* Color Armonic (analogous)*/
-    /* https://www.sessions.edu/color-calculator/ */
-    --mainAnalogousOne:#c5b6ff;
-    --mainAnalogousTwo:#b6ffd3;
-    --mainColor:#387aff;
-
-    /* Family fonts for headers and text */
-
-    --fontHeader: 'open-sans';
-    --fontText: 'open-sans';
-    --genericFont: Sans-serif;
-
-    /* High Contrast Text upper to 4.5 (for normal text) with 12 is good for all sizes*/
-    /* https://coolors.co/contrast-checker/f1bebe-090313 */
-
-    --contentTextColor:black;
-    --headerTextColor:black;
-}
-
 /*******************/
 /* General styles */
 /*****************/
@@ -31,12 +7,12 @@ html {
   }
   
 body{
-    background:linear-gradient(#bae5f9,#7a84ff,#5b69f9);
     background-size: 100% 100%;
+    background:linear-gradient(#bae5f9,#7a84ff,#5b69f9);
     margin: 0;
-    transition-duration: 0.5s;
-    padding: 0;
     min-height: 100vh;
+    padding: 0;
+    transition-duration: 0.5s;
 }
 
 @keyframes gradient {
@@ -46,36 +22,35 @@ body{
     100%{
         background-size: 100% 150%; 
     } 
-    
 }
 
 .loader-container{
-    position: relative;
     align-items: center;
     display: flex;
     height: 100vh;
     justify-content: center;
+    position: relative;
     width: 100vw;
 }
 
 .start-button{
     animation: fadeEffect 1s ease 0s forwards;
-    top: 65px;
-    left: 84px;
-    position: absolute;
-    font-size: large;
-    height: 80px;
-    width: 80px;
-    display: none;
-    outline: none;
-    border: none;
     background: transparent;
+    border: none;
     color: white;
-    text-shadow: 0 0 10px white;
     cursor: pointer;
+    display: none;
     font-family: 'Roboto';
+    font-size: large;
     font-weight: 300;
+    height: 80px;
+    left: 84px;
     opacity: 0;
+    outline: none;
+    position: absolute;
+    text-shadow: 0 0 10px white;
+    top: 65px;
+    width: 80px;
 }
 
 @keyframes fadeEffect {
@@ -88,24 +63,24 @@ body{
 }
 
 .loader{
-    position: relative;
+    background: url(../media/digivice.png);
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
     animation-name: codeSpinner;
     animation-timing-function: ease-in-out;
-    background: url(../media/digivice.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 300px;
-    height: 261px;
     color: white;
     font-family: 'Roboto'; 
     font-size: 3em;
     font-weight: 100;
+    height: 261px;
     margin: 0;
     padding: 0;
+    position: relative;
     text-shadow: 0 0 5px white;
     transition-duration: 1.5s;
+    width: 300px;
     z-index: 0;
 }
 
@@ -116,11 +91,10 @@ body{
 }
 
 .main-container{
-    animation-name: upEffect;
-    animation-delay: 1.5s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
+    animation-name: upEffect;
     animation-timing-function:ease;
-    animation-duration: 1.25s;
     display: none;
     opacity: 0;
 }
@@ -183,9 +157,9 @@ body{
 } 
 
 .din{
+    animation-name: din;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-    animation-name: din;
     animation-timing-function: ease-in-out;
     color:red;
 }
@@ -203,35 +177,36 @@ body{
 /*************/
 
 .fixed-menu-container{
-    display: none;
-    position: fixed;
     background-color: red;
-    height: fit-content;
-    width: fit-content;
     bottom: 15px;
+    display: none;
+    height: fit-content;
+    position: fixed;
     right: 15px;
+    width: fit-content;
+    z-index: 2;
 }
 
 .fixed-button-menu{
     align-items: center;
-    animation-name: upEffect;
-    animation-delay: 1.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function:ease;
+    animation-delay: 0.5s;
     animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+    animation-name: upEffect;
+    animation-timing-function:ease;
     background: linear-gradient(45deg,#b6bbf2,#3243f8);
     border-radius: 50%;
     border:none;
+    bottom: 0;
     color: white;
     cursor: pointer;
     font-size: 20pt;
     height: 50px;
     margin: 0;
+    opacity: 0;
     outline: none;
     padding: 0;
     position: absolute;
-    opacity: 0;
-    bottom: 0;
     right: 0;
     transition-duration: 0.35s;
     width: 50px;
@@ -251,18 +226,18 @@ body{
 }
 
 .first-button-position{
-    box-shadow: 1px 1px 10px 3px #635ef3;
     bottom: 60px;
+    box-shadow: 1px 1px 10px 3px #635ef3;
 }
 
 .second-button-position{
-    box-shadow: 1px 1px 10px 3px #635ef3;
     bottom: 120px;
+    box-shadow: 1px 1px 10px 3px #635ef3;
 }
 
 .third-button-position{
-    box-shadow: 1px 1px 10px 3px #635ef3;
     bottom: 180px;
+    box-shadow: 1px 1px 10px 3px #635ef3;
 }
 
 /**********/
