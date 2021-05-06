@@ -1,0 +1,428 @@
+/*******************/
+/* General styles */
+/*****************/
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+body{
+    background-size: 100% 100%;
+    background:linear-gradient(#bae5f9,#7a84ff,#5b69f9);
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    transition-duration: 0.5s;
+}
+
+@keyframes gradient {
+    0%{
+        background-size: 100% 100%; 
+    }
+    100%{
+        background-size: 100% 150%; 
+    } 
+}
+
+.loader-container{
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+}
+
+.start-button{
+    animation: fadeEffect 1s ease 0s forwards;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-family: 'Roboto';
+    font-size: large;
+    font-weight: 300;
+    height: 80px;
+    left: 84px;
+    opacity: 0;
+    outline: none;
+    position: absolute;
+    text-shadow: 0 0 10px white;
+    top: 65px;
+    width: 80px;
+}
+
+@keyframes fadeEffect {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.loader{
+    background: url(../media/digivice.png);
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-name: codeSpinner;
+    animation-timing-function: ease-in-out;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    font-family: 'Roboto'; 
+    font-size: 3em;
+    font-weight: 100;
+    height: 261px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-shadow: 0 0 5px white;
+    transition-duration: 1.5s;
+    width: 300px;
+    z-index: 0;
+}
+
+@keyframes codeSpinner {
+    50%{
+        transform: scale(1.5);
+    }
+}
+
+.main-container{
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-name: upEffect;
+    animation-timing-function:ease;
+    display: none;
+    opacity: 0;
+}
+
+@keyframes upEffect {
+    0%{
+        transform: translate(0,200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+/******************/
+/* Footer styles */
+/****************/
+
+.footer-container {
+    background: linear-gradient(#7a84ff,#5b69f9);
+    box-shadow: 0 0 15px 3px #00000078;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.footer-content {
+    color:white;
+    margin: auto;
+    width: fit-content;
+}
+
+.footer-link{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.footer-link:hover{
+    text-shadow: 0 0 5px white;
+}
+
+.footer-bar{
+    animation-name: footerBar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    border-width: 0.5px;
+    margin: 10px auto;
+    width: 10%;
+}
+
+@keyframes footerBar{
+    0%{width: 10%;}
+    40%{width: 10%;}
+    50%{width: 75%;}
+    60%{width: 10%;}
+    100%{width: 10%;}
+} 
+
+.din{
+    animation-name: din;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    color:red;
+}
+
+@keyframes din {
+    0%{text-shadow: 0 0 1px black;}
+    40%{text-shadow: 0 0 1px black;}
+    50%{text-shadow: 0 0 2px white;}
+    60%{text-shadow: 0 0 1px black;}
+    100%{text-shadow: 0 0 1px black;}
+}
+
+/***************/
+/* Fixed menu */
+/*************/
+
+.fixed-menu-container{
+    background-color: red;
+    bottom: 15px;
+    display: none;
+    height: fit-content;
+    position: fixed;
+    right: 15px;
+    width: fit-content;
+    z-index: 2;
+}
+
+.fixed-button-menu{
+    align-items: center;
+    animation-delay: 0.5s;
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+    animation-name: upEffect;
+    animation-timing-function:ease;
+    background: linear-gradient(45deg,#b6bbf2,#3243f8);
+    border-radius: 50%;
+    border:none;
+    bottom: 0;
+    color: white;
+    cursor: pointer;
+    font-size: 20pt;
+    height: 50px;
+    margin: 0;
+    opacity: 0;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    transition-duration: 0.35s;
+    width: 50px;
+    z-index: 3;
+}
+
+.fixed-button-menu > .fas{
+    font-size: 22.5px;
+}
+
+.hidden-element{
+    display: none;
+}
+
+.button-shadow{
+    box-shadow: 1px 1px 10px 3px #635ef3;
+}
+
+.first-button-position{
+    bottom: 60px;
+    box-shadow: 1px 1px 10px 3px #635ef3;
+}
+
+.second-button-position{
+    bottom: 120px;
+    box-shadow: 1px 1px 10px 3px #635ef3;
+}
+
+.third-button-position{
+    bottom: 180px;
+    box-shadow: 1px 1px 10px 3px #635ef3;
+}
+
+/**********/
+/* Modal */
+/********/
+
+.modal-container{
+    align-items: center;
+    animation-duration: 0.35s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    margin: 0;
+    padding: 5%;
+    position: fixed;
+    top: 0;
+    transform: scale(0);
+    width: 100%;
+    z-index: 2;
+}
+
+.modal-open-animation{
+    animation-duration: 0.35s;
+    animation-name: modalOpenAnimation;
+    animation-timing-function: ease-in;
+    transform: scale(1);
+}
+
+@keyframes modalOpenAnimation {
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1.25);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.modal-close-animation{
+    animation-duration: 0.25s;
+    animation-name: modalCloseAnimation;
+    animation-timing-function: ease-out;
+    transform: scale(0);
+}
+
+@keyframes modalCloseAnimation {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+.modal{
+    background: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    max-height: 90%;
+    padding-bottom: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.slider-container{
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 3px darkred;
+    display: flex;
+    margin: 0;
+    max-height: 90%;
+    overflow:hidden ;
+    width: 100%;
+}
+
+.responsive-slider{
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    margin: 0;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.responsive-slider-background{
+    background: url('../media/spinnerLoader.gif  ');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 140px;
+}
+
+.slider-arrow{
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 4vw;
+    height: 100%;
+    opacity: 0.35;
+    outline: none;
+    position: absolute;
+    text-shadow: 0 0 5px black;
+    transition-duration: 0.25s;
+    width: 10%;
+}
+
+.slider-arrow:last-child{
+    color: red;
+    right: 7.5px;
+}
+
+.slider-arrow:first-child{
+    color: red;
+    left: 2.5px;
+}
+
+.slider-arrow:last-child:hover, .slider-arrow:first-child:hover{
+    color:darkred;
+    font-size: 5vw;
+    opacity: 0.65;
+    text-shadow: 0 0 3px black;
+}
+
+.slider-arrow:last-child:active, .slider-arrow:first-child:active{
+    color: black;
+    opacity: 0.65;
+}
+
+.slider-image{
+    border-radius: 5px 0 0 5px;
+    height: max-content;
+    opacity: 1;
+    transition-duration: 0.3s;
+    width: 100%;
+}
+
+.transition-effect{
+    opacity: 0;
+}
+
+.slider-caption{
+    bottom: 0px;
+    color: white;
+    display: block;
+    font-size: 16pt;
+    height: fit-content;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 0 5px white;
+    transition-duration: 0.3s;
+    width: 100%;
+    z-index: 30;
+}
+
+/***************/
+/* Scrollbar  */
+/*************/
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent ; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:linear-gradient(to bottom,#b6bbf2,#3243f8);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:linear-gradient(to bottom,#b6bbf2,#0e1ece);
+} 

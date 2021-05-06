@@ -137,7 +137,7 @@ new Vue({
       {
         title:"Tribute Page",
         previewImage:"media/preview_1.png",
-        urlProject:"https://x1hibi.github.io/x1hibi/projects/htmlProjects/tributePage/index.html",
+        urlProject:"./projects/tributePage/index.html",
         description:'This is a tribute in honor to the singer Kōji Wada, who interpret a lot of anime songs, but especially remembered by his Digimon songs, you can listen to his album Koji Wada Digimon Memorial Best on our page.',
         tags:['HTML','CSS','JS'],
       },
