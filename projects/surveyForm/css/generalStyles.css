@@ -7,21 +7,28 @@ html {
   }
   
 body{
+    animation: backgroundAnimation 20s ease-in-out 0s infinite alternate-reverse ;
+    backdrop-filter: blur(9px);
+    background:url(myStyles.css);
     background-size: 100% 100%;
-    background:linear-gradient(#bae5f9,#7a84ff,#5b69f9);
+    background-position: 0 0;
     margin: 0;
-    min-height: 100vh;
     padding: 0;
     transition-duration: 0.5s;
+    overflow-x: hidden;
 }
 
-@keyframes gradient {
+@keyframes backgroundAnimation {
     0%{
-        background-size: 100% 100%; 
+        background-position: 0 0;
     }
-    100%{
-        background-size: 100% 150%; 
+    50%{
+        background-position: 50% 0;
+        background-size: 150%;
     } 
+    100%{
+        background-position: 0 0;
+    }
 }
 
 .loader-container{
@@ -63,7 +70,7 @@ body{
 }
 
 .loader{
-    background: url(../media/digivice.png);
+    /* background: url(../media/digivice.png); */
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
     animation-name: codeSpinner;
@@ -95,8 +102,6 @@ body{
     animation-fill-mode: forwards;
     animation-name: upEffect;
     animation-timing-function:ease;
-    display: none;
-    opacity: 0;
 }
 
 @keyframes upEffect {
