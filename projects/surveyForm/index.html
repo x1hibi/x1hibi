@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Meta information (start) -->
-        <title>Color blind survey</title>
+        <!-- Meta information -->
+        <title>Color blind test</title>
         <meta charset="UTF-8">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="x1hibi">
-        <meta name="description" content="">
+        <meta name="description" content="This questionnaire allows you to know how much you know about color blindness, as well as determine if you have color blindness using the Ishihara test">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="./media/icon.svg">
-        <meta name="theme-color" content="#7a84ff"/>
-        <!-- Meta information (end) -->
-        <!-- Preload inmediate images -->
-        <link rel="preload" as="image" href="./media/background.jpg" >
+        <meta name="theme-color" content="rgb(50 50 50)"/>
         <!-- Prefetch images needed  -->
-        <link rel="prefetch" href="./media/wireframeDesktop_1.png" >
-        <link rel="prefetch" href="./media/wireframeDesktop_2.png" >
+        <link rel="prefetch" href="./media/wireframeDesktop_1.svg" >
+        <link rel="prefetch" href="./media/wireframeDesktop_2.svg" >
         <link rel="prefetch" href="./media/wireframeMobile_1.png" >
-        <link rel="prefetch" href="./media/wireframeMobile_2.png" >
+        <link rel="prefetch" href="./media/wireframeMobile_2.svg" >
         <link rel="prefetch" href="./media/html.png" >
         <link rel="prefetch" href="./media/css1.png" >
         <link rel="prefetch" href="./media/css2.png" >
@@ -36,54 +33,505 @@
         <!-- Main body (start)-->
         <main id="main" class="main-container">
 
-            <h1 id="title" >title</h1>
-            <p id="description">description</p>
-            <form id="survey-form" class="form-container">
-                <label id="name-label">Name</label>
-                <input id="name" type="text" placeholder="Your name" required>
-                <label id="email-label">Email</label>
-                <input id="email" type="email" placeholder="example@domain.com" required>
-                <label id="number-label">Age</label>
-                <input id="number" type="number" min="1" max="100" placeholder="Your age 1-100" required>
-                <label id="dropdown-label">Select option</label>
-                <select id="dropdown" name="dropdown" required>
-                    <option value="option1" name="option1">option1</option>
-                    <option value="option2" name="option2">option2</option>
-                    <option value="option3" name="option3">option3</option>
-                    <option value="option4" name="option4">option4</option>
-                </select>
-                <fieldset>
-                    <legend>Select a color </legend>
-                    <label>
-                        <input type="radio" name="color" value="azul"> Azul
-                    </label>
-                    <label>
-                        <input type="radio" name="color" value="negro"> Negro
-                    </label>
-                    <label>
-                        <input type="radio" name="color" value="amarillo"> Amarillo
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <legend>check one or more</legend>
-                    <label>
-                        <input type="checkbox" name="color" value="azul"> Azul
-                    </label>
-                    <label>
-                        <input type="checkbox" name="color" value="negro"> Negro
-                    </label>
-                    <label>
-                        <input type="checkbox" name="color" value="amarillo"> Amarillo
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <legend>Send us your comments</legend>
-                    <textarea name="textare" id="commnet" cols="30" rows="10"></textarea>
-                </fieldset>
-                <button type="button" id="submit">Submit</button>
+            <header class="header">
+                <h1 id="title" class="title" >Color blind test</h1>
+                <p id="description" class="description">This questionnaire allows you to know how many envelopes about color blindness, as well as determine if you have color blindness</p>
+            </header>
 
-            </form>
+            <main class="form-container">
 
+                <p class="description-emoji">How much you know? 😏 maybe you are color blind 🤫</p>
+                <nav class="menu-options">
+                    <button class="option-selected option-button" type="button" id="questionnaireButton" onclick="displaySection('questionnaire')">Questionnaire</button>
+                    <button class="option-button" type="button" id="testButton" onclick="displaySection('test')">Ishihara test</button>
+                </nav>
+
+                <form id="survey-form" class="questionnaire-container" onsubmit="calfQuestionnaire(event)">
+
+                <!-- Questionnaire section (START) -->
+                    <div class="input-field">
+                        <label id="name-label" class="label-input">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" class="input" maxlength="25" required>
+                    </div>
+                    <div class="input-field">
+                        <label id="email-label" class="label-input">Email</label>
+                        <input id="email" name="email" type="email" placeholder="example@domain.com" class="input" required>
+                    </div>
+                    <div class="input-field">
+                        <label id="number-label" class="label-input">Age</label>
+                        <input id="number" name="age" type="number" min="5" max="99" placeholder="Your age 5-99" class="input" maxlength="2" required>
+                    </div>    
+                    <fieldset>
+                        <legend>Gender</legend>
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="gender" value="Male" required> Male
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="Female" required> Female
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>1) What is color blindness?</legend>
+                        <label>
+                            <input type="radio" name="ask1" value="0" required> Hereditary disease
+                        </label><br/>
+                        <label>
+                            <input type="radio" name="ask1" value="1" required> Eye damage
+                        </label>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>2) Why is it called color blindness?</legend>
+                        <select id="dropdown" name="ask2" class="input" required>
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0" name="ask2">In honor of physicist John Dalton, who was the first to point out this flaw</option>
+                            <option value="1" name="ask2">Due to the duality of colors that this implies</option>
+                        </select>
+                    </fieldset><br>             
+                    <fieldset>
+                        <legend>3) Mainly affects:</legend>
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="ask3" value="0" required> Mens
+                            </label>
+                            <label>
+                                <input type="radio" name="ask3" value="1" > Women
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>4) Symptom:</legend>
+                        <label>
+                            <input name="ask4" type="checkbox" value="0" > Difficulty seeing colors
+                        </label><br>
+                        <label>
+                            <input name="ask4" type="checkbox" value="0" > inability to tell the difference between shades of the same color
+                        </label><br>
+                        <label>
+                            <input name="ask4" type="checkbox" value="1" > Difficulty seeing from afar
+                        </label>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>5) There is only one type of color blindness?</legend>
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="ask5" value="1" required> True
+                            </label>
+                            <label>
+                                <input type="radio" name="ask5" value="0"> False
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend><label id="dropdown-label" class="label-input">6) Can women be color blind?</label></legend>
+                        <select name="ask6" class="input" required>
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="1" >They can't, only men</option>
+                            <option value="2" >They can be carriers but do not develop the disease</option>
+                            <option value="0" >They can be carriers, and can express the disease, but much less frequently than men</option>
+                        </select>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>7) Can hydroxychloroquine cause color blindness?</legend>
+                        <label>
+                            <input type="radio" name="ask7" value="0" required> Yes, it can cause color blindness
+                        </label><br>
+                        <label>
+                            <input type="radio" name="ask7" value="1"> No, it only works for rheumatoid arthritis
+                        </label>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>8) Protanopia, deuteranopia, and tritanopia are subtypes of color blindness:</legend>
+                        <label>
+                            <input type="radio" name="ask8" value="1" required> Achromatic
+                        </label><br>
+                        <label>
+                            <input type="radio" name="ask8" value="2"> Monochrome
+                        </label><br>
+                        <label>
+                            <input type="radio" name="ask8" value="0"> Dicromático
+                        </label><br>
+                        <label>
+                            <input type="radio" name="ask8" value="3"> Abnormal trichromatic
+                        </label>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>9) The lack of pigment in this cell causes color blindness:</legend>
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="ask9" value="0" required> Cones
+                            </label>
+                            <label>
+                                <input type="radio" name="ask9" value="1"> Canes
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>10) What is the most common color blindness?</legend>
+                        <label>
+                            <input type="radio" name="ask10" value="1" required> Blue-Red
+                        </label><br>
+                        <label>
+                            <input type="radio" name="ask10" value="0"> Red-Green
+                        </label><br>
+                        <label>
+                            <input type="radio" name="ask10" value="2"> Blue-Green
+                        </label>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Send us your comments</legend>
+                        <textarea name="textare" id="commnet" cols="30" rows="10" class="input text-area" placeholder="Type your comments"></textarea>
+                    </fieldset>
+                    <button id="submit" type="submit" class="option-button center-button">Submit answers</button>
+                <!-- Questionnaire section (END) -->
+
+                </form>
+
+                <!-- Questionnaire Result section (START) -->
+                <div id="questionnaireResult" class="questionnaire-result-container hidden-section">
+                    <h2 class="result-text">Check your result <span id="username"></span> 😱</h2>
+                    <h3 class="result-text">Your score in questions about colour blindness</h3>
+                    <div class="score-text" id="questionnaire-result"></div>
+               </div>
+               <!-- Questionnaire Result section (END) -->
+
+
+                <!-- Test section (START) -->
+                <form id="test-form" class="test-container hidden-section" onsubmit="resultIshiharaTest(event)">
+                    <p class="center-text">The Ishihara test is used to determine if a person suffers from color blindness by means of a series of sheets with numbers drawn with dots of different colors<br> 
+                    Select the number you see in the following images:</p>
+                    <fieldset>
+                        <legend>Plate 1</legend>
+                        <img src="./media/Plate1.jpg" class="img-test" alt="Ishihara plate 1">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam1"  value="0" required> 12
+                            </label>
+                            <label>
+                                <input type="radio" name="lam1" value="1"> 2
+                            </label>
+                            <label>
+                                <input type="radio" name="lam1" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 2</legend>
+                        <img src="./media/Plate2.jpg" class="img-test" alt="Ishihara plate 2">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam2" value="0" required> 8
+                            </label>
+                            <label>
+                                <input type="radio" name="lam2" value="1"> 3
+                            </label>
+                            <label>
+                                <input type="radio" name="lam2" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 3</legend>
+                        <img src="./media/Plate3.jpg" class="img-test" alt="Ishihara plate 3">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam3" value="0" required> 29
+                            </label>
+                            <label>
+                                <input type="radio" name="lam3" value="1"> 70
+                            </label>
+                            <label>
+                                <input type="radio" name="lam3" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 4</legend>
+                        <img src="./media/Plate4.jpg" class="img-test" alt="Ishihara plate 4">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam4" value="0" required> 5
+                            </label>
+                            <label>
+                                <input type="radio" name="lam4" value="1"> 2
+                            </label>
+                            <label>
+                                <input type="radio" name="lam4" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 5</legend>
+                        <img src="./media/Plate5.jpg" class="img-test" alt="Ishihara plate 5">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam5" value="0" required> 3
+                            </label>
+                            <label>
+                                <input type="radio" name="lam5" value="1"> 5
+                            </label>
+                            <label>
+                                <input type="radio" name="lam5" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 6</legend>
+                        <img src="./media/Plate6.jpg" class="img-test" alt="Ishihara plate 6">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam6" value="0" required> 15
+                            </label>
+                            <label>
+                                <input type="radio" name="lam6" value="1"> 17
+                            </label>
+                            <label>
+                                <input type="radio" name="lam6" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 7</legend>
+                        <img src="./media/Plate7.jpg" class="img-test" alt="Ishihara plate 7">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam7" value="0" required> 74
+                            </label>
+                            <label>
+                                <input type="radio" name="lam7" value="1"> 21
+                            </label>
+                            <label>
+                                <input type="radio" name="lam7" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 8</legend>
+                        <img src="./media/Plate8.jpg" class="img-test" alt="Ishihara plate 8">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam8" value="0" required> 6
+                            </label>
+                            <label>
+                                <input type="radio" name="lam8" value="1"> Nothing
+                            </label>
+                            <label>
+                                <input type="radio" name="lam8" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 9</legend>
+                        <img src="./media/Plate9.jpg" class="img-test" alt="Ishihara plate 9">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam9" value="0" required> 45
+                            </label>
+                            <label>
+                                <input type="radio" name="lam9" value="1"> Nothing
+                            </label>
+                            <label>
+                                <input type="radio" name="lam9" value="1"> Other 
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 10</legend>
+                        <img src="./media/Plate10.jpg" class="img-test" alt="Ishihara plate 10">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam10" value="0" required> 5
+                            </label>
+                            <label>
+                                <input type="radio" name="lam10" value="1"> Nothing
+                            </label>
+                            <label>
+                                <input type="radio" name="lam10" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 11</legend>
+                        <img src="./media/Plate11.jpg" class="img-test" alt="Ishihara plate 11">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam11" value="0" required> 7
+                            </label>
+                            <label>
+                                <input type="radio" name="lam11" value="1"> Nothing
+                            </label>
+                            <label>
+                                <input type="radio" name="lam11" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 12</legend>
+                        <img src="./media/Plate12.jpg" class="img-test" alt="Ishihara plate 12">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam12" value="0" required> 16
+                            </label>
+                            <label>
+                                <input type="radio" name="lam12" value="1"> Nothing
+                            </label>
+                            <label>
+                                <input type="radio" name="lam12" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 13</legend>
+                        <img src="./media/Plate13.jpg" class="img-test" alt="Ishihara plate 13">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam13" value="0" required> 73
+                            </label>
+                            <label>
+                                <input type="radio" name="lam13" value="1"> Nothing
+                            </label>
+                            <label>
+                                <input type="radio" name="lam13" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 14</legend>
+                        <img src="./media/Plate14.jpg" class="img-test" alt="Ishihara plate 14">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam14" value="0" required> Nothing
+                            </label>
+                            <label>
+                                <input type="radio" name="lam14" value="1"> 5
+                            </label>
+                            <label>
+                                <input type="radio" name="lam14" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 15</legend>
+                        <img src="./media/Plate15.jpg" class="img-test" alt="Ishihara plate 15">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam15" value="0" required> Nothing
+                            </label>
+                            <label>
+                                <input type="radio" name="lam15" value="1"> 45
+                            </label>
+                            <label>
+                                <input type="radio" name="lam15" value="1"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 16</legend>
+                        <img src="./media/Plate16.jpg" class="img-test" alt="Ishihara plate 16">
+                        <select id="dropdown" name="lam16" class="input" required>
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0" >A sharp 26 </option>
+                            <option value="1" >A sharp 6</option>
+                            <option value="2" >A 26 but the 6 looks sharper</option>
+                            <option value="3" >A sharp 2</option>
+                            <option value="4" >A 26 but the 2 looks sharper</option>
+                        </select>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 17</legend>
+                        <img src="./media/Plate17.jpg" class="img-test" alt="Ishihara plate 17">
+                        <select name="lam17" class="input" required>
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0" >A sharp 42 </option>
+                            <option value="1" >A sharp 2</option>
+                            <option value="2" >A 42 but the 2 looks sharper</option>
+                            <option value="3" >A sharp 4</option>
+                            <option value="4" >A 42 but the 4 looks sharper</option>
+                        </select>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 18</legend>
+                        <img src="./media/Plate18.jpg" class="img-test" alt="Ishihara plate 18">
+                        <select name="lam18" class="input" required>
+                            <option disabled selected value> -- select an option -- </option>
+                            <option  value="0" >The two paths are observed</option>
+                            <option  value="1" >You only see the road purple</option>
+                            <option  value="2" >Both ways but the purple more easily</option>
+                            <option  value="3" >You only see the red road</option>
+                            <option  value="4" >Both ways but the red one more easily</option>
+                        </select>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 19</legend>
+                        <img src="./media/Plate19.jpg" class="img-test" alt="Ishihara plate 19">
+                        <select name="lam19" class="input" required>
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0" >Can't follow the trace</option>
+                            <option value="1" >You can follow the trace</option>
+                        </select>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 20</legend>
+                        <img src="./media/Plate20.jpg" class="img-test" alt="Ishihara plate 20">
+                        <select name="lam20" class="input" required>
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0" >You can draw a blue green line</option>
+                            <option value="1" >Not able to follow a line</option>
+                        </select>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 21</legend>
+                        <img src="./media/Plate21.jpg" class="img-test" alt="Ishihara plate 21">
+                        <select name="lam21" class="input" required>
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0" >Can follow a trace Orange</option>
+                            <option value="1" >Can't keep up the line</option>
+                        </select>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 22</legend>
+                        <img src="./media/Plate22.jpg" class="img-test" alt="Ishihara plate 22">
+                        <select name="lam22" class="input" required>
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0" >Can join a blue-green and yellow-green line</option>
+                            <option value="1" >Can join the blue-green and purple line</option>
+                        </select>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 23</legend>
+                        <img src="./media/Plate23.jpg" class="img-test" alt="Ishihara plate 23">
+                        <select name="lam23" class="input" required>
+                            <option disabled selected value> -- select an option -- </option>
+                            <option value="0" >You can draw a line joining purple and orange</option>
+                            <option value="1" >Can trace a line joining the purple and blue green</option>
+                        </select>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Plate 24</legend>
+                        <img src="./media/Plate24.jpg" class="img-test" alt="Ishihara plate 24">
+                        <div class="radio-buttons">
+                            <label>
+                                <input type="radio" name="lam24" value="0" required > Can draw a line
+                            </label>
+                            <label>
+                                <input type="radio" name="lam24" value="2"> Other
+                            </label>
+                        </div>
+                    </fieldset><br>
+                    <button id="submit" type="submit" class="option-button center-button">Submit answers</button>
+                </form>
+                <!-- Test section (END) -->
+            
+                <!-- Test result section (START) -->
+                <div id="testResult" class="test-result-container hidden-section">
+                    <h2 class="result-text">Check your result 😱</h2>
+                    <h3 class="result-text">Your have a ...</h3>
+                    <div class="test-result" id="test-result"></div>
+                </div>
+                <!-- Test result  section (END) -->
+
+            </main>
 
             <!-- Footer (start)  -->
             <footer class="footer-container">
@@ -112,17 +560,15 @@
         <!-- Modal of fixed button (end) -->
 
         <!-- Button Menu (start) -->
-        <nav class="fixed-menu-container" id="fixedMenu">
-            <button name="button-play/pause" class="fixed-button-menu music-controls" onclick="playPause(event)" title="pause" id="menuPlayer"><i class="fas fa-pause"></i></button>
+        <nav class="fixed-menu-container" >
             <button name="button-wireframe" class="fixed-button-menu" onclick="buttonMenu('wireframe')" id="wireframe" title="Wireframes"><i class="fas fa-columns"></i></button>
-            <button name="button-code" class="fixed-button-menu" onclick="buttonMenu('code')" id="code" title="Code"><i class="fas fa-code"></i></button>
+            <!-- <button name="button-code" class="fixed-button-menu" onclick="buttonMenu('diagram')" id="diagram" title="diagram"><i class="fas fa-project-diagram"></i></button> -->
+            <button name="button-diagram" class="fixed-button-menu" onclick="buttonMenu('code')" id="code" title="Code"><i class="fas fa-code"></i></button>
             <button name="button-close" class="fixed-button-menu button-shadow" onclick="buttonMenu('closeMenu')"><i class="fas fa-times" title="Close menu"></i></button>
             <button name="button-menu" class="fixed-button-menu" onclick="buttonMenu('openMenu')" id="fixedMenu"><i class="fas fa-list" title="Menu"></i></button>
         </nav>
         <!-- Button Menu (end) -->
 
-        <!-- Loader page -->
-        <div id="loader" class="loader-container"><div class="loader"><button name="button-back" class="start-button" onclick="playPause(event)" title='Start' id="startButton">START</button></div></div>
     </body>
 
     <!-- Js and css files (start) -->
@@ -130,7 +576,5 @@
     <script src="./js/fixedMenuAndModalSlider.js" type="text/javascript" defer></script>
     <script src="./js/fontAsome.js" type="text/javascript" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600;1,700&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Share+Tech&family=Share+Tech+Mono&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
-    
     <!-- Js and css files (end) -->
 </html>

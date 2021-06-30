@@ -129,10 +129,10 @@ new Vue({
       },
       {
         title:"Survey Form",
-        previewImage:"media/preview_2.jpg",
-        urlProject:"https://codepen.io/x1hibi/full/eqNPWr",
-        description:'In this survey form you will be able to know the most general aspects of color blindness and you will be able to know if you are color blind quickly.',
-        tags:['HTML','CSS'],
+        previewImage:"media/preview_2.png",
+        urlProject:"./projects/surveyForm/index.html",
+        description:'This questionnaire allows you to know how much you know about color blindness, as well as determine if you have color blindness using the Ishihara test.',
+        tags:['HTML','CSS','JS'],
       },
       {
         title:"Tribute Page",

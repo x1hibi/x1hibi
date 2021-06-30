@@ -9,24 +9,44 @@ const sliderCaption=document.getElementById("sliderCaption")
 // Array of modal images 
 const modalSliderImages=[
     [{
-        "imagePath":"./media/wireframeDesktop_1.svg",
-        "captionText":"Wireframe form desktop (1/4)",
-        "altText":"Wireframe form desktop"
+        "imagePath":"./media/wireframeDesktop_view_1.png",
+        "captionText":"Wireframe home section (1/8)",
+        "altText":"Wireframe of home section"
     },
     {
-        "imagePath":"./media/wireframeDesktop_2.svg",
-        "captionText":"Wireframe result desktop (2/4)",
-        "altText":"Wireframe form result desktop"
+        "imagePath":"./media/wireframeDesktop_view_2.png",
+        "captionText":"Wireframe Social Service section (2/8)",
+        "altText":"Wireframe of ss"
     },
     {
-        "imagePath":"./media/wireframeMobile_1.png",
-        "captionText":"Wireframe form mobile (3/4)",
-        "altText":"Wireframe form mobile"
+        "imagePath":"./media/wireframeDesktop_view_3.png",
+        "captionText":"Wireframe SIAE average section (3/8)",
+        "altText":"Wireframe of SIAE average"
     },
     {
-        "imagePath":"./media/wireframeMobile_2.svg",
-        "captionText":"Wireframe result mobile (4/4)",
-        "altText":"Wireframe form result mobile"
+        "imagePath":"./media/wireframeDesktop_view_4.png",
+        "captionText":"Wireframe Blog of notes (4/8)",
+        "altText":"Wireframe of blog of notes"
+    },
+    {
+        "imagePath":"./media/wireframeMobile_view_1.png",
+        "captionText":"Wireframe home mobile (5/8)",
+        "altText":"Wireframe of home mobile"
+    },
+    {
+        "imagePath":"./media/wireframeMobile_view_2.png",
+        "captionText":"Wireframe Social Service(6/8)",
+        "altText":"Wireframe of ss"
+    },
+    {
+        "imagePath":"./media/wireframeMobile_view_3.png",
+        "captionText":"Wireframe SIAE average (7/8)",
+        "altText":"Wireframe SIAE average"
+    },
+    {
+        "imagePath":"./media/wireframeMobile_view_4.png",
+        "captionText":"Wireframe Blog of notes (8/8)",
+        "altText":"Wireframe of blog of notes"
     }],
     [{
         "imagePath":"./media/html.png",
@@ -52,8 +72,14 @@ const modalSliderImages=[
         "imagePath":"./media/js2.png",
         "captionText":"fixedMenuAndModalSlider.js (5/5)",
         "altText":"image of js file"
+    }],
+    [{
+        "imagePath":"./media/diagram.jpeg",
+        "captionText":" Diagram flow Add new course (1/1)",
+        "altText":"Insert new course "
     }]
 ]
+
 // varibles of slider 
 var currentOption = 0;
 var currentIndex = 0;
@@ -142,8 +168,8 @@ function displayFixedMenu() {
     document.getElementById("fixedMenu").classList.toggle("hidden-element")
     // toogle classes for each button to move it 
     document.getElementById("code").classList.toggle("first-button-position");
-    document.getElementById("wireframe").classList.toggle("second-button-position");
-    // document.getElementById("diagram").classList.toggle("second-button-position");
+    document.getElementById("wireframe").classList.toggle("third-button-position");
+    document.getElementById("diagram").classList.toggle("second-button-position");
 }
 
 /**

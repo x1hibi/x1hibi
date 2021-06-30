@@ -4,104 +4,39 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
   
 body{
-    animation: backgroundAnimation 20s ease-in-out 0s infinite alternate-reverse ;
-    backdrop-filter: blur(9px);
-    background:url(myStyles.css);
-    background-size: 100% 100%;
-    background-position: 0 0;
     margin: 0;
     padding: 0;
     transition-duration: 0.5s;
     overflow-x: hidden;
-}
-
-@keyframes backgroundAnimation {
-    0%{
-        background-position: 0 0;
-    }
-    50%{
-        background-position: 50% 0;
-        background-size: 150%;
-    } 
-    100%{
-        background-position: 0 0;
-    }
-}
-
-.loader-container{
-    align-items: center;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    position: relative;
-    width: 100vw;
-}
-
-.start-button{
-    animation: fadeEffect 1s ease 0s forwards;
-    background: transparent;
-    border: none;
     color: white;
-    cursor: pointer;
-    display: none;
-    font-family: 'Roboto';
-    font-size: large;
-    font-weight: 300;
-    height: 80px;
-    left: 84px;
-    opacity: 0;
-    outline: none;
-    position: absolute;
-    text-shadow: 0 0 10px white;
-    top: 65px;
-    width: 80px;
-}
-
-@keyframes fadeEffect {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-.loader{
-    /* background: url(../media/digivice.png); */
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
-    animation-name: codeSpinner;
-    animation-timing-function: ease-in-out;
-    background-repeat: no-repeat;
-    background-size: contain;
-    color: white;
-    font-family: 'Roboto'; 
-    font-size: 3em;
-    font-weight: 100;
-    height: 261px;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    text-shadow: 0 0 5px white;
-    transition-duration: 1.5s;
-    width: 300px;
-    z-index: 0;
-}
-
-@keyframes codeSpinner {
-    50%{
-        transform: scale(1.5);
-    }
+    text-shadow: 0 0 3px darkviolet;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
 
 .main-container{
-    animation-duration: 1.5s;
+    animation-duration: 5s;
     animation-fill-mode: forwards;
-    animation-name: upEffect;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-name: background;
     animation-timing-function:ease;
+    background: linear-gradient(45deg, blue, red,yellow);
+    background-size: 500%;
+    background-position-x: 0%;
+}
+
+@keyframes background{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
 }
 
 @keyframes upEffect {
@@ -119,11 +54,12 @@ body{
 /****************/
 
 .footer-container {
-    background: linear-gradient(#7a84ff,#5b69f9);
+    background-color: #ffffff50;
     box-shadow: 0 0 15px 3px #00000078;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
     padding: 10px;
+    height: 58px;
 }
 
 .footer-content {
@@ -184,7 +120,6 @@ body{
 .fixed-menu-container{
     background-color: red;
     bottom: 15px;
-    display: none;
     height: fit-content;
     position: fixed;
     right: 15px;
@@ -194,12 +129,7 @@ body{
 
 .fixed-button-menu{
     align-items: center;
-    animation-delay: 0.5s;
-    animation-duration: 1.25s;
-    animation-fill-mode: forwards;
-    animation-name: upEffect;
-    animation-timing-function:ease;
-    background: linear-gradient(45deg,#b6bbf2,#3243f8);
+    background: linear-gradient(45deg, blue, red,yellow) ;
     border-radius: 50%;
     border:none;
     bottom: 0;
@@ -208,7 +138,6 @@ body{
     font-size: 20pt;
     height: 50px;
     margin: 0;
-    opacity: 0;
     outline: none;
     padding: 0;
     position: absolute;
@@ -227,22 +156,22 @@ body{
 }
 
 .button-shadow{
-    box-shadow: 1px 1px 10px 3px #635ef3;
+    box-shadow: 1px 1px 10px 3px gray;
 }
 
 .first-button-position{
     bottom: 60px;
-    box-shadow: 1px 1px 10px 3px #635ef3;
+    box-shadow: 1px 1px 10px 3px gray;
 }
 
 .second-button-position{
     bottom: 120px;
-    box-shadow: 1px 1px 10px 3px #635ef3;
+    box-shadow: 1px 1px 10px 3px gray;
 }
 
 .third-button-position{
     bottom: 180px;
-    box-shadow: 1px 1px 10px 3px #635ef3;
+    box-shadow: 1px 1px 10px 3px gray;
 }
 
 /**********/
@@ -423,11 +352,11 @@ body{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background:linear-gradient(to bottom,#b6bbf2,#3243f8);
+    background:linear-gradient(to top,blue, red,yellow);
     border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background:linear-gradient(to bottom,#b6bbf2,#0e1ece);
+    background:linear-gradient(to top,blue, red,yellow);
 } 
