@@ -122,9 +122,9 @@ new Vue({
       },
       {
         title:"Product Landing Page",
-        previewImage:"media/preview_3.jpg",
-        urlProject:"https://codepen.io/x1hibi/full/pMJMKb",
-        description:'this is a description',
+        previewImage:"media/preview_3.png",
+        urlProject:"./projects/landingPage/index.html",
+        description:'This is a landing page of the MSI Modern 15, which highlights its attractions, characteristics and multimedia of the product and its main purchase action',
         tags:['HTML','CSS'],
       },
       {
@@ -306,3 +306,10 @@ new Vue({
     'card-component': cardComponent,
   }
 });
+
+var newLayer = new ol.layer.Tile({
+  source: new ol.source.OSM({
+      url: 'E:/Maperitive/Tiles/vychod/{z}/{x}/{y}.png',
+      crossOrigin: null
+      })
+  });

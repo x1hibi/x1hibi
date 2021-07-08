@@ -58,8 +58,9 @@ body{
     box-shadow: 0 0 15px 3px #00000078;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
-    padding: 10px;
     height: 58px;
+    padding: 10px;
+    text-align: center;
 }
 
 .footer-content {

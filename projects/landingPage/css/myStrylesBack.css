@@ -1,0 +1,63 @@
+/****************/
+/* Page Styles */
+/**************/
+
+
+
+
+
+
+/********************/
+/* Responsive text */
+/******************/
+/* I use fluid typography Made By Mike*/
+/* https://www.madebymike.com.au/writing/fluid-type-calc-examples/ */
+
+
+/* Scren with a width equal or less than 320px  */
+
+.footer-fluid-text {
+    font-size: 11px;
+}
+
+
+/* Scren with a width equal or bigger than 320px  */
+@media screen and (min-width: 320px) {
+
+    .footer-fluid-text {
+        /* sintax  linear responsive text [min font size + (max font size - min font size) * ((viewport width - min viewport width) / (max viewport width - min viewport width))] */
+        font-size: calc(11px + 5 * ((100vw - 320px) / 1600));
+    }
+
+}
+
+/* Scren with a width equal or bigger than 1920px  */
+@media screen and (min-width: 1920px) {
+
+    .footer-fluid-text {
+        font-size: 16px;
+    }
+
+}
+
+/***************************************/
+/* Responsive Web Design media queries*/
+/*************************************/
+
+@media (max-width:1024px){
+    
+    
+}
+
+
+/* Smartphones (landcape) and */
+@media (max-width:1023px){
+
+   
+
+}
+
+@media (max-width:1023px) and (orientation:landscape){
+    
+}
+    

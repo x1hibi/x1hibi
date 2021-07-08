@@ -114,6 +114,7 @@ body{
 /****************/
 
 .footer-container {
+    text-align: center;
     background: linear-gradient(#7a84ff,#5b69f9);
     box-shadow: 0 0 15px 3px #00000078;
     font-family: 'Fira Sans', sans-serif;
