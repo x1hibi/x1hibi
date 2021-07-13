@@ -1,0 +1,430 @@
+/****************/
+/* Page Styles */
+/**************/
+
+.header-container{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    color:black;
+    height: 50px;
+    box-shadow: 0 0 3px 1px grey;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text{
+    font-family: 'Oxygen', monospace;
+    text-align: center;
+    font-size: xx-large;
+    margin: 0;
+    padding-top: 5px;
+    font-weight: 200;
+}
+
+.logo-container{
+    background: linear-gradient(to right, #ddcece, #2a2727);
+    border-radius: 50%;
+}
+
+.logo{
+    color: white;
+    font-weight: 400;
+    font-style: italic;
+    text-shadow: 1px 1px 2px #050528;
+    font-family: 'oxygen', monospace;
+    font-size: x-large;
+    padding: 10px 5px 12px 5px;
+}
+
+.burger-menu{
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+.line1{
+    box-shadow: 1px 1px 2px 1px gray;
+    transition-duration: 0.25s;
+}
+
+.line2{
+    box-shadow: 1px 1px 2px 1px gray;
+    transition-duration: 0.25s;
+}
+
+.line3{
+    box-shadow: 1px 1px 2px 1px gray;
+    transition-duration: 0.25s;
+}
+
+.burger-menu-line1{
+    transform: rotate(45deg) translate(5px, 7px);
+}
+
+.burger-menu-line2{
+    opacity: 0;
+}
+
+.burger-menu-line3{
+    transform: rotate(-45deg) translate(4px, -8px);
+}
+
+.main-container{
+    background: #f8f8ff90;
+    padding: 50px ;
+    justify-content: space-around;
+}
+
+.table-content-container{
+    border-radius: 15px;
+    align-self: flex-start;
+    width: 400px;
+    padding: 15px 0 15px 15px;
+    background-color: white;
+    box-shadow: 0 0 3px #808080ad;
+}
+
+.table-title{
+    color: rgb(10, 66, 66);
+    width: fit-content;
+    font-weight: 500;
+}
+
+.menu-rule{
+    border-color: #9767ff35;
+    margin:5px 0;
+}
+
+.title-rule{
+    box-shadow: 0 0 2px 1px #80808080;
+    border-width: 0;
+}
+
+.list-container{
+    margin: 0;
+    padding-inline-start: 15px;
+}
+
+.list-item {
+    display: block;
+}
+
+.nav-link{
+    background-image: url("../media/gradient.png");
+    background-position: 0 0 ;
+    border-radius: 0 25px 25px 0;
+    padding: 10px 0px 10px 5px;
+    text-decoration: none;
+    display: block;
+    width: 250px;
+    transition-duration: 0.35s;
+    color: rgb(10, 66, 66);
+}
+
+.nav-link::before{
+    content: "· ";
+}
+
+.bullet-title::before{
+    content: "• ";
+} 
+
+.nav-link:hover{
+    background-position: 400px 0 ;
+    color: black;
+}
+
+.nav-link:visited{
+    text-decoration: underline;
+}
+
+.space-container{
+    width: 50px;
+}
+
+.documentation-container{
+    padding: 0 25px 25px 25px;
+    background: linear-gradient(to top, #f7f7f7, white);
+    box-shadow: 2px 2px 5px 1px #80808035;
+    width: 100%;
+    height: calc(100vh - 70px - 78px - 100px - 25px);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.documentation-container p{
+    text-align: justify;
+}
+
+.section-title{
+    padding-top: 20px;
+    font-size: xxx-large;
+    font-family:'Oxygen', sans-serif;
+}
+
+.section-subtitle{
+    padding: 20px 0 20px 0;
+    font-size: xx-large;
+    font-family:'Oxygen', sans-serif;
+}
+
+.hello-world{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Share Tech mono', monospace;
+    font-size: xxx-large;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.65);
+    text-shadow: 1px 1px 1px rgba(61, 45, 45, 0.5),
+        1px 2px 1px white,
+        1px 3px 1px white,
+        1px 5px 5px rgba(128, 128, 128, 0.5),
+        1px 10px 10px rgba(128, 128, 128, 0.5);
+
+}
+
+.code-container{
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 2.5px 2.5px 10px 1px rgba(128, 128, 128, 0.35);
+    background-color: white;
+    padding: 5px;
+}
+
+.copy-button{
+    padding: 0;
+    color: rgb(75, 75, 75);
+    background-color: transparent;
+    border:none;
+    outline: none;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    font-size: x-large;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.tooltip{
+    padding: 5px 15px 5px 5px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    top: 6px;
+    right: 38px;
+    font-size: medium;
+    clip-path: polygon(0% 0%, 90% 0, 90% 36%, 100% 50%, 90% 66%, 90% 100%, 0 100%);
+    opacity: 0;
+    transition-duration: 0.25s;
+}
+
+.copy-button:hover, .copy-button:active{
+    color: black;
+}
+
+.copy-button:hover ~ .tooltip{
+    opacity: 1;
+}
+
+.hidden{
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    font-size: small;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.code{
+    display: block;
+    margin: 30px 10px 20px 10px;
+    overflow-x: auto;
+}
+
+.comment{
+    color: gray;
+}
+
+.var{
+    color: darkblue;
+}
+
+.reserved-word{
+    color: darkblue;
+}
+
+.function{
+    color: darkgreen;;
+}
+
+.string{
+    color: brown;
+}
+
+.info-list{
+    padding-inline-start: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 18px;
+}
+
+.info-list li {
+    padding: 5px
+}
+
+
+/********************/
+/* Responsive text */
+/******************/
+/* I use fluid typography Made By Mike*/
+/* https://www.madebymike.com.au/writing/fluid-type-calc-examples/ */
+
+
+/* Scren with a width equal or less than 320px  */
+
+.footer-fluid-text {
+    font-size: 11px;
+}
+
+
+/* Scren with a width equal or bigger than 320px  */
+@media screen and (min-width: 320px) {
+
+    .footer-fluid-text {
+        /* sintax  linear responsive text [min font size + (max font size - min font size) * ((viewport width - min viewport width) / (max viewport width - min viewport width))] */
+        font-size: calc(11px + 5 * ((100vw - 320px) / 1600));
+    }
+
+}
+
+/* Scren with a width equal or bigger than 1920px  */
+@media screen and (min-width: 1920px) {
+
+    .footer-fluid-text {
+        font-size: 16px;
+    }
+
+}
+
+/***************************************/
+/* Responsive Web Design media queries*/
+/*************************************/
+
+@media (max-width:1023px){
+
+    .header-container{
+        justify-content: space-between;
+        padding:0;
+        width: 100%;
+    }
+
+    .logo-container{
+        margin-left: 15px;
+    }
+
+    .logo{
+        font-size: large;
+    }
+
+    .header-text{
+        padding: 0;
+        font-size: x-large;
+    }
+    
+    .burger-menu{
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+        padding: 0 7.5px;
+    }
+
+    .nav-link{
+        width: 90vw;
+    }
+
+    .nav-link:hover{
+        background-position: 300px 0 ;
+        color: black;
+    }
+    
+    .table-content-container,.space-container{
+        display: none;
+    }
+
+    .full-table-content{
+        position: fixed;
+        display: block;
+        width: 100vw;
+        height: calc(100vh - 50px);
+        top:50px;
+        left: -768px;
+        z-index: 5;
+        border-radius: 0;
+        margin-top: 0;
+        overflow-y: scroll;
+    }
+
+    .fadeIn{
+        animation: fadeIn 0.3s ease-in-out forwards;
+    }
+
+    .fadeOut{
+        animation: fadeOut 0.3s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+        0%{
+            left: -1024px;
+        }
+        100% {
+            left: 0;
+        }
+    }
+
+    @keyframes fadeOut {
+        0%{
+            left: 0;
+        }
+        100% {
+            left: -1024px;
+        }
+    }
+
+    .main-container {
+        padding: 15px;
+    }
+
+    .documentation-container{
+        padding: 0 10px 25px 10px;
+        height: calc(100vh - 50px - 30px - 58px - 25px);
+    }
+
+    .section-title{
+        font-size: xx-large;
+    }
+
+    .section-subtitle{
+        font-size: x-large;
+    }
+
+    body{
+        font-size: large;
+    }
+
+    .footer-container{
+        padding: 0;
+    }
+    
+}

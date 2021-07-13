@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta information -->
+        <title>helloWorldDocs</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="x1hibi">
+        <meta name="description" content="  ">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./media/code.png">
+        <meta name="theme-color" content="rgb(50 50 50)"/>
+        <!-- Preload images needed  -->
+        <link rel="preload" as="image" href="./media/hero.jpg">
+        <link rel="preload" as="image" href="./media/msi1.png">
+        <link rel="preload" as="image" href="./media/msi2.png">
+        <link rel="preload" as="image" href="./media/msi3.png">
+        <link rel="preload" as="image" href="./media/msi4.png">
+        <link rel="preload" as="image" href="./media/msi5.png">
+        <link rel="preload" as="image" href="./media/msi6.png">
+        <link rel="preload" as="image" href="./media/msi7.png">
+        <link rel="preload" as="image" href="./media/premio1.png">
+        <link rel="preload" as="image" href="./media/premio2.png">
+        <link rel="preload" as="image" href="./media/premio3.png">
+        <!-- Prefetch images needed  -->
+        <link rel="prefetch" href="./media/wireframeDesktop.png" >
+        <link rel="prefetch" href="./media/wireframeMobile_1.png" >
+        <link rel="prefetch" href="./media/wireframeMobile_2.png" >
+        <link rel="prefetch" href="./media/html.png" >
+        <link rel="prefetch" href="./media/css1.png" >
+        <link rel="prefetch" href="./media/css2.png" >
+        <link rel="prefetch" href="./media/js.png" >
+        <!-- load styles and inmediate resources -->
+        
+        <link type="text/css" rel="stylesheet" href="./css/generalStyles.css">   
+        <link type="text/css" rel="stylesheet" href="./css/myStyles.css">  
+        <!-- Preconnet files -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    </head>
+
+    <body>
+
+        <!-- Header (START) -->
+        <header class="flex-container header-container">
+            <div class="flex-container">
+                <div class="logo-container flex-container">
+                    <span class="logo"><&#47;>&nbsp;</span>
+                </div>
+                <h1 class="header-text">&nbsp;helloWorldDocs</h1>
+            </div>
+            <button class="burger-menu" onclick="burgerMenu()" id="buttonBurger">
+                <hr class="line1" id="line1">
+                <hr class="line2" id="line2">
+                <hr class="line3" id="line3">
+            </button>
+        </header>
+        <!-- Header (END) -->
+
+        <!-- Main section (START) -->
+        <main id="main-doc" class="main-container flex-container">
+            
+            <aside class="table-content-container" id="tableContent">
+                <nav id="navbar">
+                    <header class="table-title">Table of contents</header>
+                    <hr class="menu-rule">
+                    <ul class="list-container">
+                        <li class="list-item">
+                            <a class="nav-link bullet-title" href="#Welcome" onclick="closeBurgerMenu()">Welcome</a>
+                            <hr class="menu-rule">
+                            <ul class="list-container">
+                                <li class="list-item">
+                                    <a class="nav-link" href="#Syntax_example" onclick="closeBurgerMenu()">Syntax example</a>
+                                </li>
+                                <hr class="menu-rule">
+                            </ul>
+                        </li>
+                        <li class="list-item">
+                            <a class="nav-link bullet-title" href="#Programming_languages" onclick="closeBurgerMenu()">Programming languages</a>
+                            <hr class="menu-rule">
+                            <ul class="list-container">
+                                <li class="list-item">
+                                    <a class="nav-link" id="#C" href="#C" onclick="closeBurgerMenu()">C</a>
+                                </li>
+                                <hr class="menu-rule">
+                                <li class="list-item">
+                                    <a class="nav-link" href="#C++" onclick="closeBurgerMenu()">C++</a>
+                                </li>
+                                <hr class="menu-rule">
+                                <li class="list-item">
+                                    <a class="nav-link" href="#C#" onclick="closeBurgerMenu()">C#</a>
+                                </li>
+                                <hr class="menu-rule">
+                                <li class="list-item">
+                                    <a class="nav-link" href="#Java" onclick="closeBurgerMenu()">Java</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <span class="space-container"></span>
+
+            <section class="documentation-container">
+                
+                <section class="main-section" id="Welcome">
+                    <header class="section-title" >Welcome</header>
+                    <hr class="title-rule">
+                    <p>In this documentation page you will be able to compare some of the most used programming languages ​​and make a quick comparison of the syntax with the most common and simple example, the charming <i>hello world</i> program.</p>
+
+                    <h3 class="hello-world"> Hello World!!!</h3>
+                        
+                    <p>You will also be able to see some characteristics of each language and links to official documentation and not official of each.</p>
+                </section>
+
+                <section class="main-section" id="Syntax_example">
+                    <header class="section-subtitle" >Syntax example</header>
+                    <p>In this section we show you the layout used in our page to show a piece of code of each programing language.</p>
+                    <div class="code-container">
+                        <button class="copy-button" onclick="copyCode(event)"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
+                        <pre id="pre"><code class="code" id="code"> <span class="comment">// hello word code</span></code></pre>
+                    </div>
+                    <ul class="info-list">
+                        <li><b>Features : </b></li>
+                        <li><i>paradigm (structured or POO)</i> | </li>
+                        <li><i>Level (medium or high)</i> | </li>
+                        <li><i>Typed (strong or week)</i> | </li>
+                        <li><i>Type (compiled or interpreted)</i> | </li>
+                        <li><i>Learning Curve (fast, medium or slow)</i></li>
+                    </ul>
+                    <ul class="info-list">
+                        <li><b>Documentation :</b></li>
+                        <li><a>Official Documentation</a> |</li>
+                        <li><a>Doc Reference 1</a> |</li>
+                        <li> <a>Doc Reference 2</a> |</li>
+                    </ul>
+                </section>
+
+
+                <section class="main-section" id="Programming_languages">
+                    <header class="section-title">Programming languages</header>
+                    <hr class="title-rule">
+                    <p>In this section you will find the most used and popular programming languages and his basic syntax used in the most simple program and some features about it</p>
+                </section>
+
+
+                <section class="main-section" id="C">
+                    <header class="section-subtitle">C</header>
+                    <div class="code-container">
+                        <button class="copy-button" onclick="copyCode(event)"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
+                        <pre id="pre"><code class="code" id="code"><span class="comment">#include &ltstdio.h&gt</span>
+<span class="reserved-word">int</span> <span class="function">main</span>() {
+    <span class="function">printf</span>("<span class="string">Hello World</span>");
+    <span class="reserved-word">return</span> 0;
+}</code></pre>
+                    </div>
+                    <ul class="info-list">
+                        <li><b>Features : </b></li>
+                        <li><i>Structured</i> | </li>
+                        <li><i>Medium</i> | </li>
+                        <li><i>strongly typed</i> | </li>
+                        <li><i>Compiled</i> | </li>
+                        <li><i>Slow</i></li>
+                    </ul>
+                    <ul class="info-list">
+                        <li><b>Documentation :</b></li>
+                        <li><a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf" target="_blank">Official Documentation</a> |</li>
+                        <li><a href="https://www.tutorialspoint.com/cprogramming/index.htm" target="_blank">Doc Reference 1</a> |</li>
+                        <li><a href="https://www.w3schools.in/c-tutorial/" target="_blank">Doc Reference 2</a> |</li>
+                    </ul>
+
+                </section>
+
+                <section class="main-section" id="C++">
+                    <header class="section-subtitle" >C++</header>
+                    <div class="code-container">
+                        <button class="copy-button" onclick="copyCode(event)"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
+                        <pre id="pre"><code class="code" id="code"><span class="comment">#include &ltiostream&gt</span>
+<span class="reserved-word">using namespace</span> std;
+<span class="var">int</span> <span class="function">main</span>() {
+    <span class="reserved-word">cout </span><< "<span class="string">Hello World</span>"
+    <span class="reserved-word">return</span> 0;
+}</code></pre></div>
+                        </div>
+                        <ul class="info-list">
+                            <li><b>Features : </b></li>
+                            <li><i>POO</i> | </li>
+                            <li><i>Medium</i> | </li>
+                            <li><i>strongly typed</i> | </li>
+                            <li><i>Compiled</i> | </li>
+                            <li><i>Medium</i></li>
+                        </ul>
+                        <ul class="info-list">
+                            <li><b>Documentation :</b></li>
+                            <li><a href="https://isocpp.org/std/the-standard" target="_blank">Official Documentation</a> |</li>
+                            <li><a href="https://www.tutorialspoint.com/cplusplus/index.htm" target="_blank">Doc Reference 1</a> |</li>
+                            <li><a href="https://www.w3schools.com/cpp/default.asp" target="_blank">Doc Reference 2</a> |</li>
+                        </ul>
+                </section>
+
+                <section class="main-section" id="C#">
+                    <header class="section-subtitle" >C#</header>
+                    <p>This are an example of each lenguage</p>
+                    <pre>
+                        <code>
+    #include &ltstdio.h&gt
+    int main() {
+        printf("Hello World");
+        return 0;
+    }
+                        </code>
+                    </pre>
+
+                    <ul>
+                        <li>Parading</li> |
+                        <li>Level</li> | 
+                        <li>Typed</li> |
+                        <li>Typed</li> |
+                        <li>Learning Curve</li>
+                    </ul>
+
+                    <ul>
+                        <a>Official Documentation</a> | 
+                        <a>Doc Reference 1</a> |
+                        <a>Doc Reference 2</a> |
+                    </ul>
+
+                </section>
+
+
+                <section class="main-section" id="Java" >
+                    <header class="section-subtitle">Java</header>
+                    <p>This are an example of each lenguage</p>
+                    <pre>
+                        <code>
+    #include &ltstdio.h&gt
+    int main() {
+        printf("Hello World");
+        return 0;
+    }
+                        </code>
+                    </pre>
+
+                    <ul>
+                        <li>Parading</li> |
+                        <li>Level</li> | 
+                        <li>Typed</li> |
+                        <li>Typed</li> |
+                        <li>Learning Curve</li>
+                    </ul>
+
+                    <ul>
+                        <a>Official Documentation</a> | 
+                        <a>Doc Reference 1</a> |
+                        <a>Doc Reference 2</a> |
+                    </ul>
+
+                </section>
+
+        
+
+            </section>
+
+        </main>
+        <!-- Main section (END) -->
+
+        <!-- Footer (start)  -->
+        <footer class="footer-container">
+            <p class="footer-content footer-fluid-text"> <a href="https://x1hibi.github.io/x1hibi/" target="_blank" rel="noopener" class="footer-link"> x1hibi Web &nbsp;<i class="fas fa-dragon din" ></i></a></p>
+            <hr class="footer-bar">
+            <p class="footer-content footer-fluid-text">Copyright © 2021 x1hibi All rights reserved.</p>
+        </footer>
+        <!-- Footer (end)  -->
+        <pre contenteditable="true" id="clipboard" class="hidden"></pre>
+        
+
+        <!-- Modal of fixed button (start) -->
+        <section class="modal-container" id="modalContainer" onclick="buttonMenu(event)">
+            <!-- Wireframes and code -->
+            <figure class="modal">
+                <div class="slider-container">
+                    <div class="responsive-slider responsive-slider-background" id="sliderContainer">
+                        <button name="button-slider-left" aria-label="button-slider-left" class="slider-arrow" onclick="modalSlider('previus')"><i class="fas fa-arrow-left"></i></button>
+                        <img class="slider-image" src="#" id="sliderImage" alt="modal-image">
+                        <button name="button-slider-right" aria-label="button-slider-rifgt"class="slider-arrow" onclick="modalSlider('next')"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <figcaption class="slider-caption" id="sliderCaption">text</figcaption>
+            </figure>
+        </section>
+        <!-- Modal of fixed button (end) -->
+
+        <!-- Button Menu (start) -->
+        <nav class="fixed-menu-container" >
+            <button name="button-wireframe" class="fixed-button-menu" onclick="buttonMenu('wireframe')" id="wireframe" title="Wireframes"><i class="fas fa-columns"></i></button>
+            <!-- <button name="button-code" class="fixed-button-menu" onclick="buttonMenu('diagram')" id="diagram" title="diagram"><i class="fas fa-project-diagram"></i></button> -->
+            <button name="button-diagram" class="fixed-button-menu" onclick="buttonMenu('code')" id="code" title="Code"><i class="fas fa-code"></i></button>
+            <button name="button-close" class="fixed-button-menu button-shadow" onclick="buttonMenu('closeMenu')"><i class="fas fa-times" title="Close menu"></i></button>
+            <button name="button-menu" class="fixed-button-menu" onclick="buttonMenu('openMenu')" id="fixedMenu"><i class="fas fa-list" title="Menu"></i></button>
+        </nav>
+        <!-- Button Menu (end) -->
+
+    </body>
+
+    <!-- Js and css files (start) -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" type="text/javascript" defer></script>
+    <script src="./js/fixedMenuAndModalSlider.js" type="text/javascript" defer></script>
+    <script src="./js/fontAsome.js" type="text/javascript" defer></script>
+    <script src="./js/app.js" type="text/javascript" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600;1,700&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Share+Tech&family=Share+Tech+Mono&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Js and css files (end) -->
+</html>
