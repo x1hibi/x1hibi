@@ -117,7 +117,7 @@ new Vue({
         title:"Tecnical Documentation Page",
         previewImage:"media/preview_4.png",
         urlProject:"./projects/documentationPage/index.html",
-        description:'On this documentation page you will be able to compare some of the most used programming languages ​​and make a quick syntax comparison with the most common and simple example, the lovely hello world program, as well as a brief description, characteristics and links to official and non-official documentation. official.',
+        description:'On this documentation page you will be able to compare some of the most used programming languages ​​and make a quick syntax comparison with the most common and simple example, the lovely hello world program.',
         tags:['HTML','CSS','JS'],
       },
       {
