@@ -32,16 +32,16 @@
             <section class="w-50 h-100 d-flex flex-column justify-content-around align-items-center mx-auto">
                 <header class="d-flex ustify-content-center align-items-center">
                     <h1 class="pe-3 text-center title-responsive-text">Palindrome checker</h1>
-                    <img src="./media/reverse" height="75px" width="auto">
+                    <img src="./media/reverse" height="75px" width="auto" alt="reverse-image">
                 </header>
                 <p class="w-60 fs-5 text-center paragraph-responsive-text"><b>Whats is a palindrome?</b> is a word, number, phrase, or other sequence of characters which reads the same backward as forward, such as <i>madam</i> or <i>racecar</i>, ignoring punctuation, case and spacing.
                 </p>
-                <h3 class="subtitle-responsive-text text-center"><i>Insert any string and find out if it is a palindrome !</i></h3>
+                <h2 class="subtitle-responsive-text text-center"><i>Insert any string and find out if it is a palindrome !</i></h2>
                 <section class="d-flex w-100 shadow">
                     <input type="text" class="form-control fs-2 text-center input-border" placeholder="Type a string" id="input" oninput="displayResult(false)">
-                    <button class="btn btn-light delete-button fs-2" onclick="deleteString()"><i class="far fa-trash-alt" onclick="deleteString()"></i></button>
+                    <button class="btn btn-light delete-button fs-2" onclick="deleteString()" aria-label="trash-button"><i class="far fa-trash-alt" onclick="deleteString()"></i></button>
                 </section>
-                <button type="button" class="btn btn-primary fs-2 shadow" onclick="palindromeChecker(event)">Check</button>
+                <button type="button" class="btn btn-primary fs-2 shadow" onclick="palindromeChecker(event)" aria-label="check-button">Check</button>
                 <section class="d-flex result-container align-items-center">
                     <h3 class="title-responsive-text display-content">Result: &nbsp; </h3>
                     <div class="spinner-grow text-light icon-size" role="status" id="spinner">

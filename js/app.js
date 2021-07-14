@@ -111,7 +111,7 @@ new Vue({
         previewImage:"media/preview_6.png",
         urlProject:"./projects/palindromeChecker/index.html",
         description:'Palindrome checker is a tools to help to know easily if a string (word, number, date u other) can be reads the same backward as forward."',
-        tags:['HTML','CSS','JS'],
+        tags:['HTML','CSS','JS','BOOTSTRAP'],
       },
       {
         title:"Personal Portfolio Webpage",
