@@ -25,22 +25,27 @@ const modalSliderImages=[
     }],
     [{
         "imagePath":"./media/html.png",
-        "captionText":"index.html (1/4)",
+        "captionText":"index.html (1/5)",
         "altText":"image of html index file"
     },
     {
         "imagePath":"./media/css1.png",
-        "captionText":"myStyles.css (2/4)",
+        "captionText":"myStyles.css (2/5)",
         "altText":"image of css style file"
     },
     {
         "imagePath":"./media/css2.png",
-        "captionText":"generalStyles.css (3/4)",
+        "captionText":"generalStyles.css (3/5)",
         "altText":"image of css style file"
     },
     {
-        "imagePath":"./media/js.png",
-        "captionText":"app.js (4/4)",
+        "imagePath":"./media/js1.png",
+        "captionText":"app.js (4/5)",
+        "altText":"image of js file"
+    },
+    {
+        "imagePath":"./media/js2.png",
+        "captionText":"fixedMenuAndModalSlider.js (5/5)",
         "altText":"image of js file"
     }]
 ]
@@ -131,8 +136,8 @@ function displayFixedMenu() {
     // hide and show menu
     document.getElementById("fixedMenu").classList.toggle("hidden-element")
     // toogle classes for each button to move it 
-    document.getElementById("code").classList.toggle("first-button-position");
-    document.getElementById("wireframe").classList.toggle("second-button-position");
+    document.getElementById("wireframe").classList. toggle("third-button-position");
+    document.getElementById("code").classList.toggle("second-button-position");
     // document.getElementById("diagram").classList.toggle("second-button-position");
 }
 

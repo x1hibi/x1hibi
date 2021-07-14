@@ -31,25 +31,29 @@ body{
 /****************/
 
 .footer-container {
-    text-align: center;
-    background: linear-gradient(to bottom,#f8f8ff90,rgb(240, 213, 213));
+    background: linear-gradient(to top, var(--gradient-background), var(--navbar-background));
+    box-shadow: 0 0 5px 1px var(--shadow-color);
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
     height: 58px;
     padding: 10px;
+    text-align: center;
+    transition-duration: var(--time-transition);
 }
 
 .footer-content {
-    color:darkslategrey;
+    color:var(--text-color-secondary);
     margin: auto;
+    transition-duration: var(--time-transition);
     width: fit-content;
 }
 
 .footer-link{
-    color: darkslategrey;
+    color: var(--text-color-secondary);
     cursor: pointer;
     text-decoration: none;
     transition-duration: 0.5s;
+    transition-duration: var(--time-transition);
 }
 
 .footer-link:hover{
@@ -95,7 +99,6 @@ body{
 /*************/
 
 .fixed-menu-container{
-    background-color: red;
     bottom: 15px;
     height: fit-content;
     position: fixed;
@@ -106,11 +109,11 @@ body{
 
 .fixed-button-menu{
     align-items: center;
-    background: linear-gradient(to right,#eaedf3,#ffffff);
+    background: var(--navbar-background);
     border-radius: 50%;
     border:none;
     bottom: 0;
-    color: #7a8494;
+    color: var(--text-color-secondary);
     cursor: pointer;
     font-size: 20pt;
     height: 50px;
@@ -133,22 +136,22 @@ body{
 }
 
 .button-shadow{
-    box-shadow: 1px 1px 10px 3px rgba(173, 172, 172, 0.75);
+    box-shadow: 2px 2px 5px 1px var(--shadow-color);
 }
 
 .first-button-position{
     bottom: 60px;
-    box-shadow: 1px 1px 10px 3px rgba(173, 172, 172, 0.75);
+    box-shadow: 2px 2px 5px 1px var(--shadow-color);
 }
 
 .second-button-position{
     bottom: 120px;
-    box-shadow: 1px 1px 10px 3px rgba(173, 172, 172, 0.75);
+    box-shadow: 2px 2px 5px 1px var(--shadow-color);
 }
 
 .third-button-position{
     bottom: 180px;
-    box-shadow: 1px 1px 10px 3px rgba(173, 172, 172, 0.75);
+    box-shadow: 2px 2px 5px 1px var(--shadow-color);
 }
 
 /**********/
@@ -329,11 +332,11 @@ body{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background:linear-gradient(to top,#b7bec9,#ffffff);
+    background:linear-gradient(to top,#b7bec9,var(--navbar-background));
     border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background:linear-gradient(to top,#8891a0,#ffffff);
+    background:linear-gradient(to top,#8891a0,var(--navbar-background));
 } 

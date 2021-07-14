@@ -6,22 +6,10 @@
         <meta charset="UTF-8">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="x1hibi">
-        <meta name="description" content="  ">
+        <meta name="description" content="On this documentation page you will be able to compare some of the most used programming languages ​​and make a quick syntax comparison with the most common and simple example, the lovely hello world program, as well as a brief description, characteristics and links to official and non-official documentation. official.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="./media/code.png">
         <meta name="theme-color" content="rgb(50 50 50)"/>
-        <!-- Preload images needed  -->
-        <link rel="preload" as="image" href="./media/hero.jpg">
-        <link rel="preload" as="image" href="./media/msi1.png">
-        <link rel="preload" as="image" href="./media/msi2.png">
-        <link rel="preload" as="image" href="./media/msi3.png">
-        <link rel="preload" as="image" href="./media/msi4.png">
-        <link rel="preload" as="image" href="./media/msi5.png">
-        <link rel="preload" as="image" href="./media/msi6.png">
-        <link rel="preload" as="image" href="./media/msi7.png">
-        <link rel="preload" as="image" href="./media/premio1.png">
-        <link rel="preload" as="image" href="./media/premio2.png">
-        <link rel="preload" as="image" href="./media/premio3.png">
         <!-- Prefetch images needed  -->
         <link rel="prefetch" href="./media/wireframeDesktop.png" >
         <link rel="prefetch" href="./media/wireframeMobile_1.png" >
@@ -29,9 +17,9 @@
         <link rel="prefetch" href="./media/html.png" >
         <link rel="prefetch" href="./media/css1.png" >
         <link rel="prefetch" href="./media/css2.png" >
-        <link rel="prefetch" href="./media/js.png" >
+        <link rel="prefetch" href="./media/js1.png" >
+        <link rel="prefetch" href="./media/js2.png" >
         <!-- load styles and inmediate resources -->
-        
         <link type="text/css" rel="stylesheet" href="./css/generalStyles.css">   
         <link type="text/css" rel="stylesheet" href="./css/myStyles.css">  
         <!-- Preconnet files -->
@@ -39,9 +27,8 @@
     </head>
 
     <body>
-
         <!-- Header (START) -->
-        <header class="flex-container header-container">
+        <header class="flex-container header-container" id="header">
             <div class="flex-container">
                 <div class="logo-container flex-container">
                     <span class="logo"><&#47;>&nbsp;</span>
@@ -58,70 +45,92 @@
 
         <!-- Main section (START) -->
         <main id="main-doc" class="main-container flex-container">
-            
+            <!-- Lateral Menu (START) -->
             <aside class="table-content-container" id="tableContent">
                 <nav id="navbar">
                     <header class="table-title">Table of contents</header>
                     <hr class="menu-rule">
                     <ul class="list-container">
                         <li class="list-item">
-                            <a class="nav-link bullet-title" href="#Welcome" onclick="closeBurgerMenu()">Welcome</a>
+                            <a class="nav-link bullet-title" href="#Welcome" onclick="burgerMenu('false')">Welcome</a>
                             <hr class="menu-rule">
                             <ul class="list-container">
                                 <li class="list-item">
-                                    <a class="nav-link" href="#Syntax_example" onclick="closeBurgerMenu()">Syntax example</a>
+                                    <a class="nav-link" href="#Syntax_example" onclick="burgerMenu('false')">Syntax example</a>
                                 </li>
                                 <hr class="menu-rule">
                             </ul>
                         </li>
                         <li class="list-item">
-                            <a class="nav-link bullet-title" href="#Programming_languages" onclick="closeBurgerMenu()">Programming languages</a>
+                            <a class="nav-link bullet-title" href="#Programming_languages" onclick="burgerMenu('false')">Programming languages</a>
                             <hr class="menu-rule">
                             <ul class="list-container">
                                 <li class="list-item">
-                                    <a class="nav-link" id="#C" href="#C" onclick="closeBurgerMenu()">C</a>
+                                    <a class="nav-link" id="#C" href="#C" onclick="burgerMenu('false')">C</a>
                                 </li>
                                 <hr class="menu-rule">
                                 <li class="list-item">
-                                    <a class="nav-link" href="#C++" onclick="closeBurgerMenu()">C++</a>
+                                    <a class="nav-link" href="#C++" onclick="burgerMenu('false')">C++</a>
                                 </li>
                                 <hr class="menu-rule">
                                 <li class="list-item">
-                                    <a class="nav-link" href="#C#" onclick="closeBurgerMenu()">C#</a>
+                                    <a class="nav-link" href="#C#" onclick="burgerMenu('false')">C#</a>
                                 </li>
                                 <hr class="menu-rule">
                                 <li class="list-item">
-                                    <a class="nav-link" href="#Java" onclick="closeBurgerMenu()">Java</a>
+                                    <a class="nav-link" href="#Java" onclick="burgerMenu('false')">Java</a>
+                                </li>
+                                <hr class="menu-rule">
+                                <li class="list-item">
+                                    <a class="nav-link" href="#Kotlin" onclick="burgerMenu('false')">Kotlin</a>
+                                </li>
+                                <hr class="menu-rule">
+                                <li class="list-item">
+                                    <a class="nav-link" href="#JavaScript" onclick="burgerMenu('false')">JavaScript</a>
+                                </li>
+                                <hr class="menu-rule">
+                                <li class="list-item">
+                                    <a class="nav-link" href="#PHP" onclick="burgerMenu('false')">PHP</a>
+                                </li>
+                                <hr class="menu-rule">
+                                <li class="list-item">
+                                    <a class="nav-link" href="#Python" onclick="burgerMenu('false')">Python</a>
+                                </li>
+                                <hr class="menu-rule">
+                                <li class="list-item">
+                                    <a class="nav-link" href="#Bash" onclick="burgerMenu('false')">Bash</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
             </aside>
+            <!-- Lateral Menu (END) -->
 
             <span class="space-container"></span>
 
-            <section class="documentation-container">
-                
+            <!-- Documentation container (START) -->
+            <section class="documentation-container" id="content">
                 <section class="main-section" id="Welcome">
                     <header class="section-title" >Welcome</header>
                     <hr class="title-rule">
-                    <p>In this documentation page you will be able to compare some of the most used programming languages ​​and make a quick comparison of the syntax with the most common and simple example, the charming <i>hello world</i> program.</p>
-
-                    <h3 class="hello-world"> Hello World!!!</h3>
-                        
+                    <p>On this documentation page you will be able to compare some of the most used programming languages ​​and make a quick syntax comparison with the most common and simple example, the lovely <i>hello world</i> program.</p>
+                    <h3 class="hello-world"> Hello World!!!</h3>      
                     <p>You will also be able to see some characteristics of each language and links to official documentation and not official of each.</p>
                 </section>
 
                 <section class="main-section" id="Syntax_example">
                     <header class="section-subtitle" >Syntax example</header>
-                    <p>In this section we show you the layout used in our page to show a piece of code of each programing language.</p>
+                    <hr class="title-rule">
+                    <p>Short description of the language.</p>
                     <div class="code-container">
                         <button class="copy-button" onclick="copyCode(event)"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
-                        <pre id="pre"><code class="code" id="code"> <span class="comment">// hello word code</span></code></pre>
+                        <pre id="pre"><code class="code"><span class="comment">Example comment</span>
+
+Hello world code</code></pre>
                     </div>
                     <ul class="info-list">
-                        <li><b>Features : </b></li>
+                        <li><b>Features: </b></li>
                         <li><i>paradigm (structured or POO)</i> | </li>
                         <li><i>Level (medium or high)</i> | </li>
                         <li><i>Typed (strong or week)</i> | </li>
@@ -129,13 +138,12 @@
                         <li><i>Learning Curve (fast, medium or slow)</i></li>
                     </ul>
                     <ul class="info-list">
-                        <li><b>Documentation :</b></li>
+                        <li><b>Documentation: </b></li>
                         <li><a>Official Documentation</a> |</li>
                         <li><a>Doc Reference 1</a> |</li>
-                        <li> <a>Doc Reference 2</a> |</li>
+                        <li><a>Doc Reference 2</a></li>
                     </ul>
                 </section>
-
 
                 <section class="main-section" id="Programming_languages">
                     <header class="section-title">Programming languages</header>
@@ -143,136 +151,273 @@
                     <p>In this section you will find the most used and popular programming languages and his basic syntax used in the most simple program and some features about it</p>
                 </section>
 
-
                 <section class="main-section" id="C">
                     <header class="section-subtitle">C</header>
+                    <hr class="title-rule">
+                    <p>C programming is a general-purpose, procedural, imperative computer programming language developed in 1972 by Dennis M. Ritchie at the Bell Telephone Laboratories to develop the UNIX operating system.</p>
                     <div class="code-container">
                         <button class="copy-button" onclick="copyCode(event)"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
-                        <pre id="pre"><code class="code" id="code"><span class="comment">#include &ltstdio.h&gt</span>
+                        <pre id="pre"><code class="code"><span class="comment">// Hello world in C</span>
+
+<span class="comment">#include &ltstdio.h&gt</span>
 <span class="reserved-word">int</span> <span class="function">main</span>() {
-    <span class="function">printf</span>("<span class="string">Hello World</span>");
+    <span class="function">printf</span>(<span class="string">"Hello World"</span>);
     <span class="reserved-word">return</span> 0;
 }</code></pre>
                     </div>
                     <ul class="info-list">
-                        <li><b>Features : </b></li>
+                        <li><b>Features: </b></li>
                         <li><i>Structured</i> | </li>
                         <li><i>Medium</i> | </li>
-                        <li><i>strongly typed</i> | </li>
+                        <li><i>Strongly typed</i> | </li>
                         <li><i>Compiled</i> | </li>
                         <li><i>Slow</i></li>
                     </ul>
                     <ul class="info-list">
-                        <li><b>Documentation :</b></li>
+                        <li><b>Documentation: </b></li>
                         <li><a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf" target="_blank">Official Documentation</a> |</li>
-                        <li><a href="https://www.tutorialspoint.com/cprogramming/index.htm" target="_blank">Doc Reference 1</a> |</li>
-                        <li><a href="https://www.w3schools.in/c-tutorial/" target="_blank">Doc Reference 2</a> |</li>
+                        <li><a href="https://www.tutorialspoint.com/cprogramming/index.htm" target="_blank">tutorialspoint</a> |</li>
+                        <li><a href="https://www.w3schools.in/c-tutorial/" target="_blank">w3school</a></li>
                     </ul>
-
                 </section>
 
                 <section class="main-section" id="C++">
                     <header class="section-subtitle" >C++</header>
+                    <hr class="title-rule">
+                    <p>C++ is a middle-level programming language developed by Bjarne Stroustrup starting in 1979 at Bell Labs. C++ runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX.</p>
                     <div class="code-container">
                         <button class="copy-button" onclick="copyCode(event)"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
-                        <pre id="pre"><code class="code" id="code"><span class="comment">#include &ltiostream&gt</span>
-<span class="reserved-word">using namespace</span> std;
-<span class="var">int</span> <span class="function">main</span>() {
-    <span class="reserved-word">cout </span><< "<span class="string">Hello World</span>"
+                        <pre id="pre"><code class="code"><span class="comment">// Hello world in C++</span>
+                            
+<span class="comment">#include &ltiostream&gt</span>
+<span class="reserved-word">using namespace </span><span class="var">std;</span>
+<span class="reserved-word">int </span><span class="function">main</span>(){
+    <span class="function">count</span> << "<span class="string">Hello World</span>";
     <span class="reserved-word">return</span> 0;
-}</code></pre></div>
-                        </div>
-                        <ul class="info-list">
-                            <li><b>Features : </b></li>
-                            <li><i>POO</i> | </li>
-                            <li><i>Medium</i> | </li>
-                            <li><i>strongly typed</i> | </li>
-                            <li><i>Compiled</i> | </li>
-                            <li><i>Medium</i></li>
-                        </ul>
-                        <ul class="info-list">
-                            <li><b>Documentation :</b></li>
-                            <li><a href="https://isocpp.org/std/the-standard" target="_blank">Official Documentation</a> |</li>
-                            <li><a href="https://www.tutorialspoint.com/cplusplus/index.htm" target="_blank">Doc Reference 1</a> |</li>
-                            <li><a href="https://www.w3schools.com/cpp/default.asp" target="_blank">Doc Reference 2</a> |</li>
-                        </ul>
+}</code></pre>
+                    </div>
+                    <ul class="info-list">
+                        <li><b>Features: </b></li>
+                        <li><i>POO</i> | </li>
+                        <li><i>Medium</i> | </li>
+                        <li><i>Strongly typed</i> | </li>
+                        <li><i>Compiled</i> | </li>
+                        <li><i>Medium</i></li>
+                    </ul>
+                    <ul class="info-list">
+                        <li><b>Documentation: </b></li>
+                        <li><a href="https://isocpp.org/std/the-standard" target="_blank">Official Documentation</a> |</li>
+                        <li><a href="https://www.tutorialspoint.com/cplusplus/index.htm" target="_blank">tutorialspoint</a> |</li>
+                        <li><a href="https://www.w3schools.com/CPP/default.asp" target="_blank">w3school</a></li>
+                    </ul>
                 </section>
 
                 <section class="main-section" id="C#">
                     <header class="section-subtitle" >C#</header>
-                    <p>This are an example of each lenguage</p>
-                    <pre>
-                        <code>
-    #include &ltstdio.h&gt
-    int main() {
-        printf("Hello World");
-        return 0;
+                    <hr class="title-rule">
+                    <p>C# is a simple, modern, general-purpose, object-oriented programming language developed by Microsoft within its .NET initiative led by Anders Hejlsberg.</p>
+                    <div class="code-container">
+                        <button class="copy-button" onclick="copyCode(event)"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
+                        <pre id="pre"><code class="code"><span class="comment">// Hello world in C#</span>
+
+<span class="reserved-word">namespace</span> <span class="function">HelloWorld</span>{
+    <span class="reserved-word">class </span><span class="function">Hello</span>{
+        <span class="reserved-word">static void </span><span class="function">Main</span> (<span class="reserved-word">String</span>[] args){
+            <span class="var">System.Console</span>.<span class="function">WriteLine</span>("<span class="string">Hello World!</span>");
+        }
     }
-                        </code>
-                    </pre>
-
-                    <ul>
-                        <li>Parading</li> |
-                        <li>Level</li> | 
-                        <li>Typed</li> |
-                        <li>Typed</li> |
-                        <li>Learning Curve</li>
+}</code></pre>
+                    </div>
+                    <ul class="info-list">
+                        <li><b>Features: </b></li>
+                        <li><i>POO</i> | </li>
+                        <li><i>Medium</i> | </li>
+                        <li><i>Strongly typed</i> | </li>
+                        <li><i>Compiled and interpreted</i> | </li>
+                        <li><i>Medium</i></li>
                     </ul>
-
-                    <ul>
-                        <a>Official Documentation</a> | 
-                        <a>Doc Reference 1</a> |
-                        <a>Doc Reference 2</a> |
+                    <ul class="info-list">
+                        <li><b>Documentation: </b></li>
+                        <li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">Official Documentation</a> |</li>
+                        <li><a href="https://www.tutorialspoint.com/csharp/index.htm" target="_blank">tutorialspoint</a> |</li>
+                        <li><a href="https://www.w3schools.com/cs/index.php" target="_blank">w3school</a></li>
                     </ul>
-
                 </section>
-
 
                 <section class="main-section" id="Java" >
                     <header class="section-subtitle">Java</header>
-                    <p>This are an example of each lenguage</p>
-                    <pre>
-                        <code>
-    #include &ltstdio.h&gt
-    int main() {
-        printf("Hello World");
-        return 0;
+                    <hr class="title-rule"> 
+                    <p>Java is a high-level programming language originally developed by Sun Microsystems and released in 1995. Java runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX.</p>
+                    <div class="code-container">
+                        <button class="copy-button" onclick="copyCode(event)"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
+                        <pre id="pre"><code class="code"><span class="comment">// Hello world in Java</span>
+
+<span class="reserved-word">Class</span> <span class="function">HelloWorld</span>{
+    <span class="reserved-word">public static void main</span> (<span class="var">String[] args</span>){
+        <span class="var">System.out.</span><span class="function">println</span>("<span class="string">Hello World!</span>");
     }
-                        </code>
-                    </pre>
-
-                    <ul>
-                        <li>Parading</li> |
-                        <li>Level</li> | 
-                        <li>Typed</li> |
-                        <li>Typed</li> |
-                        <li>Learning Curve</li>
+}</code></pre></div>
+                    <ul class="info-list">
+                        <li><b>Features: </b></li>
+                        <li><i>POO</i> | </li>
+                        <li><i>Medium</i> | </li>
+                        <li><i>Strongly typed</i> | </li>
+                        <li><i>Compiled and interpreted</i> | </li>
+                        <li><i>Slow</i></li>
                     </ul>
-
-                    <ul>
-                        <a>Official Documentation</a> | 
-                        <a>Doc Reference 1</a> |
-                        <a>Doc Reference 2</a> |
+                    <ul class="info-list">
+                        <li><b>Documentation: </b></li>
+                        <li><a href="https://docs.oracle.com/en/java/javase/11/docs/api/index.html" target="_blank">Official Documentation</a> |</li>
+                        <li><a href="https://www.tutorialspoint.com/java/index.htm" target="_blank">tutorialspoint</a> |</li>
+                        <li><a href="https://www.w3schools.com/java/" target="_blank">w3school</a></li>
                     </ul>
-
                 </section>
 
-        
+                <section class="main-section" id="Kotlin" >
+                    <header class="section-subtitle">Kotlin</header>
+                    <hr class="title-rule"> 
+                    <p>Kotlin is a programming language introduced by JetBrains, the official designer of the most intelligent Java IDE, named Intellij IDEA. This is a strongly statically typed language that runs on JVM. In 2017, Google announced Kotlin is an official language for android development. Kotlin is an open source programming language that combines object-oriented programming and functional features into a unique platform.</p>
+                    <div class="code-container">
+                        <button class="copy-button" onclick="copyCode(event)"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
+                        <pre id="pre"><code class="code"><span class="comment">// Hello world in Kotlin</span>
+                            
+<span class="reserved-word">fun</span> <span class="function">main</span>(args : <span class="var">&lt;String&gt;</span>){
+    <span class="function">println</span>("<span class="string">Hello World!</span>")
+}</code></pre></div>
+                    <ul class="info-list">
+                        <li><b>Features: </b></li>
+                        <li><i>POO</i> | </li>
+                        <li><i>High</i> | </li>
+                        <li><i>Strongly typed</i> | </li>
+                        <li><i>Compiled</i> | </li>
+                        <li><i>Medium</i></li>
+                    </ul>
+                    <ul class="info-list">
+                        <li><b>Documentation: </b></li>
+                        <li><a href="https://kotlinlang.org/docs/home.html" target="_blank">Official Documentation</a> |</li>
+                        <li><a href="https://www.tutorialspoint.com/kotlin/index.htm" target="_blank">tutorialspoint</a> |</li>
+                        <li><a href="https://www.w3schools.com/kotlin/index.php" target="_blank">w3school</a></li>
+                    </ul>
+                </section>
 
+                <section class="main-section" id="JavaScript" >
+                    <header class="section-subtitle">JavaScript</header>
+                    <hr class="title-rule"> 
+                    <p>JavaScript is a lightweight, interpreted programming language. It is designed for creating network-centric applications. It is complimentary to and integrated with Java. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+                    <div class="code-container">
+                        <button class="copy-button" onclick="copyCode(event)"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
+                        <pre id="pre"><code class="code"><span class="comment">// Hello world in JavaScript</span>
+                            
+<span class="var">console.</span><span class="function">log</span>("<span class="string">Hello World!</span>")</code></pre></div>
+                    <ul class="info-list">
+                        <li><b>Features: </b></li>
+                        <li><i>Multiparadigm</i> | </li>
+                        <li><i>High</i> | </li>
+                        <li><i>Weakly typed</i> | </li>
+                        <li><i>interpreted</i> | </li>
+                        <li><i>Fast</i></li>
+                    </ul>
+                    <ul class="info-list">
+                        <li><b>Documentation: </b></li>
+                        <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">Official Documentation</a> |</li>
+                        <li><a href="https://www.tutorialspoint.com/javascript/index.htm" target="_blank">tutorialspoint</a> |</li>
+                        <li><a href="https://www.w3schools.com/js/" target="_blank">w3school</a></li>
+                    </ul>
+                </section>
+
+                <section class="main-section" id="PHP" >
+                    <header class="section-subtitle">PHP</header>
+                    <hr class="title-rule"> 
+                    <p>The PHP Hypertext Preprocessor (PHP) is a programming language that allows web developers to create dynamic content that interacts with databases. PHP is basically used for developing web based software applications. This tutorial helps you to build your base with PHP.</p>
+                    <div class="code-container">
+                        <button class="copy-button" onclick="copyCode(event)"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
+                        <pre id="pre"><code class="code"><span class="comment">// Hello world in PHP</span>
+                            
+&lt;<span class="reserved-word">?php</span>
+    <span class="function">echo</span> "<span class="string">Hello World!</span>";
+<span class="reserved-word">?</span>&gt;</code></pre></div>
+                    <ul class="info-list">
+                        <li><b>Features: </b></li>
+                        <li><i>Structured</i> | </li>
+                        <li><i>High</i> | </li>
+                        <li><i>Weakly typed</i> | </li>
+                        <li><i>interpreted</i> | </li>
+                        <li><i>Fast</i></li>
+                    </ul>
+                    <ul class="info-list">
+                        <li><b>Documentation: </b></li>
+                        <li><a href="https://www.php.net/docs.php" target="_blank">Official Documentation</a> |</li>
+                        <li><a href="https://www.tutorialspoint.com/php/index.htm" target="_blank">tutorialspoint</a> |</li>
+                        <li><a href="https://www.w3schools.com/php/" target="_blank">w3school</a></li>
+                    </ul>
+                </section>
+
+                <section class="main-section" id="Python" >
+                    <header class="section-subtitle">Python</header>
+                    <hr class="title-rule"> 
+                    <p>Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. Like Perl, Python source code is also available under the GNU General Public License (GPL). This tutorial gives enough understanding on Python programming language.</p>
+                    <div class="code-container">
+                        <button class="copy-button" onclick="copyCode(event)"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
+                        <pre id="pre"><code class="code"><span class="comment">// Hello world in Python</span>
+ 
+<span class="function">print</span>("<span class="string">Hello World!</span>")</code></pre></div>
+                    <ul class="info-list">
+                        <li><b>Features: </b></li>
+                        <li><i>Multiparadigm</i> | </li>
+                        <li><i>High</i> | </li>
+                        <li><i>Weakly typed</i> | </li>
+                        <li><i>interpreted</i> | </li>
+                        <li><i>Fast</i></li>
+                    </ul>
+                    <ul class="info-list">
+                        <li><b>Documentation: </b></li>
+                        <li><a href="https://www.python.org/doc/" target="_blank">Official Documentation</a> |</li>
+                        <li><a href="https://www.tutorialspoint.com/python/index.htm" target="_blank">tutorialspoint</a> |</li>
+                        <li><a href="https://www.w3schools.com/python/" target="_blank">w3school</a></li>
+                    </ul>
+                </section>
+
+                <section class="main-section" id="Bash" >
+                    <header class="section-subtitle">Bash</header>
+                    <hr class="title-rule"> 
+                    <p>Bash is an sh-compatible command language interpreter that executes commands read from the standard input or from a file. Bash also incorporates useful features from the Korn and C shells (ksh and csh).</p>
+                    <div class="code-container">
+                        <button class="copy-button" onclick="copyCode(event)"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
+                        <pre id="pre"><code class="code"><span class="comment"># Hello world in Bash</span>
+ 
+<span class="var">#!/bin/bash</span>
+<span class="function">echo</span>("<span class="string">Hello World!</span>")</code></pre></div>
+                    <ul class="info-list">
+                        <li><b>Features: </b></li>
+                        <li><i>Structured</i> | </li>
+                        <li><i>Medium</i> | </li>
+                        <li><i>Weakly typed</i> | </li>
+                        <li><i>interpreted</i> | </li>
+                        <li><i>Medium</i></li>
+                    </ul>
+                    <ul class="info-list">
+                        <li><b>Documentation:</b></li>
+                        <li><a href="https://www.gnu.org/software/bash/manual/bash.html#What-is-Bash_003f" target="_blank">Official Documentation</a> |</li>
+                        <li><a href="https://www.tutorialspoint.com/unix_commands/bash.htm" target="_blank">tutorialspoint</a> |</li>
+                        <li><a href="https://man.cx/bash " target="_blank">Handbook</a></li>
+                    </ul>
+                </section>
             </section>
+            <!-- Documentation container (END) -->
 
         </main>
         <!-- Main section (END) -->
 
         <!-- Footer (start)  -->
-        <footer class="footer-container">
+        <footer class="footer-container" id="footer">
             <p class="footer-content footer-fluid-text"> <a href="https://x1hibi.github.io/x1hibi/" target="_blank" rel="noopener" class="footer-link"> x1hibi Web &nbsp;<i class="fas fa-dragon din" ></i></a></p>
             <hr class="footer-bar">
             <p class="footer-content footer-fluid-text">Copyright © 2021 x1hibi All rights reserved.</p>
         </footer>
         <!-- Footer (end)  -->
+
+        <!-- Pre element editable -->
         <pre contenteditable="true" id="clipboard" class="hidden"></pre>
-        
 
         <!-- Modal of fixed button (start) -->
         <section class="modal-container" id="modalContainer" onclick="buttonMenu(event)">
@@ -293,8 +438,8 @@
         <!-- Button Menu (start) -->
         <nav class="fixed-menu-container" >
             <button name="button-wireframe" class="fixed-button-menu" onclick="buttonMenu('wireframe')" id="wireframe" title="Wireframes"><i class="fas fa-columns"></i></button>
-            <!-- <button name="button-code" class="fixed-button-menu" onclick="buttonMenu('diagram')" id="diagram" title="diagram"><i class="fas fa-project-diagram"></i></button> -->
-            <button name="button-diagram" class="fixed-button-menu" onclick="buttonMenu('code')" id="code" title="Code"><i class="fas fa-code"></i></button>
+            <button name="button-code" class="fixed-button-menu" onclick="buttonMenu('code')" id="code" title="Code"><i class="fas fa-code"></i></button>
+            <button name="button-dark" class="fixed-button-menu first-button-position" onclick="darkMode()" id="darkMode" title="darkMode"><i class="fas fa-adjust"></i></button>
             <button name="button-close" class="fixed-button-menu button-shadow" onclick="buttonMenu('closeMenu')"><i class="fas fa-times" title="Close menu"></i></button>
             <button name="button-menu" class="fixed-button-menu" onclick="buttonMenu('openMenu')" id="fixedMenu"><i class="fas fa-list" title="Menu"></i></button>
         </nav>
@@ -303,7 +448,6 @@
     </body>
 
     <!-- Js and css files (start) -->
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" type="text/javascript" defer></script>
     <script src="./js/fixedMenuAndModalSlider.js" type="text/javascript" defer></script>
     <script src="./js/fontAsome.js" type="text/javascript" defer></script>
     <script src="./js/app.js" type="text/javascript" defer></script>

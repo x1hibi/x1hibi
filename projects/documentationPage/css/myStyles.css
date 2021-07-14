@@ -1,29 +1,54 @@
+/*******************/
+/* Root Variables */
+/*****************/
+:root{
+     /* text color  */
+    --text-color-main: black;
+    --text-color-secondary:darkslategrey;
+    /* background color */
+    --navbar-background:white;
+    --gradient-background:#f7f7f7;
+    --body-background:#f8f8ff90;
+    /* other styles vars  */
+    --time-transition:0.5s;
+    --semi-black-color:rgba(0, 0, 0, 0.65);
+    --shadow-color:rgb(128 128 128 / 35%);
+    /* code styles */
+    --var:rgb(160, 148, 148);
+    --reserved-word:darkblue;
+    --function:darkgreen;
+    --string:brown;
+}
+
 /****************/
 /* Page Styles */
 /**************/
 
 .header-container{
-    width: 100%;
-    background-color: white;
-    padding: 10px;
-    color:black;
+    background-color: var(--navbar-background);
+    box-shadow: 0 0 3px 1px var(--shadow-color);
+    color:var(--text-color-main);
     height: 50px;
-    box-shadow: 0 0 3px 1px grey;
+    padding: 10px;
+    position:sticky;
+    transition-duration: var(--time-transition);
+    width: 100%;
 }
 
 .flex-container{
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .header-text{
     font-family: 'Oxygen', monospace;
-    text-align: center;
     font-size: xx-large;
+    font-weight: 200;
     margin: 0;
     padding-top: 5px;
-    font-weight: 200;
+    text-align: center;
+    text-shadow: 0 0 5px #ffffff50;
 }
 
 .logo-container{
@@ -33,20 +58,20 @@
 
 .logo{
     color: white;
-    font-weight: 400;
-    font-style: italic;
-    text-shadow: 1px 1px 2px #050528;
     font-family: 'oxygen', monospace;
     font-size: x-large;
+    font-style: italic;
+    font-weight: 400;
     padding: 10px 5px 12px 5px;
+    text-shadow: 1px 1px 2px #050528;
 }
 
 .burger-menu{
-    display: none;
     background: transparent;
     border: none;
-    padding: 0;
+    display: none;
     outline: none;
+    padding: 0;
 }
 
 .line1{
@@ -77,24 +102,28 @@
 }
 
 .main-container{
-    background: #f8f8ff90;
-    padding: 50px ;
+    background: var(--body-background);
     justify-content: space-around;
+    padding: 50px ;
+    transition-duration: var(--time-transition);
 }
 
 .table-content-container{
-    border-radius: 15px;
     align-self: flex-start;
-    width: 400px;
-    padding: 15px 0 15px 15px;
-    background-color: white;
+    background-color: var(--navbar-background);
+    border-radius: 15px;
     box-shadow: 0 0 3px #808080ad;
+    overflow-x: hidden;
+    padding: 15px 0 15px 15px;
+    transition-duration: var(--time-transition);
+    width: 400px;
 }
 
 .table-title{
-    color: rgb(10, 66, 66);
-    width: fit-content;
+    color: var(--text-color-secondary);
     font-weight: 500;
+    transition-duration: var(--time-transition);
+    width: fit-content;
 }
 
 .menu-rule{
@@ -103,8 +132,8 @@
 }
 
 .title-rule{
-    box-shadow: 0 0 2px 1px #80808080;
     border-width: 0;
+    box-shadow: 0 0 2px 1px #80808080;
 }
 
 .list-container{
@@ -120,12 +149,12 @@
     background-image: url("../media/gradient.png");
     background-position: 0 0 ;
     border-radius: 0 25px 25px 0;
+    color: var(--text-color-main);
+    display: block;
     padding: 10px 0px 10px 5px;
     text-decoration: none;
-    display: block;
-    width: 250px;
     transition-duration: 0.35s;
-    color: rgb(10, 66, 66);
+    width: 250px;
 }
 
 .nav-link::before{
@@ -138,7 +167,6 @@
 
 .nav-link:hover{
     background-position: 400px 0 ;
-    color: black;
 }
 
 .nav-link:visited{
@@ -150,13 +178,15 @@
 }
 
 .documentation-container{
-    padding: 0 25px 25px 25px;
-    background: linear-gradient(to top, #f7f7f7, white);
-    box-shadow: 2px 2px 5px 1px #80808035;
-    width: 100%;
+    background: linear-gradient(to top, var(--gradient-background), var(--navbar-background));
+    box-shadow: 2px 2px 5px 1px var(--shadow-color);
+    color: var(--text-color-main);
     height: calc(100vh - 70px - 78px - 100px - 25px);
     overflow-y: scroll;
+    padding: 0 25px 25px 25px;
     scroll-behavior: smooth;
+    transition-duration: var(--time-transition);
+    width: 100%;
 }
 
 .documentation-container p{
@@ -164,71 +194,76 @@
 }
 
 .section-title{
-    padding-top: 20px;
-    font-size: xxx-large;
     font-family:'Oxygen', sans-serif;
+    font-size: xxx-large;
+    padding-top: 20px;
+}
+
+.info-list a{
+    color: hotpink;
+    text-decoration: none;
 }
 
 .section-subtitle{
-    padding: 20px 0 20px 0;
-    font-size: xx-large;
     font-family:'Oxygen', sans-serif;
+    font-size: xx-large;
+    padding-top: 20px;
 }
 
 .hello-world{
-    margin-top: 5px;
-    margin-bottom: 15px;
-    text-align: center;
-    text-transform: uppercase;
+    color: var(--semi-black-color);
     font-family: 'Share Tech mono', monospace;
     font-size: xxx-large;
     font-weight: 600;
-    color: rgba(0, 0, 0, 0.65);
+    margin-bottom: 15px;
+    margin-top: 5px;
+    text-align: center;
     text-shadow: 1px 1px 1px rgba(61, 45, 45, 0.5),
-        1px 2px 1px white,
-        1px 3px 1px white,
-        1px 5px 5px rgba(128, 128, 128, 0.5),
-        1px 10px 10px rgba(128, 128, 128, 0.5);
-
+    1px 2px 1px white,
+    1px 3px 1px white,
+    1px 5px 5px rgba(128, 128, 128, 0.5),
+    1px 10px 10px rgba(128, 128, 128, 0.5);
+    text-transform: uppercase;
 }
 
 .code-container{
-    position: relative;
+    background-color: var(--navbar-background);
     border-radius: 5px;
-    box-shadow: 2.5px 2.5px 10px 1px rgba(128, 128, 128, 0.35);
-    background-color: white;
+    box-shadow: 2.5px 2.5px 10px 1px var(--shadow-color);
     padding: 5px;
+    position: relative;
+    transition-duration: var(--time-transition);
 }
 
 .copy-button{
-    padding: 0;
-    color: rgb(75, 75, 75);
     background-color: transparent;
     border:none;
-    outline: none;
-    position: absolute;
-    top: 5px;
-    right: 7px;
-    font-size: x-large;
+    color: var(--semi-black-color);
     cursor: pointer;
-    transition-duration: 0.2s;
+    font-size: xx-large;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    transition-duration: 0.25s;
 }
 
 .tooltip{
-    padding: 5px 15px 5px 5px;
-    color: white;
     background-color: rgba(0, 0, 0, 0.65);
-    position: absolute;
-    top: 6px;
-    right: 38px;
-    font-size: medium;
     clip-path: polygon(0% 0%, 90% 0, 90% 36%, 100% 50%, 90% 66%, 90% 100%, 0 100%);
+    color: white;
+    font-size: medium;
     opacity: 0;
+    padding: 5px 15px 5px 5px;
+    position: absolute;
+    right: 43px;
+    top: 8px;
     transition-duration: 0.25s;
 }
 
 .copy-button:hover, .copy-button:active{
-    color: black;
+    text-shadow: 0px 0px 0.5px ;
 }
 
 .copy-button:hover ~ .tooltip{
@@ -236,18 +271,18 @@
 }
 
 .hidden{
-    width: 1px;
+    font-size: small;
     height: 1px;
     margin: 0;
-    font-size: small;
     position: absolute;
     top: 0;
+    width: 1px;
     z-index: -1;
 }
 
 .code{
     display: block;
-    margin: 30px 10px 20px 10px;
+    margin: 25px 25px 20px 20px;
     overflow-x: auto;
 }
 
@@ -256,33 +291,32 @@
 }
 
 .var{
-    color: darkblue;
+    color: var(--var);
 }
 
 .reserved-word{
-    color: darkblue;
+    color: var(--reserved-word);
 }
 
 .function{
-    color: darkgreen;;
+    color: var(--function);
 }
 
 .string{
-    color: brown;
+    color: var(--string);
 }
 
 .info-list{
-    padding-inline-start: 0;
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
     font-size: 18px;
+    list-style: none;
+    padding-inline-start: 0;
 }
 
 .info-list li {
     padding: 5px
 }
-
 
 /********************/
 /* Responsive text */
@@ -323,6 +357,10 @@
 
 @media (max-width:1023px){
 
+    body{
+        font-size: large;
+    }
+
     .header-container{
         justify-content: space-between;
         padding:0;
@@ -335,19 +373,20 @@
 
     .logo{
         font-size: large;
+        padding: 8px 3px 10px 3px;
     }
 
     .header-text{
-        padding: 0;
         font-size: x-large;
+        padding: 0;
     }
     
     .burger-menu{
         display: block;
-        width: 50px;
         height: 50px;
         margin-right: 15px;
         padding: 0 7.5px;
+        width: 50px;
     }
 
     .nav-link{
@@ -364,16 +403,16 @@
     }
 
     .full-table-content{
-        position: fixed;
-        display: block;
-        width: 100vw;
-        height: calc(100vh - 50px);
-        top:50px;
-        left: -768px;
-        z-index: 5;
         border-radius: 0;
+        display: block;
+        height: calc(100vh - 50px);
+        left: -768px;
         margin-top: 0;
         overflow-y: scroll;
+        position: fixed;
+        top:50px;
+        width: 100vw;
+        z-index: 5;
     }
 
     .fadeIn{
@@ -407,8 +446,8 @@
     }
 
     .documentation-container{
-        padding: 0 10px 25px 10px;
-        height: calc(100vh - 50px - 30px - 58px - 25px);
+        height: calc(100vh - 50px - 30px - 68px - 25px );
+        padding: 0 20px 25px 20px;
     }
 
     .section-title{
@@ -419,12 +458,7 @@
         font-size: x-large;
     }
 
-    body{
-        font-size: large;
-    }
-
     .footer-container{
-        padding: 0;
+        padding: 5px 0;
     }
-    
 }
