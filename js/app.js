@@ -107,10 +107,17 @@ new Vue({
         tags:['HTML','CSS','JS','REACT'],
       },
       {
+        title:"Palindrome Checker",
+        previewImage:"media/preview_6.png",
+        urlProject:"./projects/palindromeChecker/index.html",
+        description:'Palindrome checker is a tools to help to know easily if a string (word, number, date u other) can be reads the same backward as forward."',
+        tags:['HTML','CSS','JS'],
+      },
+      {
         title:"Personal Portfolio Webpage",
         previewImage:"media/preview_5.png",
         urlProject:"https://x1hibi.github.io/x1hibi/",
-        description:'This is my ersonal web page where I show my profile and web projects.',
+        description:'This is my personal web page where I show my profile and web projects.',
         tags:['HTML','CSS','JS','VUE'],
       },
       {
