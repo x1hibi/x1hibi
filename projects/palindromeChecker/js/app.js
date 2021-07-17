@@ -12,14 +12,16 @@ function palindromeChecker() {
     let string=inputElement.value
     // check only string bigger than 1
     if(string.length > 1){
-        //We replace all the special characters with replace using a regular expresion and convert the string to lower case
-        let cleanString=string.replace(/\s|!|@|#|%|&|-|_|\.|,|\(|\)|\:|\/|\|/g,"").toLowerCase()
+        // define a regular expresion that match all especial characteres 
+        let regex= /\s|!|@|#|%|&|-|_|\.|,|\(|\)|\:|\/|\|/g
+        //We replace all the special characters using regex and convert the string to lower case
+        let cleanString=string.replace(regex,"").toLowerCase()
         // get int of half lenght of the string
         let halfLength=Math.floor(cleanString.length/2)
         let counter=0
         //We make a loop to compare all the characteres with the oposite character
         for(let i=0;i<halfLength;i++){
-            cleanString[i]== cleanString[cleanString.length-1-i] ? counter++ : false
+            cleanString[i] == cleanString[cleanString.length-1-i] ? counter++ : false
         }
         // Set correct icon 
         iconElement.children[0].className = counter==halfLength ? 'fas fa-check title-responsive-text icon-result-check' : 'fas fa-times title-responsive-text icon-result-times'
