@@ -28,23 +28,24 @@
     <body>
 
         <!-- Main section (START) -->
-        <main class="main-container text-dark text-center" >
+        <main class="main-container text-center" >
             <section class="d-flex flex-column justify-content-around align-items-center mx-auto">
                 <header class="d-flex align-items-center mt-2">
                     <h1 class="pe-3 title-responsive-text">Roman Numeral Converter</h1>
                     <h2 class="logo"><span>1</span><i class="fas fa-long-arrow-alt-right"></i></i><span>I</span></h2>
                 </header>
-                <h2 class="text-dark">Roman Notation</h2>
-                <section class="d-flex w-100 justify-content-evenly">
-                    <p class="text-dark">I → 1 <br/> V → 5 <br/>X → 10<br/> L → 50<br/> C → 100<br/> D → 500</p>
-                    <p class="text-dark">M→ 1000 <br/><span class="overline1">V</span> → 5000 <br/><span class="overline1">X</span> → 10000<br/><span class="overline1">L</span> → 50000<br><span class="overline1">C</span> → 100000<br><span class="overline1">D</span> → 500000</p>
-                    <p class="text-dark"><span class="overline1">M</span>→ 1000000 <br/><span class="overline2">V</span> → 5000000 <br/><span class="overline2">X</span> → 10000000<br/><span class="overline2">L</span> → 50000000<br><span class="overline2">C</span> → 100000000<br><span class="overline2">D</span> → 500000000</p>
-                    <p class="text-dark"><span class="overline2">M</span>→ 1000000000 <br/><span class="overline3">V</span> → 5000000000 <br/><span class="overline3">X</span> → 10000000000<br/><span class="overline3">L</span> → 50000000000<br><span class="overline3">C</span> → 100000000000<br><span class="overline3">D</span> → 500000000000</p>
+                <h2>Notation</h2>
+                <section class="d-flex notation-container">
+                    <p>I → 1 <br/> V → 5 <br/>X → 10<br/> L → 50<br/> C → 100<br/> D → 500</p>
+                    <p>M→ 1000 <br/><span class="overline1">V</span> → 5000 <br/><span class="overline1">X</span> → 10000<br/><span class="overline1">L</span> → 50000<br><span class="overline1">C</span> → 100000<br><span class="overline1">D</span> → 500000</p>
+                    <p><span class="overline1">M</span>→ 1000000 <br/><span class="overline2">V</span> → 5000000 <br/><span class="overline2">X</span> → 10000000<br/><span class="overline2">L</span> → 50000000<br><span class="overline2">C</span> → 100000000<br><span class="overline2">D</span> → 500000000</p>
+                    <p><span class="overline2">M</span>→ 1000000000 <br/><span class="overline3">V</span> → 5000000000 <br/><span class="overline3">X</span> → 10000000000<br/><span class="overline3">L</span> → 50000000000<br><span class="overline3">C</span> → 100000000000<br><span class="overline3">D</span> → 500000000000</p>
+                    <p><span class="overline2">M</span>→ 1000000000 <br/><span class="overline3">V</span> → 5000000000 <br/><span class="overline3">X</span> → 10000000000<br/><span class="overline3">L</span> → 50000000000<br><span class="overline3">C</span> → 100000000000<br><span class="overline3">D</span> → 500000000000</p>
                 </section>
                 <input type="number"class="form-control fs-2 text-center input-border" placeholder="Type a number" min="1" id="input" oninput="checkNumber()">
                 
                 <section class="result-section">
-                    <button class="copy-button" onclick="copyNumber()"><i class="far fa-copy"></i></button><span class="tooltip">Copy code</span>
+                    <button class="copy-button" onclick="copyNumber()"><i class="far fa-copy"></i></button><span class="tooltip">Copy number</span>
                     <div class="result-container">
                         <h2 class="triple-overline romanNumber" id="range3"></h2>
                         <h2 class="doble-overline romanNumber" id="range2" ></h2>
@@ -56,11 +57,13 @@
                     <b>Notes:</b>
                 </section>
             </section>
+
+            
         </main>
         <!-- Main section (END) -->
 
         <!-- Footer (start)  -->
-        <footer class="footer-container bg-secondary" id="footer">
+        <footer class="footer-container" id="footer">
             <p class="footer-content footer-responsive-text"> <a href="https://x1hibi.github.io/x1hibi/" target="_blank" rel="noopener" class="footer-link"> x1hibi Web &nbsp;<i class="fas fa-dragon din" ></i></a></p>
             <hr class="footer-bar">
             <p class="footer-content footer-responsive-text">Copyright © 2021 x1hibi All rights reserved.</p>
