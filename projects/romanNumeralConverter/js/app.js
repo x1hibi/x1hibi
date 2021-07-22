@@ -236,7 +236,9 @@ function printAndStylingNumber(number){
     document.execCommand('selectAll', false, null)
     // copy text 
     document.execCommand("copy")
-    // change focus click some element in body
-    range0.focus({preventScroll: true})
-    range0.click()
+    // display none to avoid focus in input 
+    clipboard.style.display="none"
+    setTimeout(() => {
+        clipboard.style.display="block"
+    }, 50);
 }
