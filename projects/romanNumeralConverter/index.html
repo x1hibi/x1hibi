@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="./media/logo.png">
-        <meta name="theme-color" content="#0d6efd"/>
+        <meta name="theme-color" content="#ffdee9"/>
         <!-- Prefetch images needed  -->
         <link rel="prefetch" href="./media/wireframeDesktop.png" >
         <link rel="prefetch" href="./media/wireframeMobile.png" >
@@ -34,13 +34,13 @@
                     <h1 class="pe-3 title-responsive-text">Roman Numeral Converter</h1>
                     <h2 class="logo"><span>1</span><i class="fas fa-long-arrow-alt-right"></i></i><span>I</span></h2>
                 </header>
-                <h2>Notation</h2>
+                <h3>Notation</h3>
                 <section class="d-flex notation-container">
                     <p>I → 1 <br/> V → 5 <br/>X → 10<br/> L → 50<br/> C → 100<br/> D → 500</p>
                     <p>M→ 1000 <br/><span class="overline1">V</span> → 5000 <br/><span class="overline1">X</span> → 10000<br/><span class="overline1">L</span> → 50000<br><span class="overline1">C</span> → 100000<br><span class="overline1">D</span> → 500000</p>
                     <p><span class="overline1">M</span>→ 1000000 <br/><span class="overline2">V</span> → 5000000 <br/><span class="overline2">X</span> → 10000000<br/><span class="overline2">L</span> → 50000000<br><span class="overline2">C</span> → 100000000<br><span class="overline2">D</span> → 500000000</p>
                     <p><span class="overline2">M</span>→ 1000000000 <br/><span class="overline3">V</span> → 5000000000 <br/><span class="overline3">X</span> → 10000000000<br/><span class="overline3">L</span> → 50000000000<br><span class="overline3">C</span> → 100000000000<br><span class="overline3">D</span> → 500000000000</p>
-                    <p><span class="overline2">M</span>→ 1000000000 <br/><span class="overline3">V</span> → 5000000000 <br/><span class="overline3">X</span> → 10000000000<br/><span class="overline3">L</span> → 50000000000<br><span class="overline3">C</span> → 100000000000<br><span class="overline3">D</span> → 500000000000</p>
+                    <p><span class="overline2">M</span>→ 1000000000000 <br/><span class="overline3">V</span> → 5000000000000 <br/><span class="overline3">X</span> → 10000000000000<br/><span class="overline3">L</span> → 50000000000000<br><span class="overline3">C</span> → 100000000000000<br><span class="overline3">D</span> → 500000000000000</p>
                 </section>
                 <input type="number"class="form-control fs-2 text-center input-border" placeholder="Type a number" min="1" id="input" oninput="checkNumber()">
                 
@@ -53,8 +53,15 @@
                         <h2 class="romanNumber" id="range0"></h2>
                     </div>
                 </section>
-                <section>
-                    <b>Notes:</b>
+                <h3>Notes</h3>
+                <section class="w-50">
+                    <ul class="notes-container">
+                        <li class="note-item">The representation limit is 393999999999999.</li>
+                        <li class="note-item">The copy number as a string with the following format trillions≡millions=Thousands-hundreds</li>
+                        <li class="note-item">Example : 504504504504 -> <span class="overline3">DIV</span>&nbsp;<span class="overline2">DIV</span>&nbsp;<span class="overline1">DIV</span>&nbsp;DIV -> DIV≡DIV=DIV-DIV (copied text)</li>
+                        <li class="note-item">We use a extended notation with <i>vinculum simbol</i>.</li>
+                        <li class="note-item"><a href="https://www.knowtheromans.com/roman-numerals/">Check the rules to write roman numbers.</a></li>
+                    </ul>
                 </section>
             </section>
 
