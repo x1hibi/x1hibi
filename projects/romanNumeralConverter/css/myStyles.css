@@ -237,16 +237,17 @@
 }
 
 .copy-button{
+    line-height: initial;
     background-color: transparent;
     border:none;
     color: var(--semi-black-color);
     cursor: pointer;
     font-size: xx-large;
     outline: none;
-    padding: 0;
+    padding: 0 5px;
     position: absolute;
-    right: 10px;
-    top: 5px;
+    right: 0;
+    top: 0;
     transition-duration: 0.25s;
 }
 

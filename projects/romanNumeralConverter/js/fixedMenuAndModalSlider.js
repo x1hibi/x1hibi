@@ -9,37 +9,37 @@ const sliderCaption=document.getElementById("sliderCaption")
 // Array of modal images 
 const modalSliderImages=[
     [{
-        "imagePath":"./media/wireframeDesktop.png",
+        "imagePath":"./media/wireframeDesktop.jpg",
         "captionText":"Wireframe desktop (1/2)",
         "altText":"Wireframe of desktop"
     },
     {
-        "imagePath":"./media/wireframeMobile.png",
+        "imagePath":"./media/wireframeMobile.jpg",
         "captionText":"Wireframe mobile (2/2)",
         "altText":"Wireframe of mobile"
     }],
     [{
-        "imagePath":"./media/diagram.png",
-        "captionText":"Flow diagram check word as palindrome (1/1)",
+        "imagePath":"./media/diagram.jpg",
+        "captionText":"Flow diagram to convert decimal number to roman (1/1)",
         "altText":"Check word diagram(1/1)"
     }],
     [{
-        "imagePath":"./media/html.png",
+        "imagePath":"./media/html.jpg",
         "captionText":"index.html (1/4)",
         "altText":"image of html index file"
     },
     {
-        "imagePath":"./media/css.png",
+        "imagePath":"./media/css.jpg",
         "captionText":"generalStyles.css (2/4)",
         "altText":"image of css style file"
     },
     {
-        "imagePath":"./media/js1.png",
+        "imagePath":"./media/js1.jpg",
         "captionText":"app.js (3/4)",
         "altText":"image of js file"
     },
     {
-        "imagePath":"./media/js2.png",
+        "imagePath":"./media/js2.jpg",
         "captionText":"fixedMenuAndModalSlider.js (4/4)",
         "altText":"image of js file"
     }]

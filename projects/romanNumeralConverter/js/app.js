@@ -10,12 +10,11 @@ let unitsList=[
 ]
 let romanNumberStyles={"≡":'',"=":'',"-":'',none:''}
 let numberCopy=""
-let lastAllowedNumber=""
-
 
 /**
- * This functions converts arabics number into a roman 
+ * This functions converts decimal number into a roman from 1 to 3999
  * @param {numero} number - Value to tranform  
+ * @param {Array} initList - Array with selected units 
  * @returns romanNumber String digit converted in string 
  */
 
@@ -33,15 +32,15 @@ function numberToRoman(number,unitList){
 
 
 /**
- * convert and concatenate each value from number
- * @param {String} numberString -String to count
- * @param {String} symbol - String used as multiplicator
- * @returns 
+ * Convert and concatenate each value from string number for the correct unit 
+ * @param {String} numberString -String to convert to the correct units 
+ * @param {String} multiplierLeft - Multiplicator used for units for the actual unit 
+ * @param {String} multiplierRight - Multiplicator used for units for the right next unit 
+ * @return {String}
  */
 
 function getRomanNumber(numberString, multiplierLeft='none',multiplierRight=''){
 
-    // define the container of roman traslate
     let romanNumber = "" 
     // iterate each number 
     numberString.forEach((string, i) => {

@@ -6,18 +6,18 @@
         <meta charset="UTF-8">
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="x1hibi">
-        <meta name="description" content="">
+        <meta name="description" content="This application converts numbers from the decimal system to Roman and, using the symbol of valium the system extends from 3999 to 3999999999999 numbers. ">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="./media/logo.png">
         <meta name="theme-color" content="#86f0fc"/>
         <!-- Prefetch images needed  -->
-        <link rel="prefetch" href="./media/wireframeDesktop.png" >
-        <link rel="prefetch" href="./media/wireframeMobile.png" >
-        <link rel="prefetch" href="./media/diagram.png" >
-        <link rel="prefetch" href="./media/html.png" >
-        <link rel="prefetch" href="./media/css.png" >
+        <link rel="prefetch" href="./media/wireframeDesktop.jpg" >
+        <link rel="prefetch" href="./media/wireframeMobile.jpg" >
+        <!-- <link rel="prefetch" href="./media/diagram.jpg" > -->
+        <link rel="prefetch" href="./media/html.jpg" >
+        <link rel="prefetch" href="./media/css.jpg" >
         <link rel="prefetch" href="./media/js1.png" >
-        <link rel="prefetch" href="./media/js2.png" >
+        <link rel="prefetch" href="./media/js2.jpg" >
         <!-- load styles and inmediate resources -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link type="text/css" rel="stylesheet" href="./css/generalStyles.css">   
@@ -26,7 +26,7 @@
     </head>
 
     <body>
-
+        
         <!-- Main section (START) -->
         <main class="main-container text-center" >
             <section class="d-flex flex-column justify-content-around align-items-center mx-auto">
@@ -43,9 +43,8 @@
                     <p><span class="overline2">M</span>→ 1000000000000 <br/><span class="overline3">V</span> → 5000000000000 <br/><span class="overline3">X</span> → 10000000000000<br/><span class="overline3">L</span> → 50000000000000<br><span class="overline3">C</span> → 100000000000000<br><span class="overline3">D</span> → 500000000000000</p>
                 </section>
                 <input type="number"class="form-control fs-2 text-center input-border" placeholder="Type a number" min="1" id="input" oninput="checkNumber()">
-                
                 <section class="result-section">
-                    <button class="copy-button" onclick="copyNumber()"><i class="far fa-copy"></i></button><span class="tooltip">Copy number</span>
+                    <button class="copy-button" onclick="copyNumber()" aria-label="copy-roman-number"><i class="far fa-copy"></i></button><span class="tooltip">Copy number</span>
                     <div class="result-container">
                         <h2 class="triple-overline romanNumber" id="range3"></h2>
                         <h2 class="doble-overline romanNumber" id="range2" ></h2>
@@ -60,7 +59,7 @@
                         <li class="note-item">The copy number as a string with the following format trillions≡millions=Thousands-hundreds.</li>
                         <li class="note-item">Example : 504504504504 -> <span class="overline3">DIV</span>&nbsp;<span class="overline2">DIV</span>&nbsp;<span class="overline1">DIV</span>&nbsp;DIV -> DIV≡DIV=DIV-DIV (copied text).</li>
                         <li class="note-item">We use a extended notation with <i>vinculum simbol</i>.</li>
-                        <li class="note-item"><a href="https://www.knowtheromans.com/roman-numerals/">Check the rules to write roman numbers.</a></li>
+                        <li class="note-item"><a href="https://www.knowtheromans.com/roman-numerals/" rel="noopener">Check the rules to write roman numbers.</a></li>
                     </ul>
                 </section>
             </section>
@@ -87,7 +86,7 @@
                 <div class="slider-container">
                     <div class="responsive-slider responsive-slider-background" id="sliderContainer">
                         <button name="button-slider-left" aria-label="button-slider-left" class="slider-arrow" onclick="modalSlider('previus')"><i class="fas fa-arrow-left"></i></button>
-                        <img class="slider-image" src="#" id="sliderImage" alt="modal-image">
+                        <img class="slider-image" loading="lazy" src="#" id="sliderImage" alt="modal-image">
                         <button name="button-slider-right" aria-label="button-slider-rifgt"class="slider-arrow" onclick="modalSlider('next')"><i class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
@@ -110,7 +109,7 @@
 
     <!-- Js and css files (start) -->
     <script src="./js/fixedMenuAndModalSlider.js" type="text/javascript" defer></script>
-    <script src="./js/fontAsome.js" type="text/javascript" defer></script>
+    <script src="./js/fontAsome.min.js" type="text/javascript" defer></script>
     <script src="./js/app.js" type="text/javascript" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600;1,700&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Share+Tech&family=Share+Tech+Mono&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <!-- Js and css files (end) -->

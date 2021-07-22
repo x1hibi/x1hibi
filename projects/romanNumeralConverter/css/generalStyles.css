@@ -7,13 +7,13 @@ html {
 }
   
 body{
+    background:linear-gradient(to left, #12e3ff, #89f1ff, #edfdff  );
     font-family: 'Fira Sans', sans-serif;
     font-size: 20px;
+    line-height: 2;
     margin: 0;
     padding: 0;
     transition-duration: 0.5s;
-    line-height: 2;
-    background:linear-gradient(to left, #12e3ff, #89f1ff, #edfdff  );
 }
 
 h1,h2,h3,p,b,a{
@@ -24,47 +24,22 @@ h3{
     margin:20px 0 30px 0;
 }
 
+
+
 .logo{
-    height: 100px;
-    background: linear-gradient(45deg, #1e1d1d, #5c4e4e,darkgray);
-    color: white;
-    width: 100px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    text-shadow: 0 0 4px black;
-    font-size: 45px;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 600;
+    background: linear-gradient(45deg, #1e1d1d, #5c4e4e,darkgray);
+    border-radius: 50%;
     box-shadow: 0 0 5px 1px rgba(128, 128, 128, 0.5);
-}
-
-.input-border{
-    margin-top: 30px;
-    background: linear-gradient(to right,transparent, white) ;
-    border-radius: .5rem .5rem 0 0;
-    width: 60% !important; 
-}
-
-.input-border:focus{
-    background: linear-gradient(to right,transparent, white) ;
-    box-shadow: none;
-    border-color: rgba(128, 128, 128, 0.35);
-}
-
-@keyframes zoomIcon {
-    0%{
-        transform: scale(0);
-    }
-
-    50%{
-        transform: scale(1.25);
-    }
-
-    100%{
-        transform: scale(1);
-    }   
+    color: white;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    font-weight: 600;
+    height: 100px;
+    justify-content: center;
+    text-shadow: 0 0 4px black;
+    width: 100px;
 }
 
 .notation-container{
@@ -73,35 +48,93 @@ h3{
     width: 100%;
 }
 
+.input-border{
+    background: linear-gradient(to right,transparent, white) ;
+    border-radius: .5rem .5rem 0 0;
+    margin-top: 30px;
+    width: 60% !important; 
+}
 
-.result-section{
-    background:linear-gradient(to right, #38e7ff, #f4f1f8) !important;
-    border: 1px solid #ced4da;
-    border-radius: 0 0 0.5rem 0.5rem;
-    background-color: #dcdcdc50;
-    padding: 0px 15px 0px 15px;
-    position: relative;
-    width: 60%;
-    margin-bottom: 10px;
+.input-border:focus{
+    background: linear-gradient(to right,transparent, white) ;
+    border-color: rgba(128, 128, 128, 0.35);
+    box-shadow: none;
 }
 
 .result-container{
     align-items: flex-end;
-    overflow-x: auto;
-    height: 130px;
     display: flex;
+    height: 130px;
+    overflow-x: auto;
+}
+
+.result-section{
+    background-color: #dcdcdc50;
+    background:linear-gradient(to right, #38e7ff, #f4f1f8) !important;
+    border-radius: 0 0 0.5rem 0.5rem;
+    border: 1px solid #ced4da;
+    margin-bottom: 10px;
+    padding: 0px 15px 0px 15px;
+    position: relative;
+    width: 60%;
+}
+
+.copy-button{
+    background-color: transparent;
+    border:none;
+    color: darkslategray;
+    cursor: pointer !important;
+    font-size: xx-large;
+    height: 45px;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    right: 5px;
+    top: -10px;
+    transition-duration: 0.25s;
+}
+
+.tooltip{
+    background-color: rgba(0, 0, 0, 0.65);
+    clip-path: polygon(0% 0%, 90% 0, 90% 36%, 100% 50%, 90% 66%, 90% 100%, 0 100%);
+    color: white;
+    font-size: medium;
+    opacity: 0;
+    padding: 5px 15px 5px 5px;
+    position: absolute;
+    right: 43px;
+    top: 8px;
+    transition-duration: 0.25s;
+}
+
+.copy-button:hover, .copy-button:active{
+    text-shadow: 0px 0px 0.5px ;
+}
+
+.copy-button:hover ~ .tooltip{
+    opacity: 1;
+}
+
+.hidden{
+    font-size: small;
+    height: 1px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    z-index: -1;
 }
 
 .romanNumber{
-    font-size: xxx-large !important;
-    margin-right: 10px;
     display: inline;
+    font-size: xxx-large !important;
     margin-bottom: 0;
+    margin-right: 10px;
 }
 
 .overline{
-    text-decoration: overline;
     text-decoration-thickness: 5px;
+    text-decoration: overline;
 }
 
 .doble-overline{
@@ -110,15 +143,15 @@ h3{
 }
 
 .triple-overline{
-    padding-top: 11px;
     border-top: 15px double darkslategray;
-    text-decoration: overline;
+    padding-top: 11px;
     text-decoration-thickness: 5px;
+    text-decoration: overline;
 }
 
 .overline1{
-    text-decoration: overline;
     text-decoration-thickness: 2px;
+    text-decoration: overline;
 }
 
 .overline2{
@@ -126,17 +159,16 @@ h3{
 }
 
 .overline3{
-    padding-top: 4px;
     border-top: 6px double darkslategray;
-    text-decoration: overline;
+    padding-top: 4px;
     text-decoration-thickness: 2px;
+    text-decoration: overline;
 }
 
 .note-item{
-    width: fit-content;
     text-align: left;
+    width: fit-content;
 }
-
 
 /******************/
 /* Footer styles */
@@ -163,8 +195,8 @@ h3{
     color: darkslategray;
     cursor: pointer;
     text-decoration: none;
-    transition-duration: 0.5s;
     transition-duration: 0.25s;
+    transition-duration: 0.5s;
 }
 
 .footer-link:hover{
@@ -173,9 +205,9 @@ h3{
 }
 
 .footer-bar{
-    animation-name: footerBar;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+    animation-name: footerBar;
     animation-timing-function: ease-in-out;
     border-width: 0.5px;
     margin: 10px auto;
@@ -220,15 +252,17 @@ h3{
 }
 
 .fixed-button-menu{
-    background: #f8f9fa;
     align-items: center;
+    background: #f8f9fa;
     border-radius: 50%;
     border:none;
     bottom: 0;
     color: darkslategray;
     cursor: pointer;
+    display: flex;
     font-size: 20pt;
     height: 50px;
+    justify-content: center;
     margin: 0;
     outline: none;
     padding: 0;
@@ -241,57 +275,6 @@ h3{
 
 .fixed-button-menu > .fas{
     font-size: 22.5px;
-}
-
-.hidden-element{
-    display: none;
-}
-
-.copy-button{
-    background-color: transparent;
-    border:none;
-    color: darkslategray;
-    cursor: pointer !important;
-    font-size: xx-large;
-    outline: none;
-    padding: 0;
-    position: absolute;
-    right: 5px;
-    height: 45px;
-    top: -10px;
-    transition-duration: 0.25s;
-}
-
-
-.tooltip{
-    background-color: rgba(0, 0, 0, 0.65);
-    clip-path: polygon(0% 0%, 90% 0, 90% 36%, 100% 50%, 90% 66%, 90% 100%, 0 100%);
-    color: white;
-    font-size: medium;
-    opacity: 0;
-    padding: 5px 15px 5px 5px;
-    position: absolute;
-    right: 43px;
-    top: 8px;
-    transition-duration: 0.25s;
-}
-
-.copy-button:hover, .copy-button:active{
-    text-shadow: 0px 0px 0.5px ;
-}
-
-.copy-button:hover ~ .tooltip{
-    opacity: 1;
-}
-
-.hidden{
-    font-size: small;
-    height: 1px;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    width: 1px;
-    z-index: -1;
 }
 
 .button-shadow{
@@ -376,7 +359,6 @@ h3{
     background: transparent;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
     margin: 0;
     max-height: 90%;
     padding-bottom: 30px;
@@ -515,7 +497,6 @@ h3{
     font-size: 30px !important;
     text-shadow: 2px 2px 3px rgb(128 128 128 / 35%);
 }
-}
 
 .subtitle-responsive-text{
     font-size: 20px !important;
@@ -549,7 +530,6 @@ h3{
         /* sintax  linear responsive text [min font size + (max font size - min font size) * ((viewport width - min viewport width) / (max viewport width - min viewport width))] */
         font-size: calc(11px + 5 * ((100vw - 320px) / 1600)) !important;
     }
-
 }
 
 /* Scren with a width equal or bigger than 1920px  */
@@ -588,8 +568,8 @@ h3{
     }
 
     .result-section{
-        width: 90%;
         padding:0px 10px 0px 10px;
+        width: 90%;
     }
 
     .result-container{
@@ -610,9 +590,9 @@ h3{
     }
 
     .triple-overline{
-        text-decoration-thickness: 4px;
         border-top: 13px double darkslategray;  
         padding-top: 9px;
+        text-decoration-thickness: 4px;
     }
 
    .notation-container{
@@ -622,13 +602,14 @@ h3{
    }
 
    .notation-container p{
-       min-width: fit-content;
        margin: 0 10px;
+       min-width: fit-content;
    }
 
    .input-border{
         width:90% !important;
    }
+
    .half-width-center{
         margin: auto;
         width: 90%;
