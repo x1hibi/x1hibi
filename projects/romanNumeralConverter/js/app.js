@@ -237,5 +237,5 @@ function printAndStylingNumber(number){
     // copy text 
     document.execCommand("copy")
     // change focus 
-    document.range0.focus()
+    range0.focus()
 }
