@@ -601,20 +601,6 @@ h3{
         font-size: xxx-large !important;
     }
 
-    .overline{
-        text-decoration-thickness: 1px !important; 
-    }
-
-    .doble-overline{
-        border-top: 1px solid white;
-        padding-top: 4px;
-    }
-
-    .triple-overline{
-        border-top: 4px double white;
-        padding-top: 4px;
-    }
-
    .notation-container{
        justify-content: start ;
        margin: 0 5px;
