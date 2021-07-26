@@ -108,7 +108,7 @@ new Vue({
       },
       {
         title:"Roman Numeral Converter",
-        previewImage:"media/preview_7.png",
+        previewImage:"media/preview_7.jpg",
         urlProject:"./projects/romanNumeralConverter/index.html",
         description:'This application converts numbers from the decimal system to Roman and, using the symbol of valium the system extends from 3999 to 3999999999999 numbers.',
         tags:['HTML','CSS','JS','BOOTSTRAP'],
