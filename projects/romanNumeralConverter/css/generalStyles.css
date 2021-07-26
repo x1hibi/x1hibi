@@ -139,7 +139,7 @@ h3{
     font-size: 70px !important;
     font-weight: 100;
     margin-bottom: 0;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 .overline{
@@ -148,15 +148,13 @@ h3{
 }
 
 .doble-overline{
-    border-top: 7px double white;
-    padding-top: 0px;
+    border-top: 2px solid white;
+    padding-top: 4px;
 }
 
 .triple-overline{
-    border-top: 7px double white;
-    padding-top: 5px;
-    text-decoration-thickness: 2px !important;
-    text-decoration: overline;
+    border-top: 6px double white;
+    padding-top: 4px;
 }
 
 .overline1{
@@ -165,14 +163,13 @@ h3{
 }
 
 .overline2{
-    border-top: 4px double white;
+    border-top: 1px solid white;
+    padding-top: 2px;
 }
 
 .overline3{
-    border-top: 4px double white;
-    padding-top: 3px;
-    text-decoration-thickness: 1px !important;
-    text-decoration: overline;
+    border-top: 3px double white;
+    padding-top: 2px;
 }
 
 .note-item{
@@ -492,12 +489,12 @@ h3{
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #39aefd ; 
+    background: transparent ; 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background:linear-gradient(to bottom,#2f9ae5,#003174);
+    background:linear-gradient(to bottom,#2f9ae5,#0c52b3);
     border-radius: 5px;
 }
 
@@ -609,14 +606,13 @@ h3{
     }
 
     .doble-overline{
-        border-top: 4px double white;  
-        padding-top: 1px;
+        border-top: 1px solid white;
+        padding-top: 4px;
     }
 
     .triple-overline{
-        border-top: 4px double white;  
+        border-top: 4px double white;
         padding-top: 4px;
-        text-decoration-thickness: 1px !important;
     }
 
    .notation-container{
