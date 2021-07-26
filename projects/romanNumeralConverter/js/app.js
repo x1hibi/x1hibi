@@ -8,28 +8,25 @@ let unitsList=[
     {lowUnit:'C',middleUnit:'D',highUnit:'M'},
     {lowUnit:'M',middleUnit:'M',highUnit:'M'}
 ]
-let romanNumberStyles={"≡":'',"=":'',"-":'',none:''}
 let numberCopy=""
 
 /**
- * This functions converts decimal number into a roman from 1 to 3999
+ * This functions converts a decimal number into a roman
  * @param {numero} number - Value to tranform  
- * @param {Array} initList - Array with selected units 
+ * @param {Array} unitList - Array with selected units 
  * @returns romanNumber String digit converted in string 
  */
 
-function numberToRoman(number,unitList){
+function convertNumberToRoman(number,unitList){
     // local variable of the number
     let romanNumberUnit=""
     // define the rules of roman number notation 
     romanNumberUnit= number < 4 ? unitList.lowUnit.repeat(number) : // numbers can be repeat max 3 times except V,L and D
                  number == 4 ? unitList.lowUnit + unitList.middleUnit : // number from left rest value from right number ej IX (10-1=9)
                  number < 9 ? unitList.middleUnit + unitList.lowUnit.repeat(number-5) : // number from right is added VI (5+1=6)
-                 unitList.lowUnit + unitList.highUnit;
-    //console.log("romanNumberUnit",romanNumberUnit)
+                 unitList.lowUnit + unitList.highUnit; // number 9
     return romanNumberUnit;
 }
-
 
 /**
  * Convert and concatenate each value from string number for the correct unit 
@@ -42,53 +39,26 @@ function numberToRoman(number,unitList){
 function getRomanNumber(numberString, multiplierLeft='none',multiplierRight=''){
 
     let romanNumber = "" 
-    // iterate each number 
+    // iterate each number and his correspond unit list 
     numberString.forEach((string, i) => {
-        romanNumber = numberToRoman(parseInt(string),unitsList[i]) + romanNumber
+        //concatenate each unit 
+        romanNumber = convertNumberToRoman(parseInt(string),unitsList[i]) + romanNumber
     });
 
-    //let numberStyle = romanNumber // for none multiplier
-    // check symbol 
+    // check for number over 3999
     if(multiplierLeft != 'none'){
-        // check cases for the four cases with regular expresions 
-        let numberSize=romanNumber.length
-
-        if(/[V|X|L|C|D|M]I$/g.test(romanNumber)){
-            // STEP 1 replace all I for M and set multiplier
-            romanNumber = romanNumber.replace(/I$/g,`${multiplierLeft}M${multiplierRight}`)
-            // STEP 2 save style 
-            // // cut word and save style
-            // numberStyle  = romanNumber.slice(0,numberSize-1)
-            // // remplace I for M and set correct multiplier
-            
-            // // miles counter
-            // romanNumberStyles["none"]='M'+romanNumberStyles["none"]
-        }else if(/[V|X|L|C|D|M]II$/g.test(romanNumber)){
-            // cut word and save style
-            //numberStyle= romanNumber.slice(0,numberSize-2)
-            // remplace I for M and set correct multiplier
-            romanNumber = romanNumber.replace(/II$/g,`${multiplierLeft}MM${multiplierRight}`)
-            //romanNumberStyles["none"]='MM'+romanNumberStyles["none"]
-        }else if(/[V|X|L|C|D|M]III$/g.test(romanNumber)){
-            // cut word and save style
-            //numberStyle= romanNumber.slice(0,numberSize-3)
-            // remplace I for M and set correct multiplier
-            romanNumber = romanNumber.replace(/III$/g,`${multiplierLeft}MMM${multiplierRight}`)
-            //romanNumberStyles["none"]='MMM'+romanNumberStyles["none"]
-
-        }else if(/[≡|=|-]/g.test(multiplierLeft) && /I+$/g.test(romanNumber)){
-            console.log("Entre al caso especial ")
-            romanNumber = romanNumber.replace(/I+$/g,"M".repeat(numberSize)+multiplierRight)
-        }else{
-            // avoid set miltipler dubler when romanNumber ==""
-            if(romanNumber!=0){
-                romanNumber = romanNumber+multiplierLeft
-            }else{
-                console.log("soy un cero y no pongo multiplicador ")
-            }
-        }
+        //get number of I with number 4 avoid match any value
+        let numberOfI= /I+$/g.test(romanNumber) ? romanNumber.match(/I+$/)[0].length : 4
+        // define a regexs for match cases *I,*II,*III and replace for M
+        let regexCorrection= new RegExp("I".repeat(numberOfI)+"$",'g')
+        let regexMatchI= new RegExp("[V|X|L|C|D|M]"+"I".repeat(numberOfI)+"$",'g')
+        // considering three cases 1) right I, this will change to M example V-I to V-M, 2) to avoid same simbol (13003003) X=MMM-III-III  X=MMM-MMMIII 3) when are IV,V,IX,X,IL,L .... set simbol 4) else 4=- to 4= in zero don't put multipicator
+        stringCorrection = regexMatchI.test(romanNumber) ? multiplierLeft +"M".repeat(numberOfI)+multiplierRight :
+                               /[≡|=|-]/g.test(multiplierLeft) && /I+$/g.test(romanNumber) ? (regexCorrection = /I+$/g ,"M".repeat(numberOfI)+multiplierRight):
+                               romanNumber!=0 ? (regexCorrection = /.+/g,romanNumber+multiplierLeft) : "";
+        // replace the last value and set the corrections for symbol
+        romanNumber = romanNumber.replace(regexCorrection,stringCorrection)  
     }
-
     return romanNumber
 }
 
@@ -98,19 +68,14 @@ function getRomanNumber(numberString, multiplierLeft='none',multiplierRight=''){
  * @param {Number} number -Number typed by user cleaned
  */
 
-function main(number) {
-    let realRomanNumber=""
-    // reset values for style
-    romanNumberStyles={"≡":'',"=":'',"-":'',none:''}
-    // define the roman value
-    // convert the number into string and reverse 
-    let numberString=number.replace(/^0*/g,"").split("").reverse()
+function romanConverter(number) {
+    let romanNumberString=""
+    // convert the number into array and reverse
+    let numberString=number.split("").reverse()
     // convert number into roman in base to the range
     if(number <= 3999 ){
-        realRomanNumber = getRomanNumber(numberString)
-        console.log(realRomanNumber)
+        romanNumberString = getRomanNumber(numberString)
     }else if(number <= 3999999){
-
         // step 0 split the number 
         // first last 3 chars 
         let numberA= numberString.slice(3, numberString.length) // miles
@@ -118,29 +83,19 @@ function main(number) {
         let numberB= numberString.slice(0, 3) // normla ≡
         let romanNumberA = getRomanNumber(numberA,"-")
         let romanNumberB = getRomanNumber(numberB)
-        console.log(numberB)
-        realRomanNumber = romanNumberA + romanNumberB
-        console.log(realRomanNumber)
-
+        romanNumberString = romanNumberA + romanNumberB
     }else if(number <= 3999999999){
         // step 0 split the number 
         // first last 3 chars 
         let numberA= numberString.slice(6, numberString.length) // miles
         // after the rest of number 
-        let numberB= numberString.slice(3, 6) // normla ≡
-        console.log(parseInt(numberB.join()),parseInt(numberB.join()) < 4)
+        let numberB= numberString.slice(3, 6) // normal ≡
         // millones
-        let numberC= numberString.slice(0, 3) // normla 
-
+        let numberC= numberString.slice(0, 3) // normal
         let romanNumberA = getRomanNumber(numberA,"=",parseInt(numberB.join()) < 4 ? "-" : "")
         let romanNumberB = getRomanNumber(numberB,"-")
         let romanNumberC = getRomanNumber(numberC)
-        console.log(romanNumberA)
-        console.log(romanNumberB)
-        console.log(romanNumberC)
-        realRomanNumber = romanNumberA + romanNumberB + romanNumberC
-        console.log(realRomanNumber)
-
+        romanNumberString = romanNumberA + romanNumberB + romanNumberC
     }else if (number <= 3999999999999) {
 
         // first last 3 chars 
@@ -154,16 +109,11 @@ function main(number) {
         let romanNumberC = getRomanNumber(numberC,"-")
         let romanNumberD = getRomanNumber(numberD)
 
-        realRomanNumber = romanNumberA + romanNumberB + romanNumberC +romanNumberD
-        console.log(realRomanNumber)
-
-
-        
+        romanNumberString = romanNumberA + romanNumberB + romanNumberC +romanNumberD
     }
     
-    numberCopy=realRomanNumber
-    printAndStylingNumber(realRomanNumber)
-
+    numberCopy=romanNumberString
+    printAndStylingNumber(romanNumberString)
 }
 
 /**
@@ -171,21 +121,18 @@ function main(number) {
  */
 
 function checkNumber() {
-    // remove all not allowed simbols and all left zeros 
+    // remove all left zeros
     let numberCleaned = inputElement.value.replace(/^[0]+/,"")
     inputElement.value=numberCleaned
     if(parseInt(numberCleaned) > 3999999999999){
-        console.log("entre")
         inputElement.value="3999999999999"
-        main("3999999999999")
+        romanConverter("3999999999999")
     }else if (parseInt(numberCleaned) > 0) {
-        main(numberCleaned)
+        romanConverter(numberCleaned)
     }else{
         printAndStylingNumber("")
     }
 }
-
-
 
 let range3=document.getElementById("range3")
 let range2=document.getElementById("range2")
@@ -197,28 +144,17 @@ let range0=document.getElementById("range0")
  */
 
 function printAndStylingNumber(number){
-    
+    // get trillions, millions, Thousands and hundreds
     let rangeUnit3= number.match(/[I|V|X|L|C|D|M]+(?=≡)/g) ? number.match(/[I|V|X|L|C|D|M]+(?=≡)/g)[0] : " "
     let rangeUnit2= number.match(/[I|V|X|L|C|D|M]+(?==)/g) ? number.match(/[I|V|X|L|C|D|M]+(?==)/g)[0] : " "
     let rangeUnit1= number.match(/[I|V|X|L|C|D|M]+(?=-)/g) ? number.match(/[I|V|X|L|C|D|M]+(?=-)/g)[0] : " "
     let rangeUnit0= number.match(/[I|V|X|L|C|D|M]+$/g) ? number.match(/[I|V|X|L|C|D|M]+$/g)[0] : " "
-    
-    console.log("range 0:",rangeUnit0)
-    console.log("range 1:",rangeUnit1)
-    console.log("range 2:",rangeUnit2)
-    console.log("range 3:",rangeUnit3)
-
+    // set value in span elements 
     range0.textContent=rangeUnit0
     range1.textContent=rangeUnit1
     range2.textContent=rangeUnit2
     range3.textContent=rangeUnit3
-    
-    // range0.textContent= units[0]
-
-    
-
 }
-
 
 /**
  *  Copy roman number as clipboard

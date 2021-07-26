@@ -19,10 +19,26 @@ const modalSliderImages=[
         "altText":"Wireframe of mobile"
     }],
     [{
-        "imagePath":"./media/diagram.jpg",
-        "captionText":"Flow diagram to convert decimal number to roman (1/1)",
-        "altText":"Check word diagram(1/1)"
-    }],
+        "imagePath":"./media/diagram1.jpg",
+        "captionText":"Flow diagram to convert decimal number to roman (1/5)",
+        "altText":"number to roman (1/5)"
+    },{
+        "imagePath":"./media/diagram2.jpg",
+        "captionText":"Flow diagram to convert decimal number to roman (2/5)",
+        "altText":"number to roman (2/5)"
+    },{
+        "imagePath":"./media/diagram3.jpg",
+        "captionText":"Flow diagram to convert decimal number to roman (3/5)",
+        "altText":"number to roman (3/5)"
+    },{
+        "imagePath":"./media/diagram4.jpg",
+        "captionText":"Flow diagram to convert decimal number to roman (4/5)",
+        "altText":"number to roman (4/5)"
+    },{
+        "imagePath":"./media/diagram5.jpg",
+        "captionText":"Flow diagram to convert decimal number to roman (5/5)",
+        "altText":"number to roman (5/5)"
+    },],
     [{
         "imagePath":"./media/html.jpg",
         "captionText":"index.html (1/4)",
@@ -164,7 +180,7 @@ function selectOption(type){
     // set first image of array
     sliderImage.src=modalSliderImages[currentOption][0].imagePath
     sliderImage.alt=modalSliderImages[currentOption][0].altText
-    sliderCaption.textContent=modalSliderImages[currentOption][0].captionText
+    sliderCaption.textContent="\n"+modalSliderImages[currentOption][0].captionText
     currentSize=modalSliderImages[currentOption].length
 }
 
