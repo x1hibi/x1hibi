@@ -2,18 +2,19 @@
 <html lang="en">
     <head>
         <!-- Meta information -->
-        <title>Roman Numeral Converter</title>
+        <title>Caesar Cipher</title>
         <meta charset="UTF-8">
-        <meta name="keywords" content="HTML, CSS, JavaScript,Bootstrap">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap">
         <meta name="author" content="x1hibi">
-        <meta name="description" content="This application converts numbers from the decimal system to Roman and, using the symbol of valium the system extends from 3999 to 3999999999999 numbers.">
+        <meta name="description" content="This is a caesar cipher which is a substitution cipher which by using the Latin alphabet can provide 25 encryptions since there are 25 possible shifts.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="./media/logo.png">
         <meta name="theme-color" content="#39aefd"/>
         <!-- Prefetch images needed  -->
         <link rel="prefetch" href="./media/wireframeDesktop.jpg" >
         <link rel="prefetch" href="./media/wireframeMobile.jpg" >
-        <!-- <link rel="prefetch" href="./media/diagram.jpg" > -->
+        <link rel="prefetch" href="./media/diagram1.jpg" >
+        <link rel="prefetch" href="./media/diagram2.jpg" >
         <link rel="prefetch" href="./media/html.jpg" >
         <link rel="prefetch" href="./media/css.jpg" >
         <link rel="prefetch" href="./media/js1.jpg" >
@@ -29,41 +30,59 @@
         
         <!-- Main section (START) -->
         <main class="main-container text-center" >
-            <section class="d-flex flex-column justify-content-around align-items-center mx-auto">
-                <header class="d-flex align-items-center mt-2">
-                    <h1 class="pe-3 title-responsive-text">Roman Numeral Converter</h1>
-                    <h2 class="logo"><span>1</span><i class="fas fa-long-arrow-alt-right"></i></i><span>I</span></h2>
-                </header>
-                <h3>Notation</h3>
-                <section class="d-flex notation-container">
-                    <p>I → 1 <br/> V → 5 <br/>X → 10<br/> L → 50<br/> C → 100<br/> D → 500</p>
-                    <p>M→ 1000 <br/><span class="overline1">V</span> → 5000 <br/><span class="overline1">X</span> → 10000<br/><span class="overline1">L</span> → 50000<br><span class="overline1">C</span> → 100000<br><span class="overline1">D</span> → 500000</p>
-                    <p><span class="overline1">M</span>→ 1000000 <br/><span class="overline1 overline2">V</span> → 5000000 <br/><span class="overline1 overline2">X</span> → 10000000<br/><span class="overline1 overline2">L</span> → 50000000<br><span class="overline1 overline2">C</span> → 100000000<br><span class="overline1 overline2">D</span> → 500000000</p>
-                    <p><span class="overline1 overline2">M</span>→ 1000000000 <br/><span class="overline1 overline3">V</span> → 5000000000 <br/><span class="overline1 overline3">X</span> → 10000000000<br/><span class="overline1 overline3">L</span> → 50000000000<br><span class="overline1 overline3">C</span> → 100000000000<br><span class="overline1 overline3">D</span> → 500000000000</p>
-                </section>
-                <section class="box-container">
-                    <input type="number"class="form-control fs-2 text-center input-border" placeholder="Type a number" min="1" id="input" oninput="checkNumber()">
-                    <section class="result-section">
-                        <button class="copy-button" onclick="copyNumber()" aria-label="copy-roman-number"><i class="fas fa-copy"></i></button><span class="tooltip">Copy number</span>
-                        <div class="result-container">
-                            <h2 class="overline triple-overline romanNumber" id="range3"></h2>
-                            <h2 class="overline doble-overline romanNumber" id="range2"></h2>
-                            <h2 class="overline romanNumber" id="range1"></h2>
-                            <h2 class="romanNumber" id="range0"></h2>
-                        </div>
-                    </section>
-                </section>
-                <h3>Notes</h3>
-                <section class="w-50">
-                    <ul class="notes-container">
-                        <li class="note-item">The representation limit is 399999999999999.</li>
-                        <li class="note-item">The copy number as a string with the following format trillions≡millions=thousands-hundreds.</li>
-                        <li class="note-item">Example : 504504504504 -> <span class="overline1 overline3">DIV</span>&nbsp;<span class="overline1 overline2">DIV</span>&nbsp;<span class="overline1">DIV</span>&nbsp;DIV -> DIV≡DIV=DIV-DIV (copied text).</li>
-                        <li class="note-item">We use a extended notation with <i>vinculum simbol</i>.</li>
-                        <li class="note-item"><a href="https://www.knowtheromans.com/roman-numerals/" rel="noopener">Check the rules to write roman numbers.</a></li>
-                    </ul>
-                </section>
+            <header class="d-flex justify-content-center align-items-center m-2">
+                <h1 class="title-responsive-text">Caesar Cipher</h1>
+                <span class="logo"><i class="fas fa-lock"></i></span>
+            </header>
+
+            <section>
+                <p class="mb-4 mt-3 fs-2"><b>Alphabet:</b><span id="alphabetElement"> <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span><span class="selected-rot">N</span><span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span><span>T</span><span>U</span><span>V</span><span>W</span><span>X</span><span>Y</span><span>Z</span></p>
+                <div class="input-container d-flex align-items-center">
+                    <label class="input-label">ROT/Displacement</label>
+                    <input class="rot-input" type="number" min="1" max="25" value="13" id="rotInput" oninput="setRot()">
+                </div>
             </section>
+
+            <section class="d-flex w-100 p-5 align-items-center justify-content-center editors-container">
+                <div class="w-50 editor-container">
+                    <header class="d-flex header-editor align-items-center position-relative">
+                        <h2 class="w-100 text-editor-header">Decode</h2>
+                        <button name="copy-button-1" class="copy-button"><i class="far fa-copy" onclick="copyText(event)"></i></button>
+                        <span class="tooltip">Copy Decode Text</span>
+                    </header>
+                    <div class="w-100 p-3 container-editable" contenteditable oninput="getCipher(true)" id="encoder">EXAMPLE OF CIPHER</div>
+                </div>
+                <span class="reverse-icon">
+                    <i class="fas fa-retweet"></i>
+                </span>
+                <div class="w-50 editor-container">
+                    <header class="d-flex header-editor align-items-center position-relative">
+                        <h2 class="w-100 text-editor-header">Encode</h2>
+                        <button name="copy-button-2"  class="copy-button"><i class="far fa-copy" onclick="copyText(event)"></i></button>
+                        <span class="tooltip">Copy Encode Text</span>
+                    </header>
+                    <div class="w-100 p-3 container-editable" contenteditable oninput="getCipher(false)" id="decoder">RKNZCYR BS PVCURE</div>
+                </div>
+
+            </section>
+
+            <article>
+                <h2>Cipher Info</h2><br/>
+                <p class="text-justify">In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques.</p><br/>
+                <p class="text-justify">It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. The method is named after Julius Caesar, who used it in his private correspondence.</p><br/>
+                <p class="text-justify">ROT13 ("rotate by 13 places", sometimes hyphenated ROT-13) is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the alphabet. ROT13 is a special case of the Caesar cipher which was developed in ancient Rome.</p><br/>
+                <p class="text-justify">Because there are 26 letters (2×13) in the basic Latin alphabet, ROT13 is its own inverse; that is, to undo ROT13, the same algorithm is applied, so the same action can be used for encoding and decoding. The algorithm provides virtually no cryptographic security, and is often cited as a canonical example of weak encryption.</p><br/>
+            </article>
+
+            <article>
+                <h2>Notes</h2><br/>
+                <ul class="d-flex flex-column align-items-center">
+                    <li>This cipher does not modify symbols or letters other than the Latin alphabet.</li>
+                    <li>This cipher has the 25 possible displacements of the Roman alphabet</li>
+                    <li>Copying returns the text in uppercase.</li><br>
+                </ul>
+                </article>
+
             
         </main>
         <!-- Main section (END) -->
