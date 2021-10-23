@@ -2,14 +2,14 @@
 <html lang="en">
     <head>
         <!-- Meta information -->
-        <title>Caesar Cipher</title>
+        <title>Telephone Number Validator</title>
         <meta charset="UTF-8">
         <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap">
         <meta name="author" content="x1hibi">
-        <meta name="description" content="This is a caesar cipher which is a substitution cipher which by using the Latin alphabet can provide 25 encryptions since there are 25 possible shifts.">
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="./media/logo.png">
-        <meta name="theme-color" content="#f5f6f7"/>
+        <meta name="theme-color" content="#"/>
         <!-- Prefetch images needed  -->
         <link rel="prefetch" href="./media/wireframeDesktop.jpg" >
         <link rel="prefetch" href="./media/wireframeMobile.jpg" >
@@ -26,64 +26,31 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
     </head>
 
-    <body>
+    <body class="bg-gradient-dark ">
         
         <!-- Main section (START) -->
-        <main class="main-container text-center" >
+        <main class="main-container text-center d-flex flex-column justify-content-center" >
             <header class="d-flex justify-content-center align-items-center m-2">
-                <h1 class="title-responsive-text">Caesar Cipher</h1>
-                <span class="logo"><i class="fas fa-lock"></i></span>
+                <h1 class="title-responsive-text">Telephone Number Validator</h1>
+                <span class="logo"><i class="fas fa-phone"></i></span>
             </header>
-
-            <section>
-                <p class="mb-4 mt-3 fs-2"><b>Alphabet:</b><span id="alphabetElement"> <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span><span class="selected-rot">N</span><span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span><span>T</span><span>U</span><span>V</span><span>W</span><span>X</span><span>Y</span><span>Z</span></p>
-                <div class="input-container d-flex align-items-center">
-                    <label class="input-label" for="rotInput">ROT/Displacement</label>
-                    <input class="rot-input" type="number" min="1" max="25" value="13" id="rotInput" oninput="setRot()">
-                </div>
+            <p class="text">This is customizable telephone number validator make made with a regular expression.</p>
+            <section class="d-flex justify-content-center align-items-center input-container mx-auto">
+                <input type="number" class="form-control number-input" value="" placeholder="Type your phone number" id="phoneInput">
+                <span class="spinner"><i class="fas fa-cog fa-spin"></i></span>
             </section>
+            <section >
+                <h3 class="rules-title">Rules</h3>
+                <ul class="rules-container">
 
-            <section class="d-flex w-100 p-5 align-items-center justify-content-center editors-container">
-                <div class="w-50 editor-container">
-                    <header class="d-flex header-editor align-items-center position-relative">
-                        <h2 class="w-100 text-editor-header">Decode</h2>
-                        <button name="decode-copy" class="copy-button"><i class="far fa-copy" onclick="copyText(event)"></i></button>
-                        <span class="tooltip">Copy Decode Text</span>
-                    </header>
-                    <div class="w-100 p-3 container-editable" contenteditable oninput="getCipher(true)" id="encoder">EXAMPLE OF CIPHER</div>
-                </div>
-                <span class="reverse-icon">
-                    <i class="fas fa-retweet"></i>
-                </span>
-                <div class="w-50 editor-container">
-                    <header class="d-flex header-editor align-items-center position-relative">
-                        <h2 class="w-100 text-editor-header">Encode</h2>
-                        <button name="encode-copy"  class="copy-button"><i class="far fa-copy" onclick="copyText(event)"></i></button>
-                        <span class="tooltip">Copy Encode Text</span>
-                    </header>
-                    <div class="w-100 p-3 container-editable" contenteditable oninput="getCipher(false)" id="decoder">RKNZCYR BS PVCURE</div>
-                </div>
-
-            </section>
-
-            <article>
-                <h2>Cipher Info</h2><br/>
-                <p class="text-justify">In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques.</p><br/>
-                <p class="text-justify">It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. The method is named after Julius Caesar, who used it in his private correspondence.</p><br/>
-                <p class="text-justify">ROT13 ("rotate by 13 places", sometimes hyphenated ROT-13) is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the alphabet. ROT13 is a special case of the Caesar cipher which was developed in ancient Rome.</p><br/>
-                <p class="text-justify">Because there are 26 letters (2×13) in the basic Latin alphabet, ROT13 is its own inverse; that is, to undo ROT13, the same algorithm is applied, so the same action can be used for encoding and decoding. The algorithm provides virtually no cryptographic security, and is often cited as a canonical example of weak encryption.</p><br/>
-            </article>
-
-            <article>
-                <h2>Notes</h2><br/>
-                <ul class="d-flex flex-column align-items-center">
-                    <li>This cipher does not modify symbols or letters other than the Latin alphabet.</li>
-                    <li>This cipher has the 25 possible displacements of the Roman alphabet</li>
-                    <li>Copying returns the text in uppercase.</li><br>
+                    <li class="mb-4"><label class="d-flex justify-content-center align-items-center"><input type="checkbox" value="rule1"><span class="text">Rule 1: Allow prefix 1</span></label></li>
+                    <li  class="mb-4"><label class="d-flex justify-content-center align-items-center"><input type="checkbox" value="rule2"><span class="text">Rule 2: Allow space (" ") as separator</span></label></li>
+                    <li  class="mb-4"><label class="d-flex justify-content-center align-items-center"><input type="checkbox" value="rule4"><span class="text">Rule 3: Allow hyphen ("-") as separator</span></label></li>
+                    <li  class="mb-4"><label class="d-flex justify-content-center align-items-center"><input type="checkbox" value="rule3"><span class="text">Rule 4: Allow area code in parentheses ("(yyy)")</span></label></li>
                 </ul>
-                </article>
+            </section>
 
-            
+
         </main>
         <!-- Main section (END) -->
 
