@@ -53,7 +53,7 @@
             <section class="section-container" id="contactSection">
                 <h2 class="section-title">Do you want to contact me ? <br/> Send me a email and I will contact you 😉</h2> 
                 <form class="email-container" v-on:submit.prevent="sendEmail()">
-                    <section class="subject-container"><label class="email-label">Subject</label><input type="text" class="email-subject" v-model="emailSubject" placeholder="Eg. Web Work ..." required></section>
+                    <section class="subject-container"><label class="email-label">Subject</label><input type="text" class="email-subject" v-model="emailSubject" placeholder="Eg. Web Work ..." required autocomplete="off"></section>
                     <textarea class="email-content" v-model="emailContent" placeholder="Eg. Hello x1hibi I want to speak with you ..." required></textarea>
                     <button type="submit" class="email-button" >Send mail</button>
                 </form>
