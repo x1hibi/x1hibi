@@ -1,0 +1,84 @@
+/****************
+*General styles*
+***************/
+
+
+body{
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    font-weight: 300;
+    margin: 10px 0;
+    text-shadow: 0 0 1px gray;
+}
+
+footer{
+    color: white;
+    font-weight: 200;
+    padding: 10px;
+}
+
+
+/******************
+*Bar Chart styles*
+*****************/
+
+.barchart{
+    backdrop-filter: blur( 4px );
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    height: calc(100vh - 60px - 40px);
+    width: 100vw;
+}
+
+g{
+    font-family: 'Lexend', sans-serif;
+    font-weight: 300;
+    color: black;
+}
+
+.graphTitle{
+    font-size: xx-large;
+    font-weight: 300;
+    fill: url(#my-cool-gradient) #3a033c;
+    text-shadow: 0 0 1px #3a033c;
+}
+
+.bar{
+    fill:url(#my-cool-gradient) #3a033c;
+    cursor: pointer;
+    transition: 0.25s;
+    rx: 1.5px;
+}
+
+.axisLabel{
+    font-family: 'Lexend', sans-serif;
+    font-weight: 300;
+}
+
+.bar:hover{
+    stroke: black;
+    stroke-width: 1px;
+    fill: rgba(0, 0, 0, 0.75);
+}
+
+.tooltip{
+    display: none;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: fit-content;
+    width: fit-content;
+}
