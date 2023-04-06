@@ -7,14 +7,14 @@ let tool = document.getElementById("tooltip")
 fetch(url).then(response => response.json())
           .then(data => {
             graphData = data
-            makeBarChart(graphData)
+            makeGraph(graphData)
         })
 
 /**
- * Create a bar chart with array of data
- * @param {Array} data - Data of bar chart
+ * Create a scatter plot with array of data
+ * @param {Array} data - Data of scatter plot 
  */
-function makeBarChart(dataSet) {
+function makeGraph(dataSet) {
 
     // Check if graph exist 
     if (scatterplot.children.length != 0) {
@@ -139,5 +139,5 @@ function makeBarChart(dataSet) {
 
 /*** Make a responsive graph ***/
 window.addEventListener('resize', () => { 
-    makeBarChart(graphData)
+    makeGraph(graphData)
 });
