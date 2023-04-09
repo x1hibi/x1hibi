@@ -1,0 +1,93 @@
+/****************
+*General styles*
+***************/
+
+body{
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #191f22 0%, #9599E2 100%);
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    font-weight: 300;
+    margin: 10px 0;
+    text-shadow: 0 0 1px gray;
+}
+
+footer{
+    color: white;
+    font-weight: 200;
+    padding: 10px;
+}
+
+
+/*************************
+* Treemap Diagram styles*
+***********************/
+
+.treemapDiagramContainer{
+    backdrop-filter: blur( 4px );
+    background: rgba( 255, 255, 255, 0.95 );
+    height: calc(100vh - 60px - 40px);
+    width: 100vw;
+}
+
+.treemapDiagram{
+    background: transparent;
+}
+
+.treemapDiagram2{
+    background: transparent;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.35 );
+    height: 55px;
+    width:300px;
+    padding: 5px;
+    border: 1px solid #00000073;
+}
+
+.tile{
+    transition-duration: 0.35s;
+}
+
+.tile:hover{
+    stroke: darkblue;
+    stroke-width: 2px;
+    transform: translate(-5px,-5px);
+}
+
+g{
+    font-family: 'Lexend', sans-serif;
+    font-weight: 300;
+    color: black;
+}
+
+.graphTitle{
+    font-size: xx-large;
+    font-weight: 300;
+    fill: url(#my-cool-gradient) #3a033c;
+    text-shadow: 0 0 1px #3a033c;
+}
+
+.graphDescription{
+    font-size: small;
+    font-weight: 200;
+    fill: #3a033c;
+}
+
+.tooltip{
+    display: none;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: fit-content;
+    width: fit-content;
+}
