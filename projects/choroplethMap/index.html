@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>Choropleth Map with D3.js</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript and D3.js">
+    <meta name="author" content="x1hibi">
+    <meta name="description" content="This is a example of Choropleth Map with D3.js">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./media/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="black">
+</head>
+<body>
+
+    <header>
+        <h1>Choropleth Map with D3.js</h1>
+    </header>
+
+    <main>
+        <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+            <linearGradient id="my-cool-gradient" x2="1" y2="1">
+              <stop offset="0%" stop-color="#447799" />
+              <stop offset="50%" stop-color="#224488" />
+              <stop offset="100%" stop-color="#112266" />
+            </linearGradient>
+        </svg>
+        <div class="choroplethMap">
+            <div id="choroplethMap" class="choroplethMap2"></div>
+        </div>
+        <div id="tooltip" class="tooltip">
+            <span></span>
+        </div>
+    </main>
+
+    <footer>
+        Copyright © 2023 x1hibi All rights reserved.
+    </footer>
+    
+</body>
+
+<script src="d3.js" type="text/javascript" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script src="app.js" type="text/javascript" defer></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" type="text/javascript" defer></script>
+
+</html>

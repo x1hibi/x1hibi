@@ -1,0 +1,99 @@
+/****************
+*General styles*
+***************/
+
+
+body{
+    background-color: #8BC6EC;
+    background-image: linear-gradient(150deg, #191f22 0%, #9599E2 100%);
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    font-weight: 300;
+    margin: 10px 0;
+    text-shadow: 0 0 1px gray;
+}
+
+footer{
+    color: white;
+    font-weight: 200;
+    padding: 10px;
+}
+
+main{
+    height: calc(100vh - 100px);
+}
+
+/**********************
+*choroplethMap styles*
+*********************/
+
+.choroplethMap{
+    backdrop-filter: blur( 4px );
+    background: rgba( 255, 255, 255, 0.85 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+.choroplethMap2{
+    width: auto;
+    height: 565px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+g{
+    font-family: 'Lexend', sans-serif;
+    font-weight: 300;
+    color: black;
+}
+
+.graphTitle{
+    font-size: xx-large;
+    font-weight: 300;
+    fill: url(#my-cool-gradient) #3a033c;
+    text-shadow: 0 0 1px #3a033c;
+}
+
+.graphDescription{
+    font-size: small;
+    font-weight: 200;
+    fill: #3a033c;
+}
+
+.tooltip{
+    display: none;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 0.5px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: fit-content;
+    width: fit-content;
+}
+
+.usaContanier{
+    transform: translate(50px,50px) scale(0.8);
+}
+
+path{
+    stroke:rgba(0, 0, 0, 0.5);
+    stroke-width: 0.25px;
+}
+
+path:hover{
+    stroke-width: 3px;
+    stroke:rgba(0, 0, 0, 0.75);
+}
+
+.axis path{
+   stroke: black;
+   stroke-width: 1px;
+}
