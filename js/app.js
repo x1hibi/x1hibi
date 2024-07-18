@@ -58,13 +58,6 @@ new Vue({
         tags:['HTML','CSS','JS','LARAVEL','VUE.JS','D3'],
       },
       {
-        title:"Cubre Shop",
-        previewImage:"media/preview_34.jpg",
-        urlProject:"./projects/cubreShop/index.html",
-        description:'This is an example of a digital commerce that uses only the client side',
-        tags:['HTML','CSS','JS','LARAVEL','VUE.JS'],
-      },
-      {
         title:"D3.JS",
         previewImage:"media/preview_20.jpg",
         urlProject:"./projects/treemapDiagram/index.html",
@@ -197,7 +190,6 @@ new Vue({
         description:'This is a tribute in honor to the singer Kōji Wada, who interpret a lot of anime songs, but especially remembered by his Digimon songs, you can listen to his album Koji Wada Digimon Memorial Best on our page.',
         tags:['HTML','CSS','JS'],
       },
-      ,
       {
         title:"CNU",
         previewImage:"media/preview_31.jpg",
