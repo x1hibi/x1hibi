@@ -9,47 +9,47 @@ const sliderCaption=document.getElementById("sliderCaption")
 // Array of modal images 
 const modalSliderImages=[
     [{
-        "imagePath":"./media/wireframe_home.png",
+        "imagePath":"./media/wireframe_home.jpg",
         "captionText":"Wireframe home section (1/3)",
         "altText":"Wireframe of home section"
     },
     {
-        "imagePath":"./media/wireframe_projects.png",
+        "imagePath":"./media/wireframe_projects.jpg",
         "captionText":"Wireframe projects section (2/3)",
         "altText":"Wireframe of projects section"
     },
     {
-        "imagePath":"./media/wireframe_contact.png",
+        "imagePath":"./media/wireframe_contact.jpg",
         "captionText":"Wireframe contact section (3/3)",
         "altText":"Wireframe of contact section"
     }],
     [{
-        "imagePath":"./media/searchBar.png",
+        "imagePath":"./media/searchBar.jpg",
         "captionText":"Search by tag diagram (1/1)",
         "altText":"Search by tag diagram  (1/1)"
     }],
     [{
-        "imagePath":"./media/html.png",
+        "imagePath":"./media/html.jpg",
         "captionText":"index.html (1/5)",
         "altText":"image of html index file"
     },
     {
-        "imagePath":"./media/css1.png",
+        "imagePath":"./media/css1.jpg",
         "captionText":"myStyles.css (2/5)",
         "altText":"image of css style file"
     },
     {
-        "imagePath":"./media/css2.png",
+        "imagePath":"./media/css2.jpg",
         "captionText":"generalStyles.css (3/5)",
         "altText":"image of css style file"
     },
     {
-        "imagePath":"./media/js1.png",
+        "imagePath":"./media/js1.jpg",
         "captionText":"app.js (4/5)",
         "altText":"image of js file"
     },
     {
-        "imagePath":"./media/js2.png",
+        "imagePath":"./media/js2.jpg",
         "captionText":"fixedMenuAndModalSlider.js (5/5)",
         "altText":"image of js file"
     }]
