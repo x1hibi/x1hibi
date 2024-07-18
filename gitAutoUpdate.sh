@@ -2,6 +2,7 @@
 
 ### NOTES YOU MUST HAVE INSTALL GIT BEFORE USE THIS SCRIPT 
 ### IN WIN YOU MUST RUN git config core.autocrlf true
+### Run script in terminal as ./gitAutoUpdate.sh
 commitMessage=''
 
 # Condition used to proceed with the action
@@ -40,4 +41,3 @@ git commit -m "$commitMessage"
 git push origin master 
 
 echo "Thanks to used a script maded by X1hibi."
-
