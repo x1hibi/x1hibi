@@ -60,15 +60,15 @@ new Vue({
       {
         title:"D3 Scatter Plot",
         previewImage:"media/preview_17.jpg",
-        urlProject:"https://codepen.io/x1hibi/full/GRpBwMj",
-        description:'this is a description',
+        urlProject:"https://x1hibi.github.io/x1hibi/projects/scatterPlot/index.html",
+        description:'This project shows the development of a scatterplot using D3.js.',
         tags:['HTML','CSS','JS','D3'],
       },
       {
         title:"D3 Bar Chart",
         previewImage:"media/preview_16.jpg",
-        urlProject:"https://codepen.io/x1hibi/full/VwvBvKL",
-        description:'this is a description',
+        urlProject:"https://x1hibi.github.io/x1hibi/projects/barChart/index.html",
+        description:'This project shows the development of a bar chart using D3.js.',
         tags:['HTML','CSS','JS','D3'],
       },
       {
