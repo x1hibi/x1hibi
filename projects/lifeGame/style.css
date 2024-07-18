@@ -1,0 +1,26 @@
+
+html {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+h1 {
+    text-align: center;
+}
+
+.board{
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    margin: 0 auto;
+    line-height: 9px;
+    text-align: center;
+    padding: 10px 13px 13px 10px;
+    width: fit-content;
+}
+
+.menuContainer{
+    width: fit-content;
+    margin: 15px auto;
+}

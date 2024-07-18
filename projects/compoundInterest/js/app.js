@@ -154,7 +154,7 @@ const { createApp } = Vue
                .data(dataSet)
                .enter()
                .append("circle")
-               .attr("class",d=> d[1]!=7 ? "graph-dot" : "graph-dot-2")
+               .attr("class","graph-dot")
                .attr("cx",d => xScale(d[0]))  
                .attr("cy",d => yScale(d[1]))
                .attr("r", 5)

@@ -1,0 +1,248 @@
+.dnavbar{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    z-index: 1;
+    top: 0px;
+    background: rgba(0, 0, 0, 0);
+    transition-duration: 0.5s;
+}
+
+    .blue{
+        background-color: #083F49;
+    }
+
+.logo {
+    display: inline-block;
+    height: 60px;
+
+}
+
+.social-container{
+    width: 210px;
+    margin: 0px auto;
+
+}
+
+.log{
+    display: inline-block;
+    height: 50px;
+    padding: 0px 10px;
+    overflow: hidden;
+    color: white;
+    animation-name: eslogan;
+    animation-duration: 1.5s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    font-family: 'Merriweather', serif;
+    font-size: 250%;
+}
+
+@keyframes eslogan {
+     0% {
+		transform: scale(1);
+	}
+	50% {
+        text-shadow: 0px 0px 10px white;
+	}
+	100% {
+		transform: scale(1);
+	}
+    
+}
+
+.icon{
+    margin-top:5px;
+    margin-left: 15px;
+    display: inline-block;
+    height: 50px;
+    float: left;
+
+}
+
+.links {
+    background-color: aqual;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    height: 50px;
+    float: right;
+    widows: 100%;
+}
+
+.links a {
+    display: inline-block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    float: left;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition-duration: 0.35s;
+    font-size: 20px;
+    
+}
+
+a.active{
+    text-shadow: 0px 0px 5px cyan;
+    text-decoration: underline;
+    text-decoration-color: deepskyblue;
+    text-decoration-skip:spaces
+}
+
+.links a:hover {
+    text-shadow: 0px 0px 10px white;
+    text-decoration: underline;
+
+}
+
+.container-social{
+    display: none;
+}
+
+.check {
+    display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#check-nav{
+ display: none;
+}
+
+
+.social:hover{
+    border: 1px solid lightgray;
+    transform: scale(1.2);
+}
+
+.socialnav{
+    display: none;
+}
+
+
+@media screen and (max-width:1000px){
+
+    .dnavbar{
+        background: #083F49;
+        height: 50px;
+    }    
+    
+
+.log{
+    display: inline-block;
+    height: 40px;
+    overflow: hidden;
+    color: white;
+    animation-name: eslogan;
+    animation-duration: 1.5s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    font-family: 'Merriweather', serif;
+    font-size: 200%;
+    position: relative;
+    top:-5px;
+}    
+    
+.check {
+    height: inherit;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 2px;
+    max-height: 100%;
+}    
+    
+.logo {
+    display: inline-block;
+    height: 40px;
+    padding-top: 5px;
+}    
+    
+.icon{
+    margin-top:2px;
+    margin-left: 15px;
+    display: inline-block;
+    height: 35px;
+    float: left;
+    }    
+    
+    
+.links {
+    position: absolute;
+    display: block;
+    background-color: #000;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    width: 100%;
+    margin: 0px;
+  }
+  .links a {
+    display: block;
+    font-size: 150%;
+    width: 100%;
+    float: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 30px;
+    padding-bottom: 3px; 
+    color:white;
+    font-weight: bold;
+    }
+    .links a:hover {
+    text-shadow: 0px 0px 10px white;
+    text-decoration: underline;
+}
+ 
+   .dnavbar #check-nav:not(:checked) ~ .links {
+    height: 0px;
+  }
+  .dnavbar #check-nav:checked ~ .links {
+    height: calc(100vh - 50px);
+      overflow-y: hidden;
+  }
+    
+.container-social{
+    display: block;
+}
+    
+    container-social2{
+        display: block;
+    }
+    
+.socialnav{
+    display: inline-block;
+}
+    .social-container{
+    width: 210px;
+    margin: 10px auto;  
+}
+    .social {
+    border: 1.5px solid black;
+    transition: 0.2s;
+    margin: 0px 12.5px;  
+}
+    
+        .social2 {
+    transition: 0.2s;
+    margin: 0px 12.5px; 
+    transition: 0.5s;
+}
+    .social2:hover{
+         text-shadow: 0px 0px 15px white;
+    }
+    
+    
+}
+
+
+
