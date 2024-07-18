@@ -1,0 +1,75 @@
+.graph-container{
+    position: inherit;
+}
+
+.number{
+    display: inline-block;
+    height: 250px;
+    width: 13%;
+}
+
+.number table{
+    position: relative;
+    top: -32px;
+    width: 100%;
+    height: 250px;
+
+}
+
+.number table tr td{
+    height: 58px;
+    width: 100%;
+    text-align: right;
+
+}
+
+
+.graph {
+    display: inline-block;
+    position: inherit;
+    background-color: ghostwhite;
+    height: 250px;
+    width: 70%;
+    transform: rotate(180deg);
+    background-image: linear-gradient(gray 1px, transparent 1.1px);
+    background-size: 10% 25%;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    border-bottom: 0.5px solid;
+    border-left: 0.5px solid;
+    padding-left: 5%;
+    z-index: -1;
+}
+.bar {
+    border: 1px solid ;
+    width: 10%;
+    margin: 0% 2.5%;
+    display: inline-block;
+    float: left;
+    background:linear-gradient(cyan 20%,aqua 30%,dodgerblue);
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes grow {
+  from {height: 0%};
+}
+
+
+.label{
+    color:black;
+    transform: rotate(90deg);
+    opacity: 0;
+    padding-left: 8px;
+    animation-name: scal;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scal {
+    from {opacity: 0}
+  to {opacity: 1}
+}

@@ -1,0 +1,169 @@
+.navbar{
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    display: inline-block;
+    height: 50px;
+    padding: 10;
+}
+
+.log{
+    display: inline-block;
+    height: 20px;
+    padding: 12px 10px;
+    color: white;
+    animation-name: eslogan;
+    animation-duration: 1.5s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    font-family: 'Merriweather', serif;
+    font-size: 130%
+}
+
+@keyframes eslogan {
+     0% {
+		transform: scale(1);
+	}
+	50% {
+        text-shadow: 0px 0px 10px white;
+	}
+	100% {
+		transform: scale(1);
+	}
+    
+}
+
+.icon{
+    margin-top: 5px;
+    margin-left: 15px;
+    display: inline-block;
+    height: 40px;
+    float: left;
+}
+
+.links {
+    background-color: aqual;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    height: 50px;
+    float: right;
+}
+
+.links a {
+    display: inline-block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    float: left;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition-duration: 0.35s;
+    font-size: 20px;
+}
+
+.links a:hover {
+    text-shadow: 0px 0px 10px white;
+    background-color: darkmagenta;
+}
+
+.container-social{
+    display: none;
+}
+
+.check {
+    display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#check-nav{
+ display: none;
+}
+
+
+.social-container{
+    width: 270px;
+    margin: 10px auto;
+}
+
+.social:hover{
+    border: 1px solid lightgray;
+    transform: scale(1.2);
+}
+
+.socialnav{
+    display: none;
+}
+
+
+@media screen and (max-width:1000px){
+
+    .navbar{
+        top: 0px;
+        position: fixed;
+    }
+    
+.check {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+}    
+    
+.links {
+    position: absolute;
+    display: block;
+    background-color: #333;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    width: 100%;
+  }
+  .links a {
+    display: block;
+    font-size: 150%;
+    width: 100%;
+    float: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 5px;
+    padding-bottom: 3px;  
+    }
+ 
+   .navbar #check-nav:not(:checked) ~ .links {
+    height: 0px;
+  }
+  .navbar #check-nav:checked ~ .links {
+    height: calc(100vh - 50px);
+
+      overflow-y: hidden;
+  }
+    
+.container-social{
+    display: block;
+}
+    
+.socialnav{
+    display: inline-block;
+}
+    .social-container{
+    width: 220px;
+    margin: 10px auto;   
+}
+    
+    
+}
+
+
+

@@ -1,0 +1,112 @@
+header {
+    background:linear-gradient(-45deg,white,red);
+    background-size: 400% 400%;
+    height: 280px;
+    padding-top: 20px;
+    overflow:hidden;
+    animation-delay: 1.5s;
+    animation-name: color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes color {
+ 0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.container{
+    width: 905px;
+    height: 250px;
+    margin:auto;
+}
+
+.img1{
+    margin-top:3%;
+    max-height: 220px;
+    float: left;
+    transform: scale(0);
+    animation-name: meta1;
+    animation-delay: 0.75s;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes meta1 {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+
+.img2{
+    max-height: 250px;
+    float: left;
+    animation-name: logo;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes logo {
+  from {transform: translate(1000px)}
+  to {transform: translate(0px)}
+}
+
+.img3{
+    display: none;
+}
+
+@media screen and (max-width:1000px){
+
+header{
+    margin-top: 50px;
+    }    
+    
+.img1{
+    display: none;  
+}
+    
+.img2{
+    display: none;  
+}    
+
+.img3{
+    display:block;
+
+    animation-name: cel;
+    animation-delay: 0.25s;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    }   
+    
+@keyframes cel {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}    
+    .container{   
+    height: 150px;
+    width: 360px
+}
+    header {
+    height: 180px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+    
+    
+}
+
+
+

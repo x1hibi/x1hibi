@@ -191,6 +191,13 @@ new Vue({
         tags:['HTML','CSS','JS'],
       },
       {
+        title:"Metapod",
+        previewImage:"media/preview_33.jpg",
+        urlProject:"./projects/metapod/index.html",
+        description:'This page is the full description for a metapod.',
+        tags:['HTML','CSS','JS'],
+      },
+      {
         title:"Pop movies",
         previewImage:"media/preview_32.jpg",
         urlProject:"./projects/popMovies/index.html",
