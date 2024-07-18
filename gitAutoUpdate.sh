@@ -3,6 +3,7 @@
 ### NOTES YOU MUST HAVE INSTALL GIT BEFORE USE THIS SCRIPT 
 ### IN WIN YOU MUST RUN git config core.autocrlf true
 ### Run script in terminal as ./gitAutoUpdate.sh
+### Change permitions in file $ chmod +x gitAutoUpdate.sh
 commitMessage=''
 
 # Condition used to proceed with the action
