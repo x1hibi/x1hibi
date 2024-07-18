@@ -16,19 +16,17 @@
         <h3>User controls</h3>
     </div>
     <div class="menuContainer">
-        <label>Width:</label>
-        <input type="range" min="5" max="80" id="width" value="25">
-        <label>Height:</label>
-        <input type="range" min="5" max="80" id="height" value="25">
-        <label>Generation time:</label>
-        <input type="range" min="10" max="2000" id="time" value="250">
+        <label>Size:</label>
+        <input type="range" min="5" max="80" id="width" value="25" onclick="updateBoard()">
+        <!-- <label>Generation time:</label>
+        <input id="time" type="number" min="10" max="1000" value="500" onchange="updateBoard()"> -->
     </div>
 
-
-    <div class="board" id="board"></div>
-
+    <br/>
+    <div class="board" id="boardElement"></div>
+    <br/>
+    <button onclick="startGame()">Start</button>
     <div class="menuContainer" >
-        <button onclick="startGame()">Start</button>
         <span>Generation:<span id="generation"></span></span>
         <button onclick="randomBoard()">Reset</button>
     </div>

@@ -1,13 +1,13 @@
 //Define the size of the box
-let height=25
 let width=25
+
 
 //Select characters
 let alive="■"
 let dead="□"
 
 //Time of each generation in ms
-let cicleTime=250
+var cicleTime= 100
 
 //Declare array and make matrix and fill to zero
 let board=[]
@@ -17,9 +17,6 @@ let boardString=""
 
 // game status
 let gameRunning=false
-
-// Find container in html, global variable
-let boardElement=document.getElementById("board")
 
 //Functions
 
@@ -55,7 +52,7 @@ function nextGeneration(){
 
     // iteration for 9 points 
     for (let i=0;i<width;i++){
-        for (let j=0;j<height;j++){
+        for (let j=0;j<width;j++){
             
             let livingCell=Boolean(previusBoard[i][j]==alive)
             let cellsAround=0
@@ -104,10 +101,6 @@ function randomBoard(){
 
 randomBoard()
 
-
-
-
-
 function gameLife(){
     // we run a promise
     new Promise((response)=>{
@@ -126,17 +119,23 @@ function startGame(){
         // handle user clicks
         gameRunning=true
         // get user initial conditions
-        height=document.getElementById("height").value
         width=document.getElementById("width").value
-        cicleTime=document.getElementById("time").value
-        console.log(height,width,cicleTime)
+        //cicleTime=document.getElementById("time").value
         // build a new board
         randomBoard()
-        console.log("empezo")
         setInterval(() => {
             gameLife()
         }, cicleTime);
-    }
+}
 }
 
 
+function updateBoard(){
+    // get user initial conditions
+    width=document.getElementById("width").value
+    //cicleTime=document.getElementById("time").value
+    // Clean the board
+    boardElement.textContent=""
+    // Re run random board
+    randomBoard()
+}

@@ -1,14 +1,13 @@
-freecode camp 15
-
-
-pagina x1hibi
-auto escritura 
-cubre shop
-proyecto lets house
-proyecto basico proteco
-proyecto avanzado proteco 
-to do list 
-juego de la vida
-
 
 platilla
+
+
+Recordatorios
+
+Faltan los proyectos de validador de numero celular
+Mejorar el juego de la vida
+Cubreshop vue
+To do list laravel 
+Proyecto let hous laravel
+Página de typescript
+Máquina registradora
