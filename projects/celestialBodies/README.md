@@ -6,7 +6,7 @@ This is a database created with postgress.
 **Instructions**
 
 1. Download file universe.sql.
-2. Install a posgress.
+2. Install a postgres.
 3. Run in terminal the following command to install database:
 > **$ psql -U postgres < universe.sql**
 
