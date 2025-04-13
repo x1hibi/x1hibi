@@ -18,8 +18,6 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-
-
 /**
  * Convert a URL parameter into a date object and return as json with date in utc format and date in miliseconds
  * @param {object} request 
@@ -58,8 +56,6 @@ function getDateApi(request, response) {
 
 // your first API endpoint... 
 app.get("/api/:date?", getDateApi);
-
-
 
 // Listen on port set in environment variable or default to 3000
 var listener = app.listen(process.env.PORT || 3000, function () {
