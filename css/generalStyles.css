@@ -4,8 +4,13 @@
 
 html {
     scroll-behavior: smooth;
+    text-align: center;
   }
   
+.title-bio{
+    color: white;
+}
+
 body{
     /* font-weight: lighter; */
     background-color: black;

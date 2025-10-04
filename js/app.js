@@ -2,11 +2,11 @@
 import cardComponent from './components/CardComponent.js';
 // Import the module textTypedEffect
 import TypedText from './textTypedEffect.js'
-
+// Import vue root  
 new Vue({
   el: "#app",
   mounted() {
-    console.log("mounted")
+    console.log("mounted 2")
     //make a copy non mutable of array projects
     this.projects=[...this.projectsBackup]
 
