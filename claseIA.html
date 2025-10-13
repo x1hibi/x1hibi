@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de prompts clase de IA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .card {
+            background: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .prompt-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        code {
+            flex: 1;
+            background: #f5f5f5;
+            padding: 12px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            display: block;
+            color: #333;
+        }
+
+        .copy-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            font-size: 1.2rem;
+        }
+
+        .copy-btn:hover {
+            background: #5568d3;
+            transform: scale(1.05);
+        }
+
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+
+        .copy-btn.copied {
+            background: #10b981;
+        }
+
+        .download-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .download-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 15px 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .download-btn:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .download-section {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de prompts clase de IA</h1>
+
+        <!-- Gemini IA -->
+        <div class="card">
+            <h2>Gemini IA</h2>
+            <div class="prompt-item">
+                <code>¿Qué eres?</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+            <div class="prompt-item">
+                <code>Resume en dos párrafos que es la IA, y anexa dos referencias de donde sintetizaste la información generada.</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+            <div class="prompt-item">
+                <code>Genera en dos párrafos un resumen de la historia de la IA y anexa dos referencias de donde obtuviste la información.</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+            <div class="prompt-item">
+                <code>Dame el logo de Gemini IA</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+        </div>
+
+        <!-- ChatGPT -->
+        <div class="card">
+            <h2>ChatGPT</h2>
+            <div class="prompt-item">
+                <code>¿Qué eres?</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+            <div class="prompt-item">
+                <code>Dame una lista breve y numerada de los conceptos básicos de la IA.</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+            <div class="prompt-item">
+                <code>Realiza la conversión 0.1 horas a segundos utilizando el método factor unitario</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+            <div class="prompt-item">
+                <code>Dame el logo de ChatGPT en formato PNG</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+        </div>
+
+        <!-- Meta IA -->
+        <div class="card">
+            <h2>Meta IA</h2>
+            <div class="prompt-item">
+                <code>¿Qué eres?</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+            <div class="prompt-item">
+                <code>¿Qué es un prompts en IA? (anexa la referencia de donde obtuviste la información)</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+            <div class="prompt-item">
+                <code>Dame una lista numerada de cómo se debe redactar un buen prompt para la IA</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+            <div class="prompt-item">
+                <code>Dame el logo de Meta IA en formato PNG</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+        </div>
+
+        <!-- Claude IA -->
+        <div class="card">
+            <h2>Claude IA</h2>
+            <div class="prompt-item">
+                <code>¿Qué eres?</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+            <div class="prompt-item">
+                <code>Crea una página web responsiva basada en mobile first que llevé un título h1 "Lista de promts clase de IA", utiliza el documento anexado para crear tarjetas con un border radius de 5px en donde las letras en negritas son una etiqueta h2 y cada elemento numerado será una etiqueta code y cada tarjeta tendrá a la derecha una etiqueta button con el ícono de copiar texto, que tenga la capacidad de copiar el texto que está dentro de la etiqueta code, además al final del documento genera una etiqueta button en donde se pueda descargar el archivo "prompts clase IA.txt", y abajo de ese un boton de descarga del libro el principito que fue anexado en el prompt.</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+            <div class="prompt-item">
+                <code>Actualiza la página anterior, retirando los números de cada una de las tarjetas y agrega un gradiente de color dark blue a azul que ya tienen en las etiquetas h2.</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+            <div class="prompt-item">
+                <code>Dame el logo de Claude IA en formato PNG</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+        </div>
+
+        <!-- NotebookLM -->
+        <div class="card">
+            <h2>NotebookLM</h2>
+            <div class="prompt-item">
+                <code>¿Qué eres?</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+            <div class="prompt-item">
+                <code>Genera un resumen de una cuartilla del libro anexado, con un subtítulo que delimite el inicio, nudo y desenlace.</code>
+                <button class="copy-btn" onclick="copyText(this)">📋</button>
+            </div>
+        </div>
+
+        <!-- Botones de descarga -->
+        <div class="download-section">
+            <button class="download-btn" onclick="downloadPromptsFile()">
+                📥 Descargar prompts clase IA.txt
+            </button>
+            <button class="download-btn">
+                <a  href="./el principito.pdf" download>
+                    📥 Descargar El Principito.pdf
+                </a>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function copyText(button) {
+            const code = button.previousElementSibling;
+            const text = code.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.textContent;
+                button.textContent = '✓';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function downloadPromptsFile() {
+            const content = `Gemini IA 
+
+
+1. ¿Qué eres?
+
+
+2. Resume en dos párrafos que es la IA, y anexa dos referencias de donde sintetizaste la información generada.
+
+
+3. Genera en dos párrafos un resumen de la historia de la IA y anexa dos referencias de donde obtuviste la información.
+
+
+4. Dame el logo de Gemini IA
+
+
+ChatGPT
+
+
+1. ¿Qué eres?
+
+
+2. Dame una lista breve y numerada de los conceptos básicos de la IA.
+
+
+3. Realiza la conversión 0.1 horas a segundos utilizando el método factor unitario
+
+
+4. Dame el logo de ChatGPT en formato PNG
+
+
+Meta IA
+
+
+1. ¿Qué eres?
+
+
+2. ¿Qué es un prompts en IA? (anexa la referencia de donde obtuviste la información)
+
+
+3. Dame una lista numerada de cómo se debe redactar un buen prompt para la IA
+
+
+4. Dame el logo de Meta IA en formato PNG
+
+
+Claude IA 
+
+
+1. ¿Qué eres?
+
+
+2. Crea una página web responsiva basada en mobile first que llevé un título h1 "Lista de promts clase de IA", utiliza el documento anexado para crear tarjetas con un border radius de 5px en donde las letras en negritas son una etiqueta h2 y cada elemento numerado será una etiqueta code y cada tarjeta tendrá a la derecha una etiqueta button con el ícono de copiar texto, que tenga la capacidad de copiar el texto que está dentro de la etiqueta code, además al final del documento genera una etiqueta button en donde se pueda descargar el archivo "prompts clase IA.txt", y abajo de ese un boton de descarga del libro el principito que fue anexado en el prompt.
+
+
+3. Actualiza la página anterior, retirando los números de cada una de las tarjetas y agrega un gradiente de color dark blue a azul que ya tienen en las etiquetas h2.
+
+
+4. Dame el logo de Claude IA en formato PNG
+
+
+NotebookLM
+
+
+1. ¿Qué eres?
+
+2. Genera un resumen de una cuartilla del libro anexado, con un subtítulo que delimite el inicio, nudo y desenlace.`;
+
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'prompts clase IA.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        async function downloadPrincipito() {
+            try {
+                const fileData = await window.fs.readFile('el principito.pdf');
+                const blob = new Blob([fileData], { type: 'application/pdf' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'el principito.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                alert('El archivo del Principito no está disponible para descarga directa.');
+            }
+        }
+    </script>
+</body>
+</html>
