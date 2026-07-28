@@ -39,16 +39,16 @@ new Vue({
       {
         title:"Fennex",
         previewImage:"media/preview_37.jpg",
-        urlProject:"https://fennex-css.com/",
+        urlProject:"https://fennex.infinityfree.me/",
         description:'Fennex is a web platform designed to provide support to Spanish-speaking university and pre-university students in the field of analytical chemistry.',
-        tags:['HTML','CSS','JS','LARAVEL','VUE','D3','AWS'],
+        tags:['HTML','CSS','JS','LARAVEL','VUE','D3'],
       },
       {
         title:"ESS",
         previewImage:"media/preview_36.jpg",
-        urlProject:"https://electronicstructureforstudents.com/",
+        urlProject:"https://electronicscienceforstudents.infinityfree.me/",
         description:'ESS is a suite of products aimed at bringing modern methods of quantum chemistry to university classrooms.',
-        tags:['HTML','CSS','JS','LARAVEL','VUE','D3','AWS'],
+        tags:['HTML','CSS','JS','LARAVEL','VUE','D3'],
       },
       {
         title:"Compound interest",
