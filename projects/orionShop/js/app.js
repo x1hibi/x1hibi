@@ -8,8 +8,14 @@ pages.forEach(page=>{
     const buttonNode = page.buttonElement
     buttonNode.addEventListener('click',e => {
         pages.forEach(item=>{
-            item.sectionElement.style.display = e.target === item.buttonElement 
-            ? item.style : "none"
+
+            if(e.target === item.buttonElement){
+                item.sectionElement.style.display = item.style
+                e.target.classList.add('selected-section')
+            }else{
+                item.sectionElement.style.display = "none"
+                item.buttonElement.classList.remove('selected-section')
+            }
         })
     })
 })

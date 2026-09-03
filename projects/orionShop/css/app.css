@@ -40,6 +40,18 @@ main {
     box-sizing: border-box;
 }
 
+main #homeSection{
+    text-align: justify;
+}
+
+main h1{
+    text-align: center;
+}
+
+.selected-section{
+    text-decoration: underline;
+}
+
 .orion-logo{
     display: block;
     border-radius: 5px;
