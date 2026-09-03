@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<link href="css/app.css" rel="styleSheet">
+	<body>
+        <nav>
+			<menu>
+				<li><button id="homeButton">Inicio</button></buttonZ></li>
+				<li><button id="productsButton">Productos</button></buttonZ></li>
+				<li><button id="cartButton">Carrito (<span id="productsCounter">0</span>)</button></li>
+			</menu>
+		</nav>
+		<br/>
+		<main id="mainSection">
+			<section id="homeSection">
+				<h1>¡Bienvenido a OrionShop!</h1>
+				<p>Consulta y compra los mejores productos de OrionInnovation.</p>
+				<img class="orion-logo" src="./assets/img/orionLogo.webp" alt="Orion Logo">
+				<h2>Descripción</h2>
+				<p>OrionShop es una SPA de tienda virtual desarrollada con webcomponents.</p>
+				<h2>Funcionalidades del sitio:</h2>
+				<ul>
+					<li>Explora una amplia selección de productos</li>
+					<li>Agrega artículos a tu carrito de compras</li>
+					<li>Visualiza tu carrito de compras</li>
+					<li>Elimina y agrega productos de tu carrito</li>
+				</ul>
+				<h2>Características</h2>
+				<ul>
+					<li>Interfaz de usuario intuitiva y moderna</li>
+					<li>Responsive design para una experiencia óptima en todos los dispositivos</li>
+					<li>Persistencia de datos para mantener tu información de compra</li>
+					<li>Desarrollo con webcomponents para una arquitectura modular y escalable</li>
+				</ul>
+			</section>
+			<product-list id="productsSection"></product-list>
+			<shopping-cart id="cartSection"></shopping-cart>
+			
+		</main>
+	</body>
+	<script src="js/app.js"></script>
+	<script src="js/components/ProductList.js"></script>
+	<script src="js/components/ShoppingCart.js"></script>
+    
+</html>
