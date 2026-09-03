@@ -24,7 +24,7 @@ new Vue({
       if(searchInput){
         if(searchInput==document.activeElement){
           searchInput.parentElement.style.width="1024px"
-          searchInput.placeholder="HTML CSS JS REACT VUE PHP PYTHON LARAVEL BOOTSTRAP D3"
+          searchInput.placeholder="HTML CSS JS REACT VUE PHP PYTHON LARAVEL BOOTSTRAP D3 WEBCOMPONENTS"
         }else{
           searchInput.parentElement.style.width="200px"
           searchInput.placeholder="Search by tags"
@@ -36,6 +36,13 @@ new Vue({
     subtitle: " ",
     caret: "|",
     projectsBackup:[
+      {
+        title:"OrionShop",
+        previewImage:"media/preview_38.jpg",
+        urlProject:"./projects/orionShop/index.html",
+        description:'OrionShop is a SPA developed with webcomponents that simulates a virtual store.',
+        tags:['HTML','CSS','JS','WEBCOMPONENTS'],
+      },
       {
         title:"Fennex",
         previewImage:"media/preview_37.jpg",
@@ -222,7 +229,7 @@ new Vue({
     projects:'',
     searchValue:"",
     lastsearchValue:" ",
-    allowedTags:["HTML","CSS","JS","REACT","VUE","PHP","PYTHON","LARAVEL","BOOTSTRAP","D3","AWS"],
+    allowedTags:["HTML","CSS","JS","REACT","VUE","PHP","PYTHON","LARAVEL","BOOTSTRAP","D3","AWS","WEBCOMPONENTS"],
     emailSubject:"",
     emailContent:"",
   },
