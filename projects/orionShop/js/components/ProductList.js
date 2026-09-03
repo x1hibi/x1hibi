@@ -6,7 +6,9 @@ class ProductList extends HTMLElement{
             {name:"Mochila",price:300,imgName:"./assets/img/mochila.jpeg"},
             {name:"Pluma",price:50,imgName:"./assets/img/pluma.jpeg"},
             {name:"Libreta",price:150,imgName:"./assets/img/libreta.jpeg"},
-            {name:"Macbook",price:12000,imgName:"./assets/img/macbook.jpeg"},
+            {name:"MacBook-Pro-M1",price:12000,imgName:"./assets/img/macbookM1.jpeg"},
+            {name:"MacBook-Pro-M2",price:18000,imgName:"./assets/img/macbookM2.jpeg"},
+            {name:"MacBook-Pro-M3",price:22000,imgName:"./assets/img/macbookM3.jpeg"},
         ]
         this._cartList = []
     }
@@ -43,7 +45,7 @@ class ProductList extends HTMLElement{
                 <img src="${product.imgName}">
                 <section class="product-info">
                     <article>
-                        <span>${product.name}</span>
+                        <span>${product.name.replaceAll("-"," ")}</span>
                         <span>${formatCurrency(product.price)} MXN</span>
                     </article>
                     <button id="${product.name}-${index}">Agregar</button>

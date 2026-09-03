@@ -97,7 +97,7 @@ class ShoppingCard extends HTMLElement{
                 <li>
                     <section>
                         <img src="${product.img}" width="50px">
-                        <span>${product.name}</span>
+                        <span>${product.name.replaceAll("-"," ")}</span>
                     </section>
                     <span>${formatCurrency(product.price)}</span>
                     <span name=${product.name}><button name="remove">➖</button> ${product.amount} <button name="add">➕</button></span>
