@@ -6,6 +6,7 @@ OrionShop es una SPA desarrollada con webcomponents que simula una tienda virtua
 Crear dos Web Components independientes que trabajen en conjunto:
 - <product-list> administrar y mostrar los productos disponibles.
 - <shopping-cart> administrar los productos agregados al carrito y calcular el total.
+- Los datos deben ser presistentes entre los componentes y en el navegador.
 ## Especificaciones
 ### Web Component 1 — product-list
 Debe:
