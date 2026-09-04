@@ -55,7 +55,7 @@ new Vue({
         previewImage:"media/preview_36.jpg",
         urlProject:"https://electronicscienceforstudents.infinityfree.me/",
         description:'ESS is a suite of products aimed at bringing modern methods of quantum chemistry to university classrooms.',
-        tags:['HTML','CSS','JS','LARAVEL','VUE','D3'],
+        tags:['HTML','CSS','JS','LARAVEL','VUE'],
       },
       {
         title:"Compound interest",

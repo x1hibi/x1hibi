@@ -41,8 +41,28 @@ main {
     box-sizing: border-box;
 }
 
-main #homeSection{
+.home-description{
     text-align: justify;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.home-description article{
+    display: grid;
+    justify-content: center;
+    height: min(1000px, 100%);
+    background-color: #ffffff50;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px gray;
+    box-sizing: border-box;
+}
+
+.home-description article:first-child{
+    background: black;
+    align-items: center;
 }
 
 main h1{
@@ -55,9 +75,9 @@ main h1{
 
 .orion-logo{
     display: block;
-    border-radius: 5px;
-    margin: 0 auto;
+    border-radius: 10px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 button {
@@ -175,8 +195,8 @@ shopping-cart img{
 
 @media (min-width: 600px) {
 
-    .orion-logo{
-        width: 50%;
+    .home-description{
+        grid-template-columns: 1fr 1fr;
     }
 
     product-list{
