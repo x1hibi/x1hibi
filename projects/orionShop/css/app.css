@@ -155,6 +155,8 @@ shopping-cart{
     text-align: center;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 shopping-cart ul {
@@ -193,7 +195,11 @@ shopping-cart img{
     width: 100px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
+
+    shopping-cart{
+        width: 50%;
+    }
 
     .home-description{
         grid-template-columns: 1fr 1fr;
