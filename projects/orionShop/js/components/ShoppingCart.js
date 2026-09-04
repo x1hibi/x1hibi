@@ -21,6 +21,8 @@ class ShoppingCard extends HTMLElement{
 
         this.shoppingCartButtonNode = document.querySelector("#cartButton")
 
+        this.cartList = getCartTotalFromLocalStorage()
+
         this.shoppingCartButtonNode.addEventListener("click",()=>{
             if(this.cartList.length > 0){
                 this.renderShoppingCart()

@@ -8,10 +8,9 @@ pages.forEach(page=>{
     const buttonNode = page.buttonElement
     buttonNode.addEventListener('click',e => {
         pages.forEach(item=>{
-
-            if(e.target === item.buttonElement){
+            if(e.currentTarget === item.buttonElement){
                 item.sectionElement.style.display = item.style
-                e.target.classList.add('selected-section')
+                e.currentTarget.classList.add('selected-section')
             }else{
                 item.sectionElement.style.display = "none"
                 item.buttonElement.classList.remove('selected-section')
@@ -30,6 +29,7 @@ customEvents.forEach(event =>{
         const targetNode = e.currentTarget.querySelector(event.targetElementId)
         if(targetNode){
             targetNode.cartList = e.detail    
+            saveCartTotalInLocalStorage(e.detail)
         }
     })
 })
@@ -39,4 +39,13 @@ function formatCurrency(amount, currency = 'MXN') {
         style: 'currency',
         currency: currency,
     }).format(amount);
+}
+
+function getCartTotalFromLocalStorage(){
+    const cartTotal = localStorage.getItem('cartTotal');
+    return cartTotal ? JSON.parse(cartTotal) : [];
+}
+
+function saveCartTotalInLocalStorage(cartList){
+    localStorage.setItem('cartTotal', JSON.stringify(cartList));
 }

@@ -24,6 +24,7 @@ class ProductList extends HTMLElement{
     connectedCallback() {
         this.renderProductList()
         this.createEventListeners()
+        this.cartList = getCartTotalFromLocalStorage()
     }
 
     createEventListeners(){
